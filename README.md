@@ -1,1 +1,0 @@
-# wirayuda-personal-web
