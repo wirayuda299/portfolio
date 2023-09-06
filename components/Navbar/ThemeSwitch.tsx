@@ -17,11 +17,10 @@ type ThemeSwitchProps = {
 };
 
 export default function ThemeSwitch({ theme, setTheme }: ThemeSwitchProps) {
-	const prefersDarkMode = window.matchMedia(
-		'(prefers-color-scheme: dark)'
-	).matches;
-
 	useEffect(() => {
+		const prefersDarkMode = window.matchMedia(
+			'(prefers-color-scheme: dark)'
+		).matches;
 		const selectedTheme =
 			theme || localStorage.theme || (prefersDarkMode ? 'dark' : 'light');
 
@@ -30,6 +29,9 @@ export default function ThemeSwitch({ theme, setTheme }: ThemeSwitchProps) {
 	}, [theme]);
 
 	const switchTheme = (label: string) => {
+		const prefersDarkMode = window.matchMedia(
+			'(prefers-color-scheme: dark)'
+		).matches;
 		const mode = prefersDarkMode ? 'dark' : 'light';
 		setTheme(label === 'system' ? mode : label);
 	};
