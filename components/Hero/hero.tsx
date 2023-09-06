@@ -3,9 +3,9 @@ import Content from './Content';
 
 export default function Hero() {
 	return (
-		<section className='grid grid-cols-1 gap-6 w-full md:grid-cols-2 justify-center items-center p-5 h-screen'>
+		<section className='grid grid-cols-1 gap-6 w-full md:grid-cols-2 justify-between p-5 h-full'>
 			<Content />
-			<div className=' w-full h-full max-w-lg'>
+			<div className=' w-full h-full max-w-xl'>
 				<Image
 					width={1000}
 					height={500}
