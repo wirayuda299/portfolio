@@ -15,7 +15,7 @@ export default function Navbar() {
 
 	return (
 		<nav className='flex items-center'>
-			<div className='w-full p-5 md:p-9 relative gap-x-5 flex justify-between items-center'>
+			<div className='w-full p-5 md:p-6 relative gap-x-5 flex justify-between items-center'>
 				<Logo />
 				<ul
 					className={`transition-all ease duration-500 list-container ${
