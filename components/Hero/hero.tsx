@@ -1,4 +1,5 @@
 import Image from 'next/image';
+
 import Content from './Content';
 
 export default function Hero() {
