@@ -14,7 +14,7 @@ export default function Navbar() {
 	const [theme, setTheme] = useState<string>('light');
 
 	return (
-		<nav className='flex items-center'>
+		<nav className='flex items-center md:sticky top-0 md:bg-opacity-50 md:backdrop-blur-sm md:z-50'>
 			<div className='w-full p-5 md:p-6 relative gap-x-5 flex justify-between items-center'>
 				<Logo />
 				<ul
