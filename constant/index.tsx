@@ -18,6 +18,7 @@ export const navItems = [
 		path: '',
 	},
 ];
+
 export const themeOptions = [
 	{
 		label: 'light',
@@ -33,5 +34,28 @@ export const themeOptions = [
 		label: 'system',
 		title: 'System',
 		icon: <DesktopIcon />,
+	},
+];
+
+export const services = [
+	{
+		title: 'Analytics & SEO',
+		text: 'Implement tracking & analytics tools to monitor website performance & improve SEO.',
+		icon: '/assets/icons/pencil.svg',
+	},
+	{
+		title: 'Front-End Dev',
+		text: 'Front-end dev includes creating the user interface and interactive elements of websites and apps.',
+		icon: '/assets/icons/cursor.svg',
+	},
+	{
+		title: 'Back-End Dev',
+		text: 'Front-end includes creating the user interface and interactive elements of websites and apps.',
+		icon: '/assets/icons/code.svg',
+	},
+	{
+		title: 'Web Optimization',
+		text: 'Web optimization focuses on improving website performance for a smoother user experience',
+		icon: '/assets/icons/speed.svg',
 	},
 ];
