@@ -1,4 +1,4 @@
-import { Hero, Skills, Services } from '@/components/index';
+import { Hero, Skills, Experience, Services } from '@/components/index';
 
 export default function Home() {
 	return (
@@ -6,6 +6,7 @@ export default function Home() {
 			<Hero />
 			<Services />
 			<Skills />
+			<Experience />
 		</>
 	);
 }

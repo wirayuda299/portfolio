@@ -10,7 +10,7 @@ export default function CloseButton({ setIsOpen }: CloseButtonProps) {
 		<button
 			type='button'
 			title='close'
-			className='absolute top-5 right-5 md:hidden text-white'
+			className='absolute right-5 top-5 text-white md:hidden'
 			onClick={() => setIsOpen(false)}
 		>
 			<Image
@@ -18,7 +18,7 @@ export default function CloseButton({ setIsOpen }: CloseButtonProps) {
 				width={40}
 				height={40}
 				alt='menu'
-				className='w-6 h-6'
+				className='h-6 w-6'
 			/>
 		</button>
 	);

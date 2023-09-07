@@ -4,27 +4,27 @@ import { Button } from '../ui/button';
 
 export default function CallToAction() {
 	return (
-		<div className='py-5 flex flex-col gap-5 md:flex-row'>
+		<div className='flex flex-col gap-5 py-5 md:flex-row'>
 			<Button
 				variant='primary'
-				className=' w-full min-w-[150px] h-12 text-white text-sm rounded-full'
+				className=' h-12 w-full min-w-[150px] rounded-full text-sm text-white'
 			>
 				My Work
 			</Button>
 			<Button
 				variant='contact'
 				title='Contact:wirayuda233@gmail.com'
-				className='w-full text-center h-12 rounded-full '
+				className='h-12 w-full rounded-full text-center '
 			>
 				<a
-					className='flex text-xs justify-center items-center gap-x-5 px-5 w-full'
+					className='flex w-full items-center justify-center gap-x-5 px-5 text-xs'
 					href='mailto:wirayuda233@gmail.com'
 					target='_blank'
 					rel='noopener noreferrer'
 				>
 					wirayuda233@gmail.com
 					<Image
-						className='w-5 h-5'
+						className='h-5 w-5'
 						src='/assets/icons/copy.svg'
 						width={40}
 						height={40}

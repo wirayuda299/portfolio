@@ -57,6 +57,32 @@ export const services = [
 		title: 'Web Optimization',
 		text: 'Web optimization focuses on improving website performance for a smoother user experience',
 		icon: '/assets/icons/speed.svg',
+	}]
+	
+export const backgrounds = [
+	{
+		title: 'Slack',
+		lightIcon: '/assets/icons/slack.svg',
+		subTitle: 'Product Design - 4 Years Experince',
+		darkIcon: '/assets/icons/slack-dark.svg',
+	},
+	{
+		title: 'Firefox',
+		lightIcon: '/assets/icons/firefox.svg',
+		subTitle: 'Product Design - 4 Years Experince',
+		darkIcon: '/assets/icons/firefox.svg',
+	},
+	{
+		title: 'Digital Ocean',
+		lightIcon: '/assets/icons/digital-ocean.svg',
+		subTitle: 'Product Design - 4 Years Experince',
+		darkIcon: '/assets/icons/digital-ocean-dark.svg',
+	},
+	{
+		title: 'Mailchimp',
+		lightIcon: '/assets/icons/mailchimp.svg',
+		subTitle: 'Product Design - 4 Years Experince',
+		darkIcon: '/assets/icons/mailchimp-dark.svg',
 	},
 ];
 

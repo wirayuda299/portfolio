@@ -3,8 +3,8 @@ import NavContainer from './NavContainer';
 
 export default function Navbar() {
 	return (
-		<nav className='flex items-center md:sticky top-0 md:bg-opacity-50 md:backdrop-blur-sm md:z-50'>
-			<div className='w-full p-5 md:p-6 relative gap-x-5 flex justify-between items-center'>
+		<nav className='top-0 flex items-center md:sticky md:z-50 md:bg-opacity-50 md:backdrop-blur-sm'>
+			<div className='relative flex w-full items-center justify-between gap-x-5 p-5 md:p-6'>
 				<Logo />
 				<NavContainer />
 			</div>

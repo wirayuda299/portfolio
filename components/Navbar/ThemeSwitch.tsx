@@ -44,7 +44,7 @@ export default function ThemeSwitch({ theme, setTheme }: ThemeSwitchProps) {
 					width={40}
 					height={40}
 					alt='menu'
-					className='w-6 h-6'
+					className='h-6 w-6'
 				/>
 			</DropdownMenuTrigger>
 			<DropdownMenuContent>

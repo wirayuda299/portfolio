@@ -4,13 +4,13 @@ import Content from './Content';
 
 export default function Hero() {
 	return (
-		<section className='grid grid-cols-1 gap-6 w-full md:grid-cols-2 justify-between p-5 h-full'>
+		<section className='grid h-full w-full grid-cols-1 justify-between gap-6 p-5 md:grid-cols-2'>
 			<Content />
-			<div className=' w-full h-full max-w-xl'>
+			<div className=' h-full w-full max-w-xl'>
 				<Image
 					width={1000}
 					height={500}
-					className=' h-full object-center object-contain'
+					className=' h-full object-contain object-center'
 					src={'/assets/images/illustration.png'}
 					alt='illustration image'
 					priority
