@@ -4,8 +4,8 @@ export default function Home() {
 	return (
 		<>
 			<Hero />
-			<Experience />
 			<Skills />
+			<Experience />
 		</>
 	);
 }
