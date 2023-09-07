@@ -16,6 +16,9 @@ module.exports = {
       },
     },
     extend: {
+      screens: {
+        'md1': '780px'
+      },
       colors: {
         'primary-light': '#0252CD',
         'primary-dark': '#428DFF',

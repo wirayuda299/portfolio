@@ -20,7 +20,7 @@ export default function Menu({ theme, setIsOpen }: MenuProps) {
 				width={40}
 				height={40}
 				alt='menu'
-				className='w-6 h-6'
+				className='h-6 w-6'
 			/>
 		</button>
 	);

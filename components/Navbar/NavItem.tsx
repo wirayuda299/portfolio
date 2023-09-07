@@ -12,14 +12,14 @@ export default function NavItem({ path, title, theme }: NavItemProps) {
 	const pathname = usePathname();
 
 	return (
-		<li className='text-white-500 flex items-center dark:text-white'>
+		<li className='flex items-center text-white-500 dark:text-white'>
 			{title !== 'Resume' ? (
 				<Link
 					href={path}
 					className={`${
 						pathname === path
 							? 'font-semibold text-primary-light'
-							: 'font-normal text-sm'
+							: 'text-sm font-normal'
 					}`}
 				>
 					<span>{title}</span>
@@ -27,7 +27,7 @@ export default function NavItem({ path, title, theme }: NavItemProps) {
 			) : (
 				<div className='inline-flex items-center gap-2'>
 					<Image
-						className='w-5 h-5 gap-3'
+						className='h-5 w-5 gap-3'
 						src={`/assets/icons/${
 							theme === 'light' ? 'download.svg' : 'download-light.svg'
 						}`}

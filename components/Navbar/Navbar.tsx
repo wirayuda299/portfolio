@@ -14,11 +14,11 @@ export default function Navbar() {
 	const [theme, setTheme] = useState<string>('light');
 
 	return (
-		<nav className='flex items-center md:sticky top-0 md:bg-opacity-50 md:backdrop-blur-sm md:z-50'>
-			<div className='w-full p-5 md:p-6 relative gap-x-5 flex justify-between items-center'>
+		<nav className='top-0 flex items-center md:sticky md:z-50 md:bg-opacity-50 md:backdrop-blur-sm'>
+			<div className='relative flex w-full items-center justify-between gap-x-5 p-5 md:p-6'>
 				<Logo />
 				<ul
-					className={`transition-all ease duration-500 list-container ${
+					className={`ease list-container transition-all duration-500 ${
 						isOpen ? 'left-0' : '-left-full'
 					}`}
 				>
