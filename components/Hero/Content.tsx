@@ -2,7 +2,7 @@ import CallToAction from './CallToAction';
 
 export default function Content() {
 	return (
-		<div className='w-full h-full  '>
+		<div className='w-full h-full '>
 			<div className='w-full h-full flex flex-col justify-center md:max-w-lg'>
 				<h1 className='text-primary-light text-sm md:text-xl uppercase pb-5 md:pb-7'>
 					Hi, I am Wirayuda

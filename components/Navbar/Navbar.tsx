@@ -14,12 +14,12 @@ export default function Navbar() {
 	const [theme, setTheme] = useState<string>('light');
 
 	return (
-		<nav className='flex items-center'>
+		<nav className='flex items-center md:sticky top-0 z-10 md:backdrop-blur '>
 			<div className='w-full p-5 md:p-6 relative gap-x-5 flex justify-between items-center'>
 				<Logo />
 				<ul
 					className={`transition-all ease duration-500 list-container ${
-						isOpen ? 'left-0' : '-left-full'
+						isOpen ? 'left-0' : '!-left-[200%]'
 					}`}
 				>
 					{navItems.map((item) => (
