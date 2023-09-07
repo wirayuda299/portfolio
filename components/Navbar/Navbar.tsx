@@ -15,10 +15,10 @@ export default function Navbar() {
 
 	return (
 		<nav className='flex items-center'>
-			<div className='w-full p-5 md:p-6 relative gap-x-5 flex justify-between items-center'>
+			<div className='relative flex w-full items-center justify-between gap-x-5 p-5 md:p-6'>
 				<Logo />
 				<ul
-					className={`transition-all ease duration-500 list-container ${
+					className={`ease list-container transition-all duration-500 ${
 						isOpen ? 'left-0' : '-left-full'
 					}`}
 				>

@@ -1,6 +1,6 @@
 export default function Logo() {
 	return (
-		<div className='w-12 h-11 bg-conic-gradient rounded-full text-center rotate-180 inline-flex items-center justify-center'>
+		<div className='inline-flex h-11 w-12 rotate-180 items-center justify-center rounded-full bg-conic-gradient text-center'>
 			<span className='rotate-180 font-semibold text-white'>W</span>
 		</div>
 	);
