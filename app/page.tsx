@@ -1,9 +1,10 @@
-import { Hero } from '@/components/index';
+import { Hero, Skills } from '@/components/index';
 
 export default function Home() {
 	return (
-		<div>
+		<>
 			<Hero />
-		</div>
+			<Skills />
+		</>
 	);
 }
