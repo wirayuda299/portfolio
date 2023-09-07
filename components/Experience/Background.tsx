@@ -14,7 +14,7 @@ export default function Background({
 	darkIcon,
 }: BackgroundProps) {
 	return (
-		<div className='flex  flex-col items-start justify-start gap-3 rounded-lg bg-white p-5  dark:bg-black-200 md:flex-row'>
+		<div className='flex  flex-col items-start justify-start gap-3 rounded-lg bg-white p-5  shadow-xl dark:bg-black-200 md:flex-row md:shadow-transparent'>
 			<Image
 				className='hidden dark:block'
 				src={darkIcon}
