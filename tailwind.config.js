@@ -17,7 +17,8 @@ module.exports = {
     },
     extend: {
       screens: {
-        'md1': '780px'
+        'md1': '780px',
+        'sm1': '517px'
       },
       colors: {
         'primary-light': '#0252CD',
@@ -82,6 +83,7 @@ module.exports = {
         'conic-gradient': 'conic-gradient(from 180deg at 50% 75.56%, #0252CD 0deg, rgba(2, 82, 205, 0.33) 360deg);'
       },
     },
+
   },
   plugins: [require("tailwindcss-animate")],
 }
