@@ -41,24 +41,29 @@ export const services = [
 	{
 		title: 'Analytics & SEO',
 		text: 'Implement tracking & analytics tools to monitor website performance & improve SEO.',
-		icon: '/assets/icons/pencil.svg',
+		lightIcon: '/assets/icons/services/pencil-light.svg',
+		darkIcon: '/assets/icons/services/pencil-dark.svg',
 	},
 	{
 		title: 'Front-End Dev',
 		text: 'Front-end dev includes creating the user interface and interactive elements of websites and apps.',
-		icon: '/assets/icons/cursor.svg',
+		lightIcon: '/assets/icons/services/cursor-light.svg',
+		darkIcon: '/assets/icons/services/cursor-dark.svg',
 	},
 	{
 		title: 'Back-End Dev',
 		text: 'Front-end includes creating the user interface and interactive elements of websites and apps.',
-		icon: '/assets/icons/code.svg',
+		lightIcon: '/assets/icons/services/code-light.svg',
+		darkIcon: '/assets/icons/services/code-dark.svg',
 	},
 	{
 		title: 'Web Optimization',
 		text: 'Web optimization focuses on improving website performance for a smoother user experience',
-		icon: '/assets/icons/speed.svg',
-	}]
-	
+		lightIcon: '/assets/icons/services/speed-light.svg',
+		darkIcon: '/assets/icons/services/speed-dark.svg',
+	},
+];
+
 export const backgrounds = [
 	{
 		title: 'Slack',
@@ -89,66 +94,82 @@ export const backgrounds = [
 export const skills = [
 	{
 		label: 'Javascript',
-		path: '/assets/icons/javascript.svg',
+		darkIcon: '/assets/icons/skills/javascript.svg',
+		lightIcon: '/assets/icons/skills/javascript-light.svg',
 	},
 	{
 		label: 'React Js',
-		path: '/assets/icons/react.svg',
+		darkIcon: '/assets/icons/skills/react.svg',
+		lightIcon: '/assets/icons/skills/react-light.svg',
 	},
 	{
 		label: 'Redux',
-		path: '/assets/icons/redux.svg',
+		darkIcon: '/assets/icons/skills/redux.svg',
+		lightIcon: '/assets/icons/skills/redux-light.svg',
 	},
 	{
 		label: 'Next Js',
-		path: '/assets/icons/nextjs.svg',
+		darkIcon: '/assets/icons/skills/nextjs.svg',
+		lightIcon: '/assets/icons/skills/nextjs-light.svg',
 	},
 	{
 		label: 'Typescript',
-		path: '/assets/icons/typescript.svg',
+		darkIcon: '/assets/icons/skills/typescript.svg',
+		lightIcon: '/assets/icons/skills/typescript-light.svg',
 	},
 	{
 		label: 'Html',
-		path: '/assets/icons/html.svg',
+		darkIcon: '/assets/icons/skills/html.svg',
+		lightIcon: '/assets/icons/skills/html-light.svg',
 	},
 	{
 		label: 'CSS',
-		path: '/assets/icons/css.svg',
+		darkIcon: '/assets/icons/skills/css.svg',
+		lightIcon: '/assets/icons/skills/css-light.svg',
 	},
 	{
 		label: 'Sass',
-		path: '/assets/icons/sass.svg',
+		darkIcon: '/assets/icons/skills/sass.svg',
+		lightIcon: '/assets/icons/skills/sass-light.svg',
 	},
 	{
 		label: 'Material UI',
-		path: '/assets/icons/mui.svg',
+		darkIcon: '/assets/icons/skills/mui.svg',
+		lightIcon: '/assets/icons/skills/mui-light.svg',
 	},
 	{
 		label: 'Tailwind CSS',
-		path: '/assets/icons/tailwind.svg',
+		darkIcon: '/assets/icons/skills/tailwind.svg',
+		lightIcon: '/assets/icons/skills/tailwind-light.svg',
 	},
 	{
 		label: 'Framer Motion',
-		path: '/assets/icons/framer-motion.svg',
+		darkIcon: '/assets/icons/skills/framer-motion.svg',
+		lightIcon: '/assets/icons/skills/framer-motion-light.svg',
 	},
 	{
 		label: 'Git',
-		path: '/assets/icons/git.svg',
+		darkIcon: '/assets/icons/skills/git.svg',
+		lightIcon: '/assets/icons/skills/git-light.svg',
 	},
 	{
 		label: 'Github',
-		path: '/assets/icons/github.svg',
+		darkIcon: '/assets/icons/skills/github.svg',
+		lightIcon: '/assets/icons/skills/github-light.svg',
 	},
 	{
 		label: 'Node JS',
-		path: '/assets/icons/nodejs.svg',
+		darkIcon: '/assets/icons/skills/nodejs.svg',
+		lightIcon: '/assets/icons/skills/nodejs-light.svg',
 	},
 	{
 		label: 'Express JS',
-		path: '/assets/icons/express.svg',
+		darkIcon: '/assets/icons/skills/express.svg',
+		lightIcon: '/assets/icons/skills/express-light.svg',
 	},
 	{
 		label: 'Mongo DB',
-		path: '/assets/icons/mongo.svg',
+		darkIcon: '/assets/icons/skills/mongo.svg',
+		lightIcon: '/assets/icons/skills/mongo-light.svg',
 	},
 ];

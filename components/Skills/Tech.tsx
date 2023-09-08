@@ -1,21 +1,33 @@
+'use client';
+
+import { useState } from 'react';
 import Image from 'next/image';
 
 type TechIconProps = {
 	label: string;
-	path: string;
+	lightIcon: string;
+	darkIcon: string;
 };
 
-export default function TechIcon({ label, path }: TechIconProps) {
+export default function TechIcon({
+	label,
+	darkIcon,
+	lightIcon,
+}: TechIconProps) {
+	const [isHover, setIsHover] = useState<boolean>(false);
+
 	return (
 		<div
+			onMouseEnter={() => setIsHover(true)}
+			onMouseLeave={() => setIsHover(false)}
 			title={label}
-			className='w-[53px] h-[53px] md:w-24 md:h-24 rounded-full shadow-lg bg-white-800 dark:bg-black-200 flex items-center justify-center'
+			className='ease flex h-[53px] w-[53px] items-center justify-center rounded-full bg-white-800 shadow-lg transition-all duration-500 dark:bg-black-200 md:h-24 md:w-24'
 		>
 			<Image
-				className='w-10 h-10 p-1 md:p-0 md:w-14 md:h-14'
-				src={path}
-				width={50}
-				height={50}
+				className='h-10 w-10 p-1 md:h-14 md:w-14 md:p-0'
+				src={isHover ? lightIcon : darkIcon}
+				width={55}
+				height={55}
 				alt={label}
 			/>
 		</div>

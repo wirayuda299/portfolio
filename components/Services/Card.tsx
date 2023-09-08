@@ -1,53 +1,37 @@
-import Image from 'next/image';
+'use client';
+import { useState } from 'react';
+import CardImage from './CardImage';
 
 type ServiceCardProps = {
 	title: string;
-	icon: string;
-	index: number;
+	darkIcon: string;
+	lightIcon: string;
 	text: string;
 };
 
 export default function ServiceCard({
 	title,
-	icon,
-	index,
+	darkIcon,
+	lightIcon,
 	text,
 }: ServiceCardProps) {
+	const [isHover, setIsHover] = useState<boolean>(false);
 	return (
 		<div
-			key={title}
-			className={` rounded-lg shadow-lg dark:shadow-md w-80 sm:w-72 aspect-square py-7 px-5  ${
-				index !== 1
-					? 'bg-white-800 dark:bg-black-200 dark:shadow-white-500'
-					: 'bg-primary-light dark:!bg-primary-dark dark:!shadow-primary-dark'
-			}`}
+			className='ease group aspect-square w-80 rounded-lg bg-white-800 px-5 py-7 shadow-2xl transition-all duration-500 hover:translate-y-10 hover:bg-primary-light dark:bg-black-200 dark:shadow-md dark:shadow-white-500 dark:hover:bg-primary-dark hover:dark:shadow-primary-dark sm:w-72'
+			onMouseEnter={() => setIsHover(true)}
+			onMouseLeave={() => setIsHover(false)}
 		>
-			<div
-				className={`${
-					index === 1 ? 'bg-white ' : 'bg-primary-light '
-				} w-16 h-16 rounded-md flex items-center shadow-lg p-3`}
-			>
-				<Image
-					className='w-8 h-8 mx-auto '
-					src={icon}
-					width={50}
-					height={50}
-					alt={title}
-				/>
-			</div>
-			<h3
-				className={`pt-9 text-2xl font-semibold ${
-					index === 1 ? 'text-white' : 'text-black dark:text-white-800'
-				}`}
-			>
+			<CardImage
+				isHover={isHover}
+				darkIcon={darkIcon}
+				lightIcon={lightIcon}
+				title={title}
+			/>
+			<h3 className='dar pt-9 text-2xl font-semibold text-black group-hover:text-white dark:text-white-800'>
 				{title}
 			</h3>
-
-			<p
-				className={`text-sm pt-[10px] ${
-					index === 1 ? 'text-white' : 'text-white-500 dark:text-white-800 '
-				}`}
-			>
+			<p className='pt-[10px] text-sm group-hover:text-white dark:text-white'>
 				{text}
 			</p>
 		</div>
