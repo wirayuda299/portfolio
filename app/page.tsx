@@ -1,10 +1,11 @@
-import { Hero, Skills, Experience } from '@/components/index';
+import { Hero, Skills, Experience, Services } from '@/components/index';
 
 export default function Home() {
 	return (
 		<>
 			<Hero />
 			<Skills />
+			<Services />
 			<Experience />
 		</>
 	);
