@@ -1,34 +1,30 @@
 'use client';
 
 import Image from 'next/image';
-import { Navigation, Pagination } from 'swiper/modules';
+import { Navigation } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 import 'swiper/css';
 import 'swiper/css/navigation';
-import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 
 export default function Testimonial() {
 	return (
 		<section className='min-h-[500px] pt-24 dark:bg-black-300'>
-			<h2 className='w-full text-center text-4xl font-bold dark:text-white md:text-5xl'>
+			<h2 className='w-full text-center text-4xl  font-bold dark:text-white md:text-5xl'>
 				What{' '}
 				<span className='relative z-[1] w-max before:absolute before:bottom-3 before:left-0 before:z-[-1] before:h-3 before:w-full before:bg-secondary'>
 					they say
 				</span>{' '}
 				about me
 			</h2>
-			<div className='pt-16'>
+			<div className='px-5 pt-16'>
 				<Swiper
 					spaceBetween={50}
 					loop={true}
 					slidesPerView={1}
 					navigation={true}
-					pagination={{
-						clickable: true,
-					}}
-					modules={[Navigation, Pagination]}
+					modules={[Navigation]}
 				>
 					{[1, 2, 3, 4, 5, 6, 7].map((review) => (
 						<SwiperSlide key={review}>

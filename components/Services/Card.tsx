@@ -18,7 +18,7 @@ export default function ServiceCard({
 	const [isHover, setIsHover] = useState<boolean>(false);
 	return (
 		<div
-			className='ease group aspect-square w-80 rounded-lg bg-white-800 px-5 py-7 shadow-2xl transition-all duration-500 hover:translate-y-10 hover:bg-primary-light dark:bg-black-200 dark:shadow-md dark:shadow-white-500 dark:hover:bg-primary-dark hover:dark:shadow-primary-dark sm:w-72'
+			className='ease group mx-auto aspect-square w-80 rounded-lg bg-white-800 px-5 py-7 shadow-2xl transition-all duration-500 hover:translate-y-10 hover:bg-primary-light dark:bg-black-200 dark:shadow-md dark:shadow-white-500 dark:hover:bg-primary-dark hover:dark:shadow-primary-dark sm:w-72'
 			onMouseEnter={() => setIsHover(true)}
 			onMouseLeave={() => setIsHover(false)}
 		>
