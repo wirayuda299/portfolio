@@ -173,7 +173,7 @@ export const skills = [
 		lightIcon: '/assets/icons/skills/mongo-light.svg',
 	},
 ];
-export const socialIcons = [
+export const footerData = [
 	{
 		link: 'https://www.instagram.com/wiiiraaaaa_/',
 		label: 'Instagram',
