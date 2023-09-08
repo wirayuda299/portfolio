@@ -130,3 +130,34 @@ export const skills = [
 		path: '/assets/icons/mongo.svg',
 	},
 ];
+
+export const featureProjects = [
+	{
+		title: 'Morrent - A Car Rental Application',
+		backgroundColor: '#416CEA',
+		image: '/assets/images/mockup/morent_.png',
+		techStacks: {
+			frontend: ['ReactJS, NextJS'],
+			backend: ['NodeJS, MongoDB'],
+		},
+	},
+	{
+		title: 'JobIT - A Job Finding Application',
+		backgroundColor: '#0BAB7C',
+		image: '/assets/images/mockup/JobIt.png',
+
+		techStacks: {
+			frontend: ['ReactJS, NextJS'],
+			backend: ['NodeJS, MongoDB'],
+		},
+	},
+	{
+		title: 'Hipnode - A Social Media Application',
+		backgroundColor: '#FF6934',
+		image: '/assets/images/mockup/Hipnode.png',
+		techStacks: {
+			frontend: ['ReactJS, NextJS'],
+			backend: ['NodeJS, MongoDB'],
+		},
+	},
+];
