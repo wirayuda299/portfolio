@@ -173,6 +173,26 @@ export const skills = [
 		lightIcon: '/assets/icons/skills/mongo-light.svg',
 	},
 ];
+export const footerData = [
+	{
+		link: 'https://www.instagram.com/wiiiraaaaa_/',
+		label: 'Instagram',
+		darkIcon: '/assets/icons/footer/instagram.svg',
+		lightIcon: '/assets/icons/footer/instagram-light.svg',
+	},
+	{
+		link: 'https://www.linkedin.com/in/wira-yuda29/',
+		label: 'Linkedln',
+		darkIcon: '/assets/icons/footer/linkedln.svg',
+		lightIcon: '/assets/icons/footer/linkedln-light.svg',
+	},
+	{
+		link: 'https://github.com/footer/wirayuda299',
+		label: 'Github',
+		darkIcon: '/assets/icons/footer/github.svg',
+		lightIcon: '/assets/icons/footer/github-light.svg',
+	},
+];
 
 export const featureProjects = [
 	{
