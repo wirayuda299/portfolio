@@ -1,8 +1,19 @@
 import Hero from './Hero/hero';
+import Footer from './Footer/Footer';
+import Skills from './Skills/Skills';
 import Navbar from './Navbar/Navbar';
 import Services from './Services/Services';
-import Skills from './Skills/Skills';
 import Experience from './Experience/Experience';
-import Footer from './Footer/Footer';
+import CallToAction from './CallToAction/CallToAction';
+import FeatureProject from './FeatureProject/FeatureProject';
 
-export { Navbar, Hero, Skills, Experience, Services, Footer };
+export {
+	Hero,
+	Skills,
+	Footer,
+	Navbar,
+	Services,
+	Experience,
+	CallToAction,
+	FeatureProject,
+};

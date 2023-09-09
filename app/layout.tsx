@@ -3,7 +3,7 @@ import type { Metadata } from 'next';
 import { Poppins } from 'next/font/google';
 
 import './globals.css';
-import { Footer, Navbar } from '@/components/index';
+import { Footer, Navbar, CallToAction } from '@/components/index';
 
 export const metadata: Metadata = {
 	title: 'Portfolio',
@@ -24,6 +24,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
 				<main className='mx-auto max-w-[1400px] bg-white-800 text-black dark:bg-black-300'>
 					<Navbar />
 					{children}
+					<CallToAction />
 					<Footer />
 				</main>
 			</body>
