@@ -173,3 +173,54 @@ export const skills = [
 		lightIcon: '/assets/icons/skills/mongo-light.svg',
 	},
 ];
+export const footerData = [
+	{
+		link: 'https://www.instagram.com/wiiiraaaaa_/',
+		label: 'Instagram',
+		darkIcon: '/assets/icons/footer/instagram.svg',
+		lightIcon: '/assets/icons/footer/instagram-light.svg',
+	},
+	{
+		link: 'https://www.linkedin.com/in/wira-yuda29/',
+		label: 'Linkedln',
+		darkIcon: '/assets/icons/footer/linkedln.svg',
+		lightIcon: '/assets/icons/footer/linkedln-light.svg',
+	},
+	{
+		link: 'https://github.com/footer/wirayuda299',
+		label: 'Github',
+		darkIcon: '/assets/icons/footer/github.svg',
+		lightIcon: '/assets/icons/footer/github-light.svg',
+	},
+];
+
+export const featureProjects = [
+	{
+		title: 'Morrent - A Car Rental Application',
+		backgroundColor: '#416CEA',
+		image: '/assets/images/mockup/morent_.png',
+		techStacks: {
+			frontend: ['ReactJS, NextJS'],
+			backend: ['NodeJS, MongoDB'],
+		},
+	},
+	{
+		title: 'JobIT - A Job Finding Application',
+		backgroundColor: '#0BAB7C',
+		image: '/assets/images/mockup/JobIt.png',
+
+		techStacks: {
+			frontend: ['ReactJS, NextJS'],
+			backend: ['NodeJS, MongoDB'],
+		},
+	},
+	{
+		title: 'Hipnode - A Social Media Application',
+		backgroundColor: '#FF6934',
+		image: '/assets/images/mockup/Hipnode.png',
+		techStacks: {
+			frontend: ['ReactJS, NextJS'],
+			backend: ['NodeJS, MongoDB'],
+		},
+	},
+];
