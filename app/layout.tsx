@@ -3,7 +3,7 @@ import type { Metadata } from 'next';
 import { Poppins } from 'next/font/google';
 
 import './globals.css';
-import { CallToAction, Navbar } from '@/components/index';
+import { Footer, Navbar, CallToAction } from '@/components/index';
 
 export const metadata: Metadata = {
 	title: 'Portfolio',
@@ -25,6 +25,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
 					<Navbar />
 					{children}
 					<CallToAction />
+					<Footer />
 				</main>
 			</body>
 		</html>
