@@ -10,7 +10,7 @@ export default function FeatureProject() {
 			<div className='w-full text-center '>
 				<h2 className=' w-full text-4xl font-bold text-black dark:text-white md:text-5xl'>
 					Featured{' '}
-					<span className='relative z-[1] before:absolute before:bottom-3 before:left-0 before:z-[-1] before:h-3 before:w-full before:bg-secondary'>
+					<span className='relative z-[1] inline-block w-max before:absolute before:bottom-2 before:left-0 before:z-[-1] before:h-3 before:w-full before:bg-secondary'>
 						Projects
 					</span>
 				</h2>
