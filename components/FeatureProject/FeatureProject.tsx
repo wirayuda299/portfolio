@@ -1,8 +1,8 @@
 import Image from 'next/image';
+import Link from 'next/link';
 
 import { featureProjects } from '@/constant';
 import FeatureProjectCard from './Card';
-import Link from 'next/link';
 
 export default function FeatureProject() {
 	return (
