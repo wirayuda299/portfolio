@@ -26,7 +26,7 @@ export default function FeatureProject() {
 				))}
 				<Link
 					href='/case-studies'
-					className='mx-auto inline-flex max-w-[350px] gap-5 rounded-full bg-primary-light p-3 text-white dark:bg-primary-dark'
+					className='mx-auto my-10 inline-flex max-w-[350px] gap-5 rounded-full bg-primary-light p-3 text-white dark:bg-primary-dark'
 				>
 					See more case studies
 					<Image

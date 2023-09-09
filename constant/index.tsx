@@ -94,82 +94,66 @@ export const backgrounds = [
 export const skills = [
 	{
 		label: 'Javascript',
-		darkIcon: '/assets/icons/skills/javascript.svg',
 		lightIcon: '/assets/icons/skills/javascript-light.svg',
 	},
 	{
 		label: 'React Js',
-		darkIcon: '/assets/icons/skills/react.svg',
 		lightIcon: '/assets/icons/skills/react-light.svg',
 	},
 	{
 		label: 'Redux',
-		darkIcon: '/assets/icons/skills/redux.svg',
 		lightIcon: '/assets/icons/skills/redux-light.svg',
 	},
 	{
 		label: 'Next Js',
-		darkIcon: '/assets/icons/skills/nextjs.svg',
 		lightIcon: '/assets/icons/skills/nextjs-light.svg',
 	},
 	{
 		label: 'Typescript',
-		darkIcon: '/assets/icons/skills/typescript.svg',
 		lightIcon: '/assets/icons/skills/typescript-light.svg',
 	},
 	{
 		label: 'Html',
-		darkIcon: '/assets/icons/skills/html.svg',
 		lightIcon: '/assets/icons/skills/html-light.svg',
 	},
 	{
 		label: 'CSS',
-		darkIcon: '/assets/icons/skills/css.svg',
 		lightIcon: '/assets/icons/skills/css-light.svg',
 	},
 	{
 		label: 'Sass',
-		darkIcon: '/assets/icons/skills/sass.svg',
 		lightIcon: '/assets/icons/skills/sass-light.svg',
 	},
 	{
 		label: 'Material UI',
-		darkIcon: '/assets/icons/skills/mui.svg',
 		lightIcon: '/assets/icons/skills/mui-light.svg',
 	},
 	{
 		label: 'Tailwind CSS',
-		darkIcon: '/assets/icons/skills/tailwind.svg',
 		lightIcon: '/assets/icons/skills/tailwind-light.svg',
 	},
 	{
 		label: 'Framer Motion',
-		darkIcon: '/assets/icons/skills/framer-motion.svg',
 		lightIcon: '/assets/icons/skills/framer-motion-light.svg',
 	},
 	{
 		label: 'Git',
-		darkIcon: '/assets/icons/skills/git.svg',
 		lightIcon: '/assets/icons/skills/git-light.svg',
 	},
 	{
 		label: 'Github',
-		darkIcon: '/assets/icons/skills/github.svg',
 		lightIcon: '/assets/icons/skills/github-light.svg',
 	},
 	{
 		label: 'Node JS',
-		darkIcon: '/assets/icons/skills/nodejs.svg',
 		lightIcon: '/assets/icons/skills/nodejs-light.svg',
 	},
 	{
 		label: 'Express JS',
-		darkIcon: '/assets/icons/skills/express.svg',
 		lightIcon: '/assets/icons/skills/express-light.svg',
 	},
 	{
 		label: 'Mongo DB',
-		darkIcon: '/assets/icons/skills/mongo.svg',
 		lightIcon: '/assets/icons/skills/mongo-light.svg',
 	},
 ];

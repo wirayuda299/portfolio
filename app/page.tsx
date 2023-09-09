@@ -14,8 +14,8 @@ export default function Home() {
 			<Skills />
 			<Services />
 			<Experience />
-			<Testimonial />
 			<FeatureProject />
+			<Testimonial />
 		</>
 	);
 }
