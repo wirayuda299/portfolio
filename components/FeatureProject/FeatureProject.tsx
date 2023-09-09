@@ -1,8 +1,8 @@
 import Image from 'next/image';
+import Link from 'next/link';
 
 import { featureProjects } from '@/constant';
 import FeatureProjectCard from './Card';
-import Link from 'next/link';
 
 export default function FeatureProject() {
 	return (
@@ -10,7 +10,7 @@ export default function FeatureProject() {
 			<div className='w-full text-center '>
 				<h2 className=' w-full text-4xl font-bold text-black dark:text-white md:text-5xl'>
 					Featured{' '}
-					<span className='relative z-[1] before:absolute before:bottom-3 before:left-0 before:z-[-1] before:h-3 before:w-full before:bg-secondary'>
+					<span className='relative z-[1] inline-block w-max before:absolute before:bottom-2 before:left-0 before:z-[-1] before:h-3 before:w-full before:bg-secondary'>
 						Projects
 					</span>
 				</h2>
@@ -26,7 +26,7 @@ export default function FeatureProject() {
 				))}
 				<Link
 					href='/case-studies'
-					className='mx-auto inline-flex max-w-[350px] gap-5 rounded-full bg-primary-light p-3 text-white dark:bg-primary-dark'
+					className='mx-auto my-10 inline-flex max-w-[350px] gap-5 rounded-full bg-primary-light p-3 text-white dark:bg-primary-dark'
 				>
 					See more case studies
 					<Image

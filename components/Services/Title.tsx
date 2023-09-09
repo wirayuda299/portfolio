@@ -1,8 +1,8 @@
 export default function Title() {
 	return (
-		<h2 className='text-4xl font-bold lg:text-5xl text-center z-0 w-full dark:text-white-800 relative'>
+		<h2 className='relative z-0 w-full text-center text-4xl font-bold dark:text-white-800 lg:text-5xl'>
 			What{' '}
-			<span className='relative whitespace-nowrap before:absolute before:bg-secondary before:h-5 before:w-[140px] before:left-0 before:bottom-1 before:z-[-1] lg:before:w-44 lg:before:bottom-2'>
+			<span className='relative whitespace-nowrap before:absolute before:bottom-2 before:left-0 before:z-[-1] before:h-3 before:w-full before:bg-secondary md:before:h-4 lg:before:bottom-3  '>
 				service
 			</span>{' '}
 			do I provide
