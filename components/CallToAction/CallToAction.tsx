@@ -3,7 +3,7 @@ import { Button } from '../ui/button';
 
 export default function CallToAction() {
 	return (
-		<section className='mt-24 h-full w-full sm:p-6 '>
+		<section className='mb-10 mt-24 flex h-full min-h-[500px] w-full items-center p-3 dark:bg-black-200 sm:p-6'>
 			<div className="flex aspect-video h-full w-full flex-col items-center justify-center  rounded-xl bg-[url('/assets/images/cta.png')] bg-auto bg-center bg-no-repeat p-4 sm:h-[330px] sm:bg-cover sm:p-10 md:flex-row md:justify-between lg:p-12">
 				<div className='max-w-xl'>
 					<h2 className='p-5 text-3xl font-bold sm:text-center md:text-left md:text-[32px] lg:text-5xl'>

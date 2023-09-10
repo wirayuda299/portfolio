@@ -17,7 +17,8 @@ module.exports = {
     },
     extend: {
       screens: {
-        'md1': '780px'
+        'md1': '780px',
+        'sm1': '517px'
       },
       colors: {
         'primary-light': '#0252CD',
@@ -85,6 +86,7 @@ module.exports = {
         600: '600px'
       }
     },
+
   },
   plugins: [require("tailwindcss-animate")],
 }

@@ -14,7 +14,7 @@ export default function NavContainer() {
 	return (
 		<>
 			<ul
-				className={`transition-all ease duration-500 list-container ${
+				className={`ease list-container transition-all duration-500 ${
 					isOpen ? 'left-0' : '!-left-[200%]'
 				}`}
 			>
