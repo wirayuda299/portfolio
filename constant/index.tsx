@@ -157,6 +157,7 @@ export const skills = [
 		lightIcon: '/assets/icons/skills/mongo-light.svg',
 	},
 ];
+
 export const footerData = [
 	{
 		link: 'https://www.instagram.com/wiiiraaaaa_/',
@@ -180,6 +181,7 @@ export const footerData = [
 
 export const featureProjects = [
 	{
+		label: 'morrent',
 		title: 'Morrent - A Car Rental Application',
 		backgroundColor: '#416CEA',
 		image: '/assets/images/mockup/morent_.png',
@@ -189,16 +191,17 @@ export const featureProjects = [
 		},
 	},
 	{
+		label: 'jobit',
 		title: 'JobIT - A Job Finding Application',
 		backgroundColor: '#0BAB7C',
 		image: '/assets/images/mockup/JobIt.png',
-
 		techStacks: {
 			frontend: ['ReactJS, NextJS'],
 			backend: ['NodeJS, MongoDB'],
 		},
 	},
 	{
+		label: 'hipnode',
 		title: 'Hipnode - A Social Media Application',
 		backgroundColor: '#FF6934',
 		image: '/assets/images/mockup/Hipnode.png',
@@ -206,5 +209,44 @@ export const featureProjects = [
 			frontend: ['ReactJS, NextJS'],
 			backend: ['NodeJS, MongoDB'],
 		},
+	},
+];
+
+export const caseStudies = [
+	{
+		title: 'Morrent',
+		subTitle: 'Car Rental Application',
+		image: '/assets/images/morent.png',
+		backgroundColor: '#5CAFFC',
+	},
+	{
+		title: 'JobIt',
+		subTitle: 'Job Finding Application',
+		image: '/assets/images/JobIT-Laptop.png',
+		backgroundColor: '#0BAB7C',
+	},
+	{
+		title: 'HipNode',
+		subTitle: 'Social Platform for Developers',
+		image: '/assets/images/Hipnode-Laptop.png',
+		backgroundColor: '#FF6934',
+	},
+	{
+		title: 'Trip Guide ',
+		subTitle: 'Booking Platform',
+		image: '/assets/images/TripGuide-Laptop.png',
+		backgroundColor: '#316BFF',
+	},
+	{
+		title: 'Virtue',
+		subTitle: 'Crowdfunding Application',
+		image: '/assets/images/Virtue-Laptop.png',
+		backgroundColor: '#4ACD8D',
+	},
+	{
+		title: 'Filmpire',
+		subTitle: 'AI-Powered Movie Application',
+		image: '/assets/images/Filmpire-Laptop.png',
+		backgroundColor: '#DB202C',
 	},
 ];

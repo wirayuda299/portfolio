@@ -20,8 +20,10 @@ const poppins = Poppins({
 export default function RootLayout({ children }: { children: ReactNode }) {
 	return (
 		<html lang='en'>
-			<body className={poppins.className}>
-				<main className='mx-auto max-w-[1400px] bg-white-800 text-black dark:bg-black-300'>
+			<body
+				className={`bg-white-800 text-black dark:bg-black-300 ${poppins.className}`}
+			>
+				<main>
 					<Navbar />
 					{children}
 					<CallToAction />

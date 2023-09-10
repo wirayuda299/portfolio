@@ -30,7 +30,7 @@ export default function Background({
 				alt={title}
 			/>
 			<div>
-				<h3 className='text-base font-semibold dark:text-white md:text-2xl'>
+				<h3 className='text-base font-semibold dark:text-white lg:text-2xl'>
 					{title}
 				</h3>
 				<p className='pt-2 text-sm text-white-500 dark:text-white'>
