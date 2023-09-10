@@ -224,3 +224,59 @@ export const featureProjects = [
 		},
 	},
 ];
+
+export const projectInfo = [
+	{
+		label: 'My Role',
+		text: 'Software Engineer',
+	},
+	{
+		label: 'Start Date',
+		text: '24/01/2023',
+	},
+	{
+		label: 'End Date',
+		text: '02/03/2023',
+	},
+];
+
+export const process = [
+	{
+		label: 'Definition',
+		icon: '/assets/icons/pencil_underline.svg',
+	},
+	{
+		label: 'Design',
+		icon: '/assets/icons/picture.svg',
+	},
+	{
+		label: 'Planning',
+		icon: '/assets/icons/note.svg',
+	},
+	{
+		label: 'Development',
+		icon: '/assets/icons/code.svg',
+	},
+	{
+		label: 'Deployment',
+		icon: '/assets/icons/computer.svg',
+	},
+];
+
+export const challenges = [
+	'Gained extensive knowledge of full authentication and authorization implementation, including the use of industry-standard security protocols such as JSON Web Tokens.',
+	'We conducted brainstorming and carefully weighed our options before making a decision. Furthermore, using NextJS was a new experience for us, and we encountered difficulties while implementing its features. Finally, we had to work under time constraints, which added pressure to the project. ',
+	'However, we collaborated effectively to overcome these obstacles and ultimately delivered a high-quality product within the given timeline.',
+];
+export const learnings = [
+	'Gained extensive knowledge of full authentication and authorization implementation, including the use of industry-standard security protocols such as JSON Web Tokens.',
+	'Sharpened my backend skills, specifically in optimizing database queries, improving performance, and handling server-side logic.',
+	'Learned how to properly handle files, including file upload, storage, and retrieval, ensuring that the app is data is organized & easily accessible while keeping it secure.',
+	'Acquired proficiency in NextJS and implemented various features utilizing industry-standard best practices.',
+];
+
+export const projectDescriptions = [
+	'Morent, a cutting-edge car rental application that was developed using the MERN stack. The app boasts a dynamic homepage that showcases featured vehicles, along with convenient pickup & drop-off location options & a comprehensive list of available cars.',
+	'My team and I also developed the car listing page which offers a search bar and various filtering options for users to find the perfect vehicle. Additionally, it has a car details page which provides users with detailed information along with suggestions for other recommended vehicles.',
+	'Car owners are also able to list their cars for rent through our Add Car page, while users can easily track their rented and rented-out cars through their profile page. Overall, we have ve created an intuitive and user-friendly MVP version of the platform that will make renting a car a breeze',
+];
