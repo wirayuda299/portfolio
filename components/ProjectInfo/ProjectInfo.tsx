@@ -6,7 +6,7 @@ export default function ProjectInfo() {
 	return (
 		<section className='mt-10 h-full w-full bg-white dark:bg-black-200'>
 			<div className='mx-auto max-w-600 pb-10'>
-				<div className='flex flex-wrap justify-start gap-9 px-5 py-10 sm:px-2'>
+				<div className='flex flex-wrap justify-start gap-x-20 gap-y-6 px-5 py-10 sm:px-2'>
 					{projectInfo.map((info) => (
 						<div key={info.label} className='max-w-[200px]'>
 							<h2 className='text-sm font-semibold text-white-500'>
