@@ -8,16 +8,20 @@ import ProjectCard from './ProjectCard/ProjectCard';
 import Testimonial from './Testimonial/Testimonial';
 import CallToAction from './CallToAction/CallToAction';
 import FeatureProject from './FeatureProject/FeatureProject';
+import ContactForm from './ContactForm/ContactForm';
+import MyInfo from './MyInfo/MyInfo';
 
 export {
 	Hero,
 	Skills,
+	MyInfo,
 	Footer,
 	Navbar,
 	Services,
 	Experience,
-	ProjectCard,
 	Testimonial,
+	ContactForm,
+	ProjectCard,
 	CallToAction,
 	FeatureProject,
 };

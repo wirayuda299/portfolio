@@ -1,6 +1,6 @@
 import Image from 'next/image';
 
-import { footerData } from '@/constant';
+import { socialLinks } from '@/constant';
 
 export default function Footer() {
 	return (
@@ -13,7 +13,7 @@ export default function Footer() {
 						</p>
 					</div>
 					<div className='inline-flex gap-6'>
-						{footerData.map((item) => (
+						{socialLinks.map((item) => (
 							<a
 								href={item.link}
 								key={item.label}
