@@ -14,7 +14,7 @@ export default function CaseStudies() {
 				<div className='flex flex-wrap justify-center gap-6'>
 					{[1, 2].map((p) => (
 						<div
-							className='max-w-[300px] rounded-lg bg-white shadow-md dark:bg-black-300 '
+							className='max-w-[300px] rounded-lg bg-white shadow-md dark:bg-black-300 dark:shadow-[#1F2C41] '
 							key={p}
 						>
 							<Image
