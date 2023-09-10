@@ -8,6 +8,7 @@ import Services from './Services/Services';
 import Experience from './Experience/Experience';
 import ProjectLink from './ProjectLink/ProjectLink';
 import ProjectInfo from './ProjectInfo/ProjectInfo';
+import ProjectCard from './ProjectCard/ProjectCard';
 import Testimonial from './Testimonial/Testimonial';
 import CallToAction from './CallToAction/CallToAction';
 import FeatureProject from './FeatureProject/FeatureProject';
@@ -30,6 +31,7 @@ export {
 	ProjectLink,
 	ProjectInfo,
 	CaseStudies,
+	ProjectCard,
 	Testimonial,
 	CallToAction,
 	ProjectTitle,

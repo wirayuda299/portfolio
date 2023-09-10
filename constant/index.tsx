@@ -157,6 +157,7 @@ export const skills = [
 		lightIcon: '/assets/icons/skills/mongo-light.svg',
 	},
 ];
+
 export const footerData = [
 	{
 		link: 'https://www.instagram.com/wiiiraaaaa_/',
@@ -180,6 +181,7 @@ export const footerData = [
 
 export const featureProjects = [
 	{
+		label: 'morrent',
 		title: 'Morrent - A Car Rental Application',
 		backgroundColor: '#416CEA',
 		image: '/assets/images/mockup/morent_.png',
@@ -189,16 +191,17 @@ export const featureProjects = [
 		},
 	},
 	{
+		label: 'jobit',
 		title: 'JobIT - A Job Finding Application',
 		backgroundColor: '#0BAB7C',
 		image: '/assets/images/mockup/JobIt.png',
-
 		techStacks: {
 			frontend: ['ReactJS, NextJS'],
 			backend: ['NodeJS, MongoDB'],
 		},
 	},
 	{
+		label: 'hipnode',
 		title: 'Hipnode - A Social Media Application',
 		backgroundColor: '#FF6934',
 		image: '/assets/images/mockup/Hipnode.png',
@@ -263,4 +266,42 @@ export const projectDescriptions = [
 	'Morent, a cutting-edge car rental application that was developed using the MERN stack. The app boasts a dynamic homepage that showcases featured vehicles, along with convenient pickup & drop-off location options & a comprehensive list of available cars.',
 	'My team and I also developed the car listing page which offers a search bar and various filtering options for users to find the perfect vehicle. Additionally, it has a car details page which provides users with detailed information along with suggestions for other recommended vehicles.',
 	'Car owners are also able to list their cars for rent through our Add Car page, while users can easily track their rented and rented-out cars through their profile page. Overall, we have ve created an intuitive and user-friendly MVP version of the platform that will make renting a car a breeze',
+];
+export const caseStudies = [
+	{
+		title: 'Morrent',
+		subTitle: 'Car Rental Application',
+		image: '/assets/images/morent.png',
+		backgroundColor: '#5CAFFC',
+	},
+	{
+		title: 'JobIt',
+		subTitle: 'Job Finding Application',
+		image: '/assets/images/JobIT-Laptop.png',
+		backgroundColor: '#0BAB7C',
+	},
+	{
+		title: 'HipNode',
+		subTitle: 'Social Platform for Developers',
+		image: '/assets/images/Hipnode-Laptop.png',
+		backgroundColor: '#FF6934',
+	},
+	{
+		title: 'Trip Guide ',
+		subTitle: 'Booking Platform',
+		image: '/assets/images/TripGuide-Laptop.png',
+		backgroundColor: '#316BFF',
+	},
+	{
+		title: 'Virtue',
+		subTitle: 'Crowdfunding Application',
+		image: '/assets/images/Virtue-Laptop.png',
+		backgroundColor: '#4ACD8D',
+	},
+	{
+		title: 'Filmpire',
+		subTitle: 'AI-Powered Movie Application',
+		image: '/assets/images/Filmpire-Laptop.png',
+		backgroundColor: '#DB202C',
+	},
 ];
