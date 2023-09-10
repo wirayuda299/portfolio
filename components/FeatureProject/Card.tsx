@@ -9,29 +9,29 @@ type FeatureProjectCardProps = {
 		frontend: string[];
 		backend: string[];
 	};
-	background: string;
+	backgroundColor: string;
 	image: string;
-	index: number;
+	label: string;
 };
 
 export default function FeatureProjectCard({
-	background,
+	backgroundColor,
 	techStacks: { backend, frontend },
 	image,
 	title,
-	index,
+	label,
 }: FeatureProjectCardProps) {
 	return (
 		<div
 			className={` w-full rounded-lg p-6 lg:p-20`}
 			style={{
-				backgroundColor: background,
+				backgroundColor,
 			}}
 		>
-			<div className='grid !w-full grid-cols-1 items-center  justify-start gap-6 lg:grid-cols-2 lg:justify-between lg:gap-x-11'>
+			<div className='grid w-full grid-cols-1 items-center  justify-start gap-6 lg:grid-cols-2 lg:justify-between lg:gap-x-11'>
 				<div
 					className={`${
-						index === 1 ? 'lg:!order-2' : ''
+						label === 'jobit' ? 'lg:!order-2' : ''
 					} w-fit whitespace-pre-wrap sm:pl-10 md:pl-12 lg:pl-0`}
 				>
 					<h3 className='w-fit pt-6 text-3xl font-bold text-white md:text-4xl lg:text-5xl'>
@@ -63,7 +63,9 @@ export default function FeatureProjectCard({
 				<Image
 					src={image}
 					width={800}
-					className={`${index === 1 ? 'lg:order-1' : 'order-2'} object-cover`}
+					className={`${
+						label === 'jobit' ? 'lg:order-1' : 'order-2'
+					} object-cover`}
 					height={800}
 					alt='Morent'
 				/>

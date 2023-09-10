@@ -18,7 +18,7 @@ export default function Testimonial() {
 				</span>{' '}
 				about me
 			</h2>
-			<div className='px-5 pt-16'>
+			<div className='mx-auto max-w-[1400px] px-5 pt-16'>
 				<Swiper
 					spaceBetween={50}
 					loop={true}
