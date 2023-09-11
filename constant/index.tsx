@@ -158,7 +158,7 @@ export const skills = [
 	},
 ];
 
-export const footerData = [
+export const socialLinks = [
 	{
 		link: 'https://www.instagram.com/wiiiraaaaa_/',
 		label: 'Instagram',
@@ -303,5 +303,25 @@ export const caseStudies = [
 		subTitle: 'AI-Powered Movie Application',
 		image: '/assets/images/Filmpire-Laptop.png',
 		backgroundColor: '#DB202C',
+	},
+];
+
+export const formFields = [
+	{
+		label: 'name',
+		title: 'What’s your name?',
+	},
+	{
+		label: 'email',
+		title: 'What is your email?',
+	},
+	{
+		label: 'messageText',
+		title: 'Write something about your project goals and timeframe',
+	},
+	{
+		label: 'senderContact',
+		title: 'How to reach out to you back?',
+		subTitle: 'eg. phone number or email ',
 	},
 ];
