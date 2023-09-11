@@ -4,6 +4,7 @@ import { Poppins } from 'next/font/google';
 
 import './globals.css';
 import { Footer, Navbar, CallToAction } from '@/components/index';
+import { Toaster } from '@/components/ui/toaster';
 
 export const metadata: Metadata = {
 	title: 'Portfolio',
@@ -24,6 +25,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
 				className={`bg-white-800 text-black dark:bg-black-300 ${poppins.className}`}
 			>
 				<main>
+					<Toaster />
 					<Navbar />
 					{children}
 					<CallToAction />
