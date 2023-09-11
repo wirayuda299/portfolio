@@ -41,10 +41,10 @@ export default function ContactForm() {
 				to_contact: senderContact,
 			};
 			await emailjs.send(
-				process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID as string,
-				process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID as string,
+				process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
+				process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
 				templateParams,
-				process.env.NEXT_PUBLIC_EMAILJS_API_KEY as string
+				process.env.NEXT_PUBLIC_EMAILJS_API_KEY!
 			);
 			toast({
 				title: 'Your message successfully sended',
