@@ -83,6 +83,9 @@ module.exports = {
       backgroundImage: {
         'conic-gradient': 'conic-gradient(from 180deg at 50% 75.56%, #0252CD 0deg, rgba(2, 82, 205, 0.33) 360deg);'
       },
+      maxWidth: {
+        600: '600px'
+      }
     },
 
   },

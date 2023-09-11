@@ -14,6 +14,7 @@ export default function Hero() {
 					src={'/assets/images/illustration.png'}
 					alt='illustration image'
 					priority
+					fetchPriority='high'
 				/>
 			</div>
 		</section>
