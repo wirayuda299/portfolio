@@ -1,6 +1,9 @@
+'use client';
+
 import Image from 'next/image';
 
 import { Button } from '../ui/button';
+import { copyText } from '@/utils/copy';
 
 export default function CallToAction() {
 	return (
@@ -13,15 +16,11 @@ export default function CallToAction() {
 			</Button>
 			<Button
 				variant='contact'
-				title='Contact:wirayuda233@gmail.com'
+				title='wirayuda233@gmail.com'
 				className='h-12 w-full rounded-full text-center '
+				onClick={() => copyText('wirayuda233@gmail.com')}
 			>
-				<a
-					className='flex w-full items-center justify-center gap-x-5 px-5 text-xs'
-					href='mailto:wirayuda233@gmail.com'
-					target='_blank'
-					rel='noopener noreferrer'
-				>
+				<p className='flex w-full items-center justify-center gap-x-5 px-5 text-xs'>
 					wirayuda233@gmail.com
 					<Image
 						className='h-5 w-5'
@@ -30,7 +29,7 @@ export default function CallToAction() {
 						height={40}
 						alt='copy icon'
 					/>
-				</a>
+				</p>
 			</Button>
 		</div>
 	);

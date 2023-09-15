@@ -7,10 +7,11 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/scrollbar';
+import Link from 'next/link';
 
 export default function Testimonial() {
 	return (
-		<section className='min-h-[500px] pt-24 dark:bg-black-300'>
+		<section className='min-h-[500px] py-24 dark:bg-black-300'>
 			<h2 className='w-full text-center text-4xl  font-bold dark:text-white md:text-5xl'>
 				What{' '}
 				<span className='relative z-[1] w-max before:absolute before:bottom-3 before:left-0 before:z-[-1] before:h-3 before:w-full before:bg-secondary'>
@@ -18,7 +19,7 @@ export default function Testimonial() {
 				</span>{' '}
 				about me
 			</h2>
-			<div className='mx-auto max-w-[1400px] px-5 pt-16'>
+			<div className='mx-auto max-w-1400 px-5 pt-16'>
 				<Swiper
 					spaceBetween={50}
 					loop={true}
@@ -68,6 +69,14 @@ export default function Testimonial() {
 						</SwiperSlide>
 					))}
 				</Swiper>
+			</div>
+			<div className='flex w-full justify-center'>
+				<Link
+					href={'/review'}
+					className='mt-10 rounded-full bg-primary-light px-5 py-3 text-xs font-semibold text-white dark:bg-primary-dark'
+				>
+					Give your feedback
+				</Link>
 			</div>
 		</section>
 	);

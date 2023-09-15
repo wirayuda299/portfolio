@@ -13,7 +13,6 @@ import Testimonial from './Testimonial/Testimonial';
 import ProjectLink from './ProjectLink/ProjectLink';
 import ContactForm from './ContactForm/ContactForm';
 import CaseStudies from './CaseStudies/CaseStudies';
-import ProjectDesc from './ProjectDesc/ProjectDesc';
 import CallToAction from './CallToAction/CallToAction';
 import ProjectTitle from './ProjectTitle/ProjectTitle';
 import FeatureProject from './FeatureProject/FeatureProject';
@@ -30,15 +29,14 @@ export {
 	Process,
 	Services,
 	Experience,
-	ProjectDesc,
-	ProjectLink,
+	Testimonial,
 	ProjectInfo,
 	CaseStudies,
-	Testimonial,
 	ContactForm,
+	ProjectLink,
 	ProjectCard,
-	CallToAction,
 	ProjectTitle,
+	CallToAction,
 	FeatureProject,
 	ProjectProblem,
 	ChallengesLearning,

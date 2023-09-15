@@ -1,13 +1,12 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
-import { featureProjects } from '@/constant';
 import FeatureProjectCard from './Card';
 
-export default function FeatureProject() {
+export default function FeatureProject({ projects }: { projects: Projects[] }) {
 	return (
 		<section className='px-5 pt-20 dark:bg-black-200'>
-			<div className='mx-auto max-w-[1400px]'>
+			<div className='mx-auto max-w-1400'>
 				<div className='w-full text-center '>
 					<h2 className=' w-full text-4xl font-bold text-black dark:text-white md:text-5xl'>
 						Featured{' '}
@@ -17,12 +16,13 @@ export default function FeatureProject() {
 					</h2>
 				</div>
 				<div className='mt-9 flex flex-col gap-5'>
-					{featureProjects.map((item, i) => (
+					{projects.map((item) => (
 						<FeatureProjectCard {...item} key={item.title} />
 					))}
 					<Link
+						title='See more case studies'
 						href='/case-studies'
-						className='mx-auto my-10 inline-flex max-w-[350px] gap-5 rounded-full bg-primary-light px-10 py-3 text-white dark:bg-primary-dark'
+						className='mx-auto my-10 inline-flex max-w-[350px] gap-5 truncate rounded-full bg-primary-light px-5 py-3 text-xs text-white dark:bg-primary-dark sm:px-10 sm:text-sm'
 					>
 						See more case studies
 						<Image

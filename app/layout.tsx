@@ -3,6 +3,7 @@ import type { Metadata } from 'next';
 import { Poppins } from 'next/font/google';
 
 import './globals.css';
+import { Toaster } from '@/components/ui/toaster';
 
 export const metadata: Metadata = {
 	title: 'Portfolio',
@@ -22,7 +23,10 @@ export default function RootLayout({ children }: { children: ReactNode }) {
 			<body
 				className={`bg-white-800 text-black dark:bg-black-300 ${poppins.className}`}
 			>
-				<main>{children}</main>
+				<main>
+					<Toaster />
+					{children}
+				</main>
 			</body>
 		</html>
 	);

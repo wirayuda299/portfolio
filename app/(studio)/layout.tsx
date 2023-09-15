@@ -1,5 +1,5 @@
-import React from 'react';
-import { ReactNode } from 'react';
+import React, { ReactNode } from 'react';
+
 
 export default function RootLayout({ children }: { children: ReactNode }) {
 	return <section>{children}</section>;

@@ -1,8 +1,10 @@
+import { urlForImage } from '@/sanity/lib/image';
 import Image from 'next/image';
+import type { Image as SanityImage } from 'sanity';
 
-export default function Design() {
+export default function Design({ design }: { design: SanityImage }) {
 	return (
-		<section className=' mx-auto max-w-[1400px]'>
+		<section className=' mx-auto max-w-1400'>
 			<div className='bg-primary-light py-4 dark:bg-primary-dark '>
 				<h2 className='text-center text-sm font-semibold uppercase text-white lg:text-3xl'>
 					High-Fidelity Figma Design
@@ -12,7 +14,7 @@ export default function Design() {
 				<Image
 					fill
 					className='object-cover'
-					src={'/assets/images/design.png'}
+					src={urlForImage(design).url()}
 					alt='figma design image'
 				/>
 			</div>

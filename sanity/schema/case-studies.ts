@@ -9,6 +9,21 @@ export default {
 			type: 'string',
 		},
 		{
+			name: 'difficulty',
+			title: 'Difficulty',
+			type: 'number',
+		},
+		{
+			name: 'subTitle',
+			title: 'SubTitle',
+			type: 'string',
+		},
+		{
+			name: 'thumbnail',
+			title: 'Thumbnail',
+			type: 'image',
+		},
+		{
 			name: 'mockup',
 			title: 'Mockup',
 			type: 'image',
@@ -64,14 +79,48 @@ export default {
 					type: 'document',
 					fields: [
 						{
-							name: 'techName',
-							title: 'TechName',
-							type: 'string',
+							name: 'frontend',
+							title: 'Frontend',
+							type: 'array',
+							of: [
+								{
+									type: 'document',
+									fields: [
+										{
+											name: 'name',
+											title: 'Name',
+											type: 'string',
+										},
+										{
+											name: 'icon',
+											title: 'Icon',
+											type: 'image',
+										},
+									],
+								},
+							],
 						},
 						{
-							name: 'icon',
-							title: 'Icon',
-							type: 'image',
+							name: 'backend',
+							title: 'Backend',
+							type: 'array',
+							of: [
+								{
+									type: 'document',
+									fields: [
+										{
+											name: 'name',
+											title: 'Name',
+											type: 'string',
+										},
+										{
+											name: 'icon',
+											title: 'Icon',
+											type: 'image',
+										},
+									],
+								},
+							],
 						},
 					],
 				},
