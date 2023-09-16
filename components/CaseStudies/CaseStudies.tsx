@@ -2,7 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 import { Button } from '../ui/button';
-import { getSimilarCaseStudies } from '@/utils/caseStudies';
+import { getSimilarCaseStudies } from '@/sanity/actions/caseStudies';
 import { urlForImage } from '@/sanity/lib/image';
 
 export default async function CaseStudies({ id }: { id: string }) {

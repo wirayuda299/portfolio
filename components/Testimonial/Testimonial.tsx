@@ -1,13 +1,14 @@
 'use client';
 
 import Image from 'next/image';
-import { Navigation } from 'swiper/modules';
+import { Navigation, Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import Link from 'next/link';
 
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/scrollbar';
-import Link from 'next/link';
+import 'swiper/css/pagination';
 
 export default function Testimonial() {
 	return (
@@ -23,9 +24,11 @@ export default function Testimonial() {
 				<Swiper
 					spaceBetween={50}
 					loop={true}
+					grabCursor={true}
+					pagination={true}
 					slidesPerView={1}
 					navigation={true}
-					modules={[Navigation]}
+					modules={[Navigation, Pagination]}
 				>
 					{[1, 2, 3, 4, 5, 6, 7].map((review) => (
 						<SwiperSlide key={review}>

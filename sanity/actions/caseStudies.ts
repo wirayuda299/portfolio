@@ -32,7 +32,8 @@ export const getSingleCaseStudy = async (id: string) => {
 export const getSimilarCaseStudies = async (id: string) => {
 	try {
 		const diffProject = await client.fetch(
-			`*[_type == "caseStudies" && _id != "${id}"][0..1]`
+			`*[_type == "caseStudies" && _id != $id][0..1]`,
+			{ id }
 		);
 
 		return diffProject as Projects[];

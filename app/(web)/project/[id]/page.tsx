@@ -10,7 +10,7 @@ import {
 	ProjectProblem,
 	ChallengesLearning,
 } from '@/components/index';
-import { getSingleCaseStudy } from '@/utils/caseStudies';
+import { getSingleCaseStudy } from '@/sanity/actions/caseStudies';
 import { urlForImage } from '@/sanity/lib/image';
 
 type Params = {

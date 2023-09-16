@@ -6,7 +6,7 @@ import {
 	Testimonial,
 	FeatureProject,
 } from '@/components/index';
-import { getCaseStudies } from '@/utils/caseStudies';
+import { getCaseStudies } from '@/sanity/actions/caseStudies';
 
 export default async function Home() {
 	const caseStudies = await getCaseStudies('featured');

@@ -6,7 +6,7 @@ export default {
 		{
 			name: 'star',
 			title: 'Star',
-			type: 'string',
+			type: 'number',
 		},
 		{
 			name: 'comments',
