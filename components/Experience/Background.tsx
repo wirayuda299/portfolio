@@ -12,7 +12,7 @@ export default function Background({
 	subTitle,
 }: BackgroundProps) {
 	return (
-		<div className='ease group flex w-full cursor-pointer flex-col items-start justify-start gap-3 rounded-lg bg-white p-5 shadow-xl shadow-white-100 transition-all duration-500 hover:shadow-white-100 dark:bg-black-200 dark:shadow-transparent dark:hover:bg-black-300 dark:hover:shadow-black-100 md:flex-row md:shadow-2xl md:shadow-transparent'>
+		<div className='group flex w-full cursor-pointer flex-col items-start justify-start gap-3 rounded-lg bg-white p-5 shadow-xl shadow-white-100 transition-all duration-700 ease-in-out hover:shadow-white-100 dark:bg-black-200 dark:shadow-transparent dark:hover:bg-black-300 dark:hover:shadow-black-100 md:flex-row md:shadow-2xl md:shadow-transparent'>
 			<Image
 				className='ease block brightness-[10%] filter transition-colors duration-500  group-hover:filter-none dark:brightness-0 dark:grayscale-0 dark:invert'
 				src={lightIcon}

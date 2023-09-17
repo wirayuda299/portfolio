@@ -18,6 +18,8 @@ import ProjectTitle from './ProjectTitle/ProjectTitle';
 import FeatureProject from './FeatureProject/FeatureProject';
 import ProjectProblem from './ProjectProblem/ProjectProblem';
 import ChallengesLearning from './ChallengesLearning/ChallengesLearning';
+import ReviewForm from './ReviewForm/ReviewForm';
+import ImageUpload from './ImageUpload/ImageUpload';
 
 export {
 	Hero,
@@ -29,12 +31,14 @@ export {
 	Process,
 	Services,
 	Experience,
-	Testimonial,
+	ReviewForm,
 	ProjectInfo,
+	Testimonial,
 	CaseStudies,
 	ContactForm,
 	ProjectLink,
 	ProjectCard,
+	ImageUpload,
 	ProjectTitle,
 	CallToAction,
 	FeatureProject,
