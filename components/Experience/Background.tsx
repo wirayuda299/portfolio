@@ -4,26 +4,17 @@ type BackgroundProps = {
 	title: string;
 	subTitle: string;
 	lightIcon: string;
-	darkIcon: string;
 };
 
 export default function Background({
 	title,
 	lightIcon,
 	subTitle,
-	darkIcon,
 }: BackgroundProps) {
 	return (
-		<div className='ease flex w-full cursor-pointer flex-col items-start justify-start gap-3 rounded-lg bg-white p-5 shadow-lg transition-all duration-500 hover:shadow-xl dark:bg-black-200  dark:hover:bg-black-300 md:flex-row md:shadow-transparent'>
+		<div className='ease group flex w-full cursor-pointer flex-col items-start justify-start gap-3 rounded-lg bg-white p-5 shadow-xl shadow-white-100 transition-all duration-500 hover:shadow-white-100 dark:bg-black-200 dark:shadow-transparent dark:hover:bg-black-300 dark:hover:shadow-black-100 md:flex-row md:shadow-2xl md:shadow-transparent'>
 			<Image
-				className='hidden dark:block'
-				src={darkIcon}
-				width={50}
-				height={50}
-				alt={title}
-			/>
-			<Image
-				className='block dark:hidden'
+				className='ease block brightness-[10%] filter transition-colors duration-500  group-hover:filter-none dark:brightness-0 dark:grayscale-0 dark:invert'
 				src={lightIcon}
 				width={50}
 				height={50}

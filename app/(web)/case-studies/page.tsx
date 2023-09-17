@@ -1,7 +1,9 @@
 import { ProjectCard } from '@/components/index';
-import { caseStudies } from '@/constant';
+import { getCaseStudies } from '@/sanity/actions/caseStudies';
 
-export default function CaseStudies() {
+export default async function CaseStudies() {
+	const caseStudies = await getCaseStudies('all');
+
 	return (
 		<div className='h-full w-full'>
 			<div className='mx-auto h-full w-full '>
@@ -19,7 +21,7 @@ export default function CaseStudies() {
 					</p>
 				</div>
 				<section className='mt-20 bg-white px-5 py-10 dark:bg-black-200'>
-					<div className='mx-auto  flex max-w-[1400px] flex-wrap justify-center gap-9 '>
+					<div className='mx-auto flex max-w-[1400px] flex-wrap justify-center gap-9 '>
 						{caseStudies.map((project) => (
 							<ProjectCard {...project} key={project.title} />
 						))}

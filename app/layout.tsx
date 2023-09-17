@@ -3,7 +3,6 @@ import type { Metadata } from 'next';
 import { Poppins } from 'next/font/google';
 
 import './globals.css';
-import { Footer, Navbar, CallToAction } from '@/components/index';
 import { Toaster } from '@/components/ui/toaster';
 
 export const metadata: Metadata = {
@@ -26,10 +25,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
 			>
 				<main>
 					<Toaster />
-					<Navbar />
 					{children}
-					<CallToAction />
-					<Footer />
 				</main>
 			</body>
 		</html>

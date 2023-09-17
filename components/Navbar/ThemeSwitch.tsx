@@ -47,7 +47,7 @@ export default function ThemeSwitch({ theme, setTheme }: ThemeSwitchProps) {
 					className='h-6 w-6'
 				/>
 			</DropdownMenuTrigger>
-			<DropdownMenuContent>
+			<DropdownMenuContent className='!border-none'>
 				{themeOptions.map((item) => (
 					<DropdownMenuItem
 						key={item.label}

@@ -27,6 +27,8 @@ module.exports = {
         'secondary': '#FFBE62',
         'white-800': '#F3F8FF',
         'white-500': '#6F74A7',
+        'white-100': '#ececec',
+        'black-100': '#00000014',
         'black-200': '#151E2C',
         'black-300': '#192333',
         'black-400': '#778295',
@@ -84,8 +86,10 @@ module.exports = {
         'conic-gradient': 'conic-gradient(from 180deg at 50% 75.56%, #0252CD 0deg, rgba(2, 82, 205, 0.33) 360deg);'
       },
       maxWidth: {
-        600: '600px'
-      }
+        600: '600px',
+        1400: '1400px'
+      },
+
     },
 
   },
