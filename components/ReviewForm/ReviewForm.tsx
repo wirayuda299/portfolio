@@ -67,7 +67,7 @@ export default function ReviewForm() {
 			};
 
 			await client.create(formData, {
-				token: process.env.SANITY_WRITE_TOKEN,
+				token: process.env.NEXT_PUBLIC_SANITY_WRITE_TOKEN,
 			});
 			toast({
 				title: 'Success',
