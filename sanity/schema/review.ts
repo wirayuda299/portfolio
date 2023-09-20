@@ -19,6 +19,11 @@ export default {
 			type: 'string',
 		},
 		{
+			name: 'profileImageKey',
+			title: 'ProfileImageKey',
+			type: 'string',
+		},
+		{
 			name: 'name',
 			title: 'Name',
 			type: 'string',

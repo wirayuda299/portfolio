@@ -3,10 +3,9 @@ import type { Dispatch, SetStateAction } from 'react';
 
 type MenuProps = {
 	setIsOpen: Dispatch<SetStateAction<boolean>>;
-	theme: string;
 };
 
-export default function Menu({ theme, setIsOpen }: MenuProps) {
+export default function Menu({ setIsOpen }: MenuProps) {
 	return (
 		<button
 			className='md:hidden'
@@ -14,13 +13,18 @@ export default function Menu({ theme, setIsOpen }: MenuProps) {
 			onClick={() => setIsOpen((prev) => !prev)}
 		>
 			<Image
-				src={`/assets/icons/${
-					theme === 'dark' ? 'menu-white.svg' : 'menu.svg'
-				}`}
+				src='/assets/icons/menu-white.svg'
 				width={40}
 				height={40}
 				alt='menu'
-				className='h-6 w-6'
+				className='hidden h-6 w-6 dark:block'
+			/>
+			<Image
+				src='/assets/icons/menu.svg'
+				width={40}
+				height={40}
+				alt='menu'
+				className='block h-6 w-6  dark:hidden'
 			/>
 		</button>
 	);

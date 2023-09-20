@@ -1,9 +1,12 @@
 import type { ReactNode } from 'react';
 import type { Metadata } from 'next';
 import { Poppins } from 'next/font/google';
+import { NextSSRPlugin } from '@uploadthing/react/next-ssr-plugin';
+import { extractRouterConfig } from 'uploadthing/server';
 
-import './globals.css';
 import { Toaster } from '@/components/ui/toaster';
+import { ourFileRouter } from './api/uploadthing/core';
+import './globals.css';
 
 export const metadata: Metadata = {
 	title: 'Portfolio',
@@ -23,10 +26,9 @@ export default function RootLayout({ children }: { children: ReactNode }) {
 			<body
 				className={`bg-white-800 text-black dark:bg-black-300 ${poppins.className}`}
 			>
-				<main>
-					<Toaster />
-					{children}
-				</main>
+				<Toaster />
+				<main className='h-full w-full'>{children}</main>
+				<NextSSRPlugin routerConfig={extractRouterConfig(ourFileRouter)} />
 			</body>
 		</html>
 	);
