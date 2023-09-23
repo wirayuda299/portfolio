@@ -1,4 +1,3 @@
-import Hero from './Hero/Hero';
 import Footer from './Footer/Footer';
 import Skills from './Skills/Skills';
 import Navbar from './Navbar/Navbar';
@@ -21,7 +20,7 @@ import ChallengesLearning from './ChallengesLearning/ChallengesLearning';
 import ReviewForm from './ReviewForm/ReviewForm';
 import FileUpload from './FileUpload/FileUpload';
 import DeleteImageDialog from './Dialog/DeleteImageDIalog';
-
+import Hero from './Hero';
 export {
 	Hero,
 	Design,
