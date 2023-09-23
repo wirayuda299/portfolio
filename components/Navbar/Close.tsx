@@ -18,7 +18,7 @@ export default function CloseButton({ setIsOpen }: CloseButtonProps) {
 				width={40}
 				height={40}
 				alt='menu'
-				className='h-6 w-6'
+				className='h-6 w-6 '
 			/>
 		</button>
 	);

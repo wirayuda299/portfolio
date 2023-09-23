@@ -1,7 +1,8 @@
 'use client';
 
 import Image from 'next/image';
-import { Dispatch, SetStateAction, useEffect } from 'react';
+import { useRef } from 'react';
+import { useTheme } from 'next-themes';
 
 import {
 	DropdownMenu,
@@ -11,40 +12,32 @@ import {
 } from '@/components/ui/dropdown-menu';
 import { themeOptions } from '@/constant';
 
-type ThemeSwitchProps = {
-	theme: string;
-	setTheme: Dispatch<SetStateAction<string>>;
-};
-
-export default function ThemeSwitch({ theme, setTheme }: ThemeSwitchProps) {
-	useEffect(() => {
-		const prefersDarkMode = window.matchMedia(
-			'(prefers-color-scheme: dark)'
-		).matches;
-		const selectedTheme =
-			theme || localStorage.theme || (prefersDarkMode ? 'dark' : 'light');
-
-		document.documentElement.classList.toggle('dark', selectedTheme === 'dark');
-		localStorage.theme = selectedTheme;
-	}, [theme]);
+export default function ThemeSwitch() {
+	const iconRef = useRef<HTMLImageElement | null>(null);
+	const { setTheme, theme } = useTheme();
 
 	const switchTheme = (label: string) => {
-		const prefersDarkMode = window.matchMedia(
-			'(prefers-color-scheme: dark)'
-		).matches;
-		const mode = prefersDarkMode ? 'dark' : 'light';
-		setTheme(label === 'system' ? mode : label);
+		setTheme(label);
+
+		iconRef.current?.classList.add('animate-icon-up');
+		setTimeout(() => {
+			iconRef.current?.classList.remove('animate-icon-up');
+		}, 500);
 	};
 
 	return (
 		<DropdownMenu>
-			<DropdownMenuTrigger title='Switch theme'>
+			<DropdownMenuTrigger
+				title='Switch theme'
+				className='h-7 w-7 overflow-hidden '
+			>
 				<Image
+					ref={iconRef}
 					src={`/assets/icons/${theme === 'light' ? 'sun.svg' : 'moon.svg'}`}
-					width={40}
-					height={40}
+					width={24}
+					height={24}
 					alt='menu'
-					className='h-6 w-6'
+					className='ease h-6 w-6 transition-all duration-300 '
 				/>
 			</DropdownMenuTrigger>
 			<DropdownMenuContent className='!border-none'>

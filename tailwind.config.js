@@ -1,8 +1,9 @@
 /** @type {import('tailwindcss').Config} */
 
 import './types/tailwindcss-animated.d.ts'
+const { withUt } = require("uploadthing/tw");
 
-module.exports = {
+module.exports = withUt({
   darkMode: "class",
   content: [
     './pages/**/*.{ts,tsx}',
@@ -89,12 +90,20 @@ module.exports = {
           to: { width: '100%' }
         },
 
+        'icon-up': {
+          '0%': {
+            transform: 'translateY(-100%)'
+          },
+          '100%': { transform: 'translateY(0)' }
+        },
+
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         "fade-in": "fade-in 1s ease-in forwards",
         "increasing": "increasing 1s forwards",
+        "icon-up": "icon-up 0.5s linear",
       },
       backgroundImage: {
         'conic-gradient': 'conic-gradient(from 180deg at 50% 75.56%, #0252CD 0deg, rgba(2, 82, 205, 0.33) 360deg);'
@@ -108,4 +117,4 @@ module.exports = {
 
   },
   plugins: [require("tailwindcss-animate"), require('tailwindcss-animated')],
-}
+})

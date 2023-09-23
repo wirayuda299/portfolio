@@ -73,7 +73,7 @@ export default function ContactForm() {
 								<FormLabel className='flex flex-wrap gap-x-2 text-base text-black-300 dark:text-white'>
 									{formField.title}
 									<span className='text-xs font-light text-white-500 md:text-sm'>
-										{formField?.subTitle}
+										{formField.subTitle}
 									</span>
 								</FormLabel>
 								<FormControl className='!bg-white-800  !py-3 focus:!ring-1 focus:!ring-primary-light dark:!bg-black-300 dark:text-white dark:focus:!ring-primary-dark'>

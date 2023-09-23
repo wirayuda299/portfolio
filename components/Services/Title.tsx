@@ -9,7 +9,7 @@ export default function Title() {
 	useIntersectionObserver(ref, ['before:animate-increasing']);
 
 	return (
-		<h2 className='relative z-0 w-full text-center text-4xl font-bold dark:text-white-800 lg:text-5xl'>
+		<h2 className='relative z-0 w-full px-1 text-center text-4xl font-bold dark:text-white-800 lg:text-5xl'>
 			What{' '}
 			<span
 				ref={ref}

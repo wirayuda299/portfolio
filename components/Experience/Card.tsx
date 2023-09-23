@@ -9,11 +9,11 @@ export default function Card() {
 	return (
 		<div
 			ref={ref}
-			className='justify-center-center flex aspect-square max-h-[500px] w-full flex-col rounded-lg bg-black  p-11 text-white opacity-0  dark:bg-white  dark:text-black sm1:p-24 md:h-full md:p-16 lg:p-24'
+			className='justify-center-center sm1:p-24 flex aspect-square max-h-[500px] w-full flex-col rounded-lg  bg-black p-11 text-white  opacity-0  dark:bg-white dark:text-black md:h-full md:p-16 lg:p-24'
 		>
 			<h2 className='relative z-[1] w-max  text-4xl font-bold sm:text-5xl'>
 				Work{' '}
-				<span className='block before:absolute before:bottom-0 before:left-0 before:z-[-1] before:h-4 before:!w-1/2 before:bg-secondary'>
+				<span className='before:bg-secondary block before:absolute before:bottom-0 before:left-0 before:z-[-1] before:h-4 before:!w-1/2'>
 					Experience
 				</span>
 			</h2>
