@@ -44,7 +44,7 @@ export default function ReviewForm() {
 				className='flex h-full w-full flex-wrap items-center justify-center gap-20 '
 			>
 				<FileUpload setImage={setImage} />
-				<div className='h-full w-full  max-w-sm'>
+				<div className='h-full w-full max-w-sm'>
 					{formReviewFields.map((formField) => (
 						<div key={formField.label} className='space-y-5'>
 							<h2 className='pt-3 text-sm dark:text-white'>
@@ -54,7 +54,7 @@ export default function ReviewForm() {
 								<Textarea
 									required
 									name='comments'
-									className='resize-none !bg-white-800 !py-3 focus:!border-none focus:!ring-1 focus:!ring-primary-light dark:border-none dark:!bg-black-300 dark:text-white dark:focus:!ring-primary-dark'
+									className='resize-none border border-white !bg-white-800 !py-3 focus:!ring-primary-light dark:!border-none dark:!bg-black-300  dark:text-white dark:focus:ring-primary-dark dark:focus-visible:!border-0 dark:focus-visible:!ring-offset-0'
 								/>
 							) : (
 								<Input
@@ -62,7 +62,7 @@ export default function ReviewForm() {
 									max={5}
 									required
 									name={formField.label}
-									className='!bg-white-800 !py-3 focus:!ring-1 focus:!ring-primary-light dark:border-none dark:!bg-black-300 dark:text-white dark:focus:!ring-primary-dark'
+									className='border border-white !bg-white-800 !py-3 focus:!ring-primary-light dark:!border-none dark:!bg-black-300 dark:text-white dark:focus:ring-primary-dark dark:focus-visible:!border-0 dark:focus-visible:!ring-offset-0 '
 									type={formField.label === 'star' ? 'number' : 'text'}
 									autoComplete='off'
 								/>

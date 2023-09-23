@@ -30,14 +30,14 @@ export default function NavItem({
 			className={`before:ease 
 			 relative z-[1] flex ${
 					isOpen ? 'animate-fade-in' : ''
-				} text-white-500 before:bg-primary-light dark:before:bg-primary-dark items-center opacity-0 before:absolute before:bottom-0 before:left-0 before:z-[-1] before:h-1 before:w-full before:scale-x-0 before:rounded-full before:transition-all before:duration-300 hover:before:scale-x-100 dark:text-white md:opacity-100`}
+				} items-center text-white-500 opacity-0 before:absolute before:bottom-0 before:left-0 before:z-[-1] before:h-1 before:w-full before:scale-x-0 before:rounded-full before:bg-primary-light before:transition-all before:duration-300 hover:before:scale-x-100 dark:text-white dark:before:bg-primary-dark md:opacity-100`}
 		>
 			{title !== 'Resume' ? (
 				<Link
 					href={path}
 					className={`${
 						pathname === path
-							? 'text-primary-light font-semibold'
+							? '`duration-&lsqb;20000&rsqb animate-pulse font-semibold text-primary-light dark:text-primary-dark'
 							: 'text-sm font-normal'
 					}`}
 				>
