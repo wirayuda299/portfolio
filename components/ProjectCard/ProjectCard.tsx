@@ -10,6 +10,7 @@ type ProjectCardProps = {
 	title: string;
 	subTitle: string;
 	_id: string;
+	index: number;
 };
 
 export default function ProjectCard({
@@ -18,10 +19,14 @@ export default function ProjectCard({
 	subTitle,
 	title,
 	_id,
+	index,
 }: ProjectCardProps) {
 	return (
 		<Link
-			className='h-full w-full max-w-[400px]'
+			style={{
+				animationDelay: `${index * 100}ms`,
+			}}
+			className='h-full w-full max-w-[400px] animate-fade-in opacity-0'
 			href={`/project/${_id}`}
 			prefetch={false}
 		>

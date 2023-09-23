@@ -12,7 +12,7 @@ export default function NavItem({ path, title, theme }: NavItemProps) {
 	const pathname = usePathname();
 
 	return (
-		<li className='flex items-center text-white-500 dark:text-white'>
+		<li className='flex items-center text-slate-600 dark:text-white'>
 			{title !== 'Resume' ? (
 				<Link
 					href={path}

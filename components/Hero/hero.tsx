@@ -10,7 +10,7 @@ export default function Hero() {
 				<Image
 					width={1000}
 					height={500}
-					className=' h-full object-contain object-center'
+					className='h-full animate-fade-left object-contain object-center animate-once'
 					src={'/assets/images/hero.png'}
 					alt='illustration image'
 					priority

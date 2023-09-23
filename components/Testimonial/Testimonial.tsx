@@ -4,6 +4,9 @@ import Image from 'next/image';
 import { Navigation, Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import Link from 'next/link';
+import { useRef } from 'react';
+
+import useIntersectionObserver from '@/hooks/useInterSectionObserver';
 
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -11,6 +14,10 @@ import 'swiper/css/scrollbar';
 import 'swiper/css/pagination';
 
 export default function Testimonial() {
+	const ref = useRef<HTMLDivElement>(null);
+
+	useIntersectionObserver(ref, ['animate-fade-up', 'animate-once']);
+
 	return (
 		<section className='min-h-[500px] py-24 dark:bg-black-300'>
 			<h2 className='w-full text-center text-4xl  font-bold dark:text-white md:text-5xl'>
@@ -32,7 +39,7 @@ export default function Testimonial() {
 				>
 					{[1, 2, 3, 4, 5, 6, 7].map((review) => (
 						<SwiperSlide key={review}>
-							<div className=' grid max-w-6xl grid-cols-1 items-center justify-center gap-10 sm:grid-cols-2 md:px-20 md:py-16'>
+							<div className='grid max-w-6xl grid-cols-1 items-center justify-center gap-10  sm:grid-cols-2 md:px-20 md:py-16'>
 								<Image
 									className='aspect-square max-h-[400px] w-full rounded-lg object-cover sm:max-w-[400px]'
 									src='/assets/images/profile.png'

@@ -8,8 +8,8 @@ export default function Skills() {
 			<div className='mx-auto w-full max-w-1400'>
 				<Title />
 				<div className='mt-10 flex flex-wrap justify-center gap-4 md:gap-8'>
-					{skills.map((skill) => (
-						<TechIcon {...skill} key={skill.label} />
+					{skills.map((skill, i) => (
+						<TechIcon {...skill} key={skill.label} delay={i} />
 					))}
 				</div>
 			</div>

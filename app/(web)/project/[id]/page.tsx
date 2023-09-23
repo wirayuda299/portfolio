@@ -21,7 +21,7 @@ export default async function ProjectDetail({ params: { id } }: Params) {
 	const caseStudy = await getSingleCaseStudy(id);
 
 	return (
-		<div className='w-full'>
+		<div className='h-full w-full'>
 			<ProjectTitle title={caseStudy.title} shortDesc={caseStudy.subTitle} />
 			<section className=' px-3 pt-7'>
 				<Image

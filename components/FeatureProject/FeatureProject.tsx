@@ -2,19 +2,13 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 import FeatureProjectCard from './Card';
+import FeatureProjectTitle from './Title';
 
 export default function FeatureProject({ projects }: { projects: Projects[] }) {
 	return (
 		<section className='px-5 pt-20 dark:bg-black-200'>
 			<div className='mx-auto max-w-1400'>
-				<div className='w-full text-center '>
-					<h2 className=' w-full text-4xl font-bold text-black dark:text-white md:text-5xl'>
-						Featured{' '}
-						<span className='relative z-[1] inline-block w-max before:absolute before:bottom-2 before:left-0 before:z-[-1] before:h-3 before:w-full before:bg-secondary'>
-							Projects
-						</span>
-					</h2>
-				</div>
+				<FeatureProjectTitle />
 				<div className='mt-9 flex flex-col gap-5'>
 					{projects.map((item) => (
 						<FeatureProjectCard {...item} key={item.title} />
@@ -22,7 +16,7 @@ export default function FeatureProject({ projects }: { projects: Projects[] }) {
 					<Link
 						title='See more case studies'
 						href='/case-studies'
-						className='mx-auto my-10 inline-flex max-w-[350px] gap-5 truncate rounded-full bg-primary-light px-5 py-3 text-xs text-white dark:bg-primary-dark sm:px-10 sm:text-sm'
+						className='mx-auto my-10 inline-flex max-w-[350px] animate-fade-up gap-5 truncate rounded-full bg-primary-light px-5 py-3 text-xs text-white opacity-0 dark:bg-primary-dark sm:px-10 sm:text-sm'
 					>
 						See more case studies
 						<Image

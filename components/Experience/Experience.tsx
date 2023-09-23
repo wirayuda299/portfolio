@@ -8,8 +8,8 @@ export default function Experience() {
 			<div className='mx-auto flex w-full max-w-1400 flex-col items-center gap-6 bg-white p-5 pt-16 dark:bg-black-200  md2:flex-row '>
 				<Card />
 				<div className='flex w-full flex-col justify-between gap-8 '>
-					{backgrounds.map((background) => (
-						<Background {...background} key={background.title} />
+					{backgrounds.map((background, i) => (
+						<Background {...background} key={background.title} index={i} />
 					))}
 				</div>
 			</div>
