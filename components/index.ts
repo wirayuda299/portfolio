@@ -1,4 +1,3 @@
-import Hero from './Hero/hero';
 import Footer from './Footer/Footer';
 import Skills from './Skills/Skills';
 import Navbar from './Navbar/Navbar';
@@ -18,7 +17,10 @@ import ProjectTitle from './ProjectTitle/ProjectTitle';
 import FeatureProject from './FeatureProject/FeatureProject';
 import ProjectProblem from './ProjectProblem/ProjectProblem';
 import ChallengesLearning from './ChallengesLearning/ChallengesLearning';
-
+import ReviewForm from './ReviewForm/ReviewForm';
+import FileUpload from './FileUpload/FileUpload';
+import DeleteImageDialog from './Dialog/DeleteImageDIalog';
+import Hero from './Hero';
 export {
 	Hero,
 	Design,
@@ -28,6 +30,8 @@ export {
 	Navbar,
 	Process,
 	Services,
+	ReviewForm,
+	FileUpload,
 	Experience,
 	Testimonial,
 	ProjectInfo,
@@ -37,7 +41,8 @@ export {
 	ProjectCard,
 	ProjectTitle,
 	CallToAction,
-	FeatureProject,
 	ProjectProblem,
+	FeatureProject,
 	ChallengesLearning,
+	DeleteImageDialog,
 };
