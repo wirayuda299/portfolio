@@ -12,6 +12,7 @@ export const metadata: Metadata = {
 	title: 'Portfolio',
 	description: 'Personal website',
 };
+export const dynamic = 'force-dynamic';
 
 const poppins = Poppins({
 	display: 'swap',
@@ -24,7 +25,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
 	return (
 		<html lang='en'>
 			<body
-				className={`bg-white-800 text-black dark:bg-black-300 ${poppins.className}`}
+				className={`bg-white-800 dark:bg-black-300 text-black ${poppins.className}`}
 			>
 				<Toaster />
 				<main className='h-full w-full'>{children}</main>

@@ -1,19 +1,17 @@
 'use client';
 
 import { useState } from 'react';
-import { useRouter } from 'next/navigation';
 
 import { toast } from '../ui/use-toast';
 import { Input } from '../ui/input';
 import { Button } from '@/components/ui/button';
 import { Textarea } from '../ui/textarea';
-import { FileUpload } from '../index';
 import { postReview } from '@/sanity/actions/review';
+import { FileUpload } from '../index';
 import { formReviewFields } from '@/constant';
 
 export default function ReviewForm() {
 	const [image, setImage] = useState<ImageResult | null>(null);
-	const router = useRouter();
 
 	const handleSubmit = async (data: FormData) => {
 		try {
@@ -24,10 +22,10 @@ export default function ReviewForm() {
 					title: 'Please add profile image',
 				});
 
-			await postReview(data, image);
-
-			toast({ title: 'Success' });
-			router.push('/', { scroll: true });
+			await postReview(data, image).then(() => {
+				window.location.href = '/';
+				toast({ title: 'Success' });
+			});
 		} catch (error) {
 			toast({
 				className: 'text-white',
@@ -43,7 +41,7 @@ export default function ReviewForm() {
 				action={handleSubmit}
 				className='flex h-full w-full flex-wrap items-center justify-center gap-20 '
 			>
-				<FileUpload setImage={setImage} />
+				<FileUpload setImage={setImage} imagePreview={image} />
 				<div className='h-full w-full max-w-sm'>
 					{formReviewFields.map((formField) => (
 						<div key={formField.label} className='space-y-5'>

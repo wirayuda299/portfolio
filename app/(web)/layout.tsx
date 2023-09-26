@@ -5,12 +5,7 @@ import { ThemeProvider } from '@/Provider/ThemeProvider';
 
 export default function RootLayout({ children }: { children: ReactNode }) {
 	return (
-		<ThemeProvider
-			attribute='class'
-			defaultTheme='system'
-			enableSystem
-			disableTransitionOnChange
-		>
+		<ThemeProvider attribute='class' defaultTheme='system' enableSystem>
 			<Navbar />
 			{children}
 			<CallToAction />

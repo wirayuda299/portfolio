@@ -8,13 +8,13 @@ export default async function Testimonial() {
 	const review = await getReview();
 
 	return (
-		<section className='min-h-[500px] py-24 dark:bg-black-300' id='review'>
+		<section className='dark:bg-black-300 min-h-[500px] py-24' id='review'>
 			<TestimonialTitle />
 			<Content review={review} />
 			<div className='flex w-full justify-center'>
 				<Link
 					href={'/review'}
-					className='mt-10 rounded-full bg-primary-light px-5 py-3 text-xs font-semibold text-white dark:bg-primary-dark'
+					className='bg-primary-light dark:bg-primary-dark mt-10 rounded-full px-5 py-3 text-xs font-semibold text-white'
 				>
 					Give your feedback
 				</Link>
