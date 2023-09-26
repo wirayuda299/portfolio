@@ -1,6 +1,7 @@
-import { deleteImage } from '@/uploadthing/actions';
 import { useState, useEffect } from 'react';
 import { UploadFileResponse } from 'uploadthing/client';
+
+import { deleteImage } from '@/serveractions/index';
 
 export default function useBeforeUnload() {
 	const [imagePreview, setImagePreview] = useState<UploadFileResponse | null>(
