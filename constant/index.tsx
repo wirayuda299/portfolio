@@ -17,7 +17,7 @@ export const navItems = [
 		title: 'Resume',
 		path: '',
 	},
-];
+] as const;
 
 export const themeOptions = [
 	{
@@ -35,7 +35,7 @@ export const themeOptions = [
 		title: 'System',
 		icon: <DesktopIcon />,
 	},
-];
+] as const;
 
 export const services = [
 	{
@@ -62,7 +62,7 @@ export const services = [
 		lightIcon: '/assets/icons/services/speed-light.svg',
 		darkIcon: '/assets/icons/services/speed-dark.svg',
 	},
-];
+] as const;
 
 export const backgrounds = [
 	{
@@ -85,7 +85,7 @@ export const backgrounds = [
 		lightIcon: '/assets/icons/mailchimp.svg',
 		subTitle: 'Product Design - 4 Years Experince',
 	},
-];
+] as const;
 
 export const skills = [
 	{
@@ -152,7 +152,7 @@ export const skills = [
 		label: 'Mongo DB',
 		lightIcon: '/assets/icons/skills/mongo-light.svg',
 	},
-];
+] as const;
 
 export const socialLinks = [
 	{
@@ -173,24 +173,47 @@ export const socialLinks = [
 		darkIcon: '/assets/icons/footer/github.svg',
 		lightIcon: '/assets/icons/footer/github-light.svg',
 	},
-];
+] as const;
 
 export const formFields = [
 	{
 		label: 'name',
 		title: 'What’s your name?',
+		subTitle: '',
 	},
 	{
 		label: 'email',
 		title: 'What is your email?',
+		subTitle: '',
 	},
 	{
 		label: 'messageText',
 		title: 'Write something about your project goals and timeframe',
+		subTitle: '',
 	},
 	{
 		label: 'senderContact',
 		title: 'How to reach out to you back?',
 		subTitle: 'eg. phone number or email ',
 	},
-];
+] as const;
+
+export const formReviewFields = [
+	{
+		label: 'star',
+		title: 'Rating',
+	},
+
+	{
+		label: 'name',
+		title: 'Your Name',
+	},
+	{
+		label: 'role',
+		title: 'Your Role',
+	},
+	{
+		label: 'comments',
+		title: 'Give your feedback',
+	},
+] as const;

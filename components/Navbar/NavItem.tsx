@@ -1,14 +1,24 @@
+'use client';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import Image from 'next/image';
+import type { Dispatch, SetStateAction } from 'react';
 
 type NavItemProps = {
 	path: string;
 	title: string;
-	theme: string;
+	setIsOpen: Dispatch<SetStateAction<boolean>>;
+	delay: number;
+	isOpen: boolean;
 };
 
-export default function NavItem({ path, title, theme }: NavItemProps) {
+export default function NavItem({
+	path,
+	title,
+	setIsOpen,
+	delay,
+	isOpen,
+}: NavItemProps) {
 	const pathname = usePathname();
 
 	return (
@@ -27,10 +37,8 @@ export default function NavItem({ path, title, theme }: NavItemProps) {
 			) : (
 				<div className='inline-flex items-center gap-2'>
 					<Image
-						className='h-5 w-5 gap-3'
-						src={`/assets/icons/${
-							theme === 'light' ? 'download.svg' : 'download-light.svg'
-						}`}
+						className='h-5 w-5 gap-3 dark:invert'
+						src={'/assets/icons/download.svg'}
 						width={40}
 						height={40}
 						alt='download icon'
