@@ -1,4 +1,8 @@
-import { deleteImage } from '@/uploadthing/actions';
+'use client';
+
+import type { Dispatch, SetStateAction } from 'react';
+import { UploadFileResponse } from 'uploadthing/client';
+
 import { Button } from '../ui/button';
 import {
 	Dialog,
@@ -7,8 +11,7 @@ import {
 	DialogTitle,
 	DialogTrigger,
 } from '@/components/ui/dialog';
-import type { Dispatch, SetStateAction } from 'react';
-import { UploadFileResponse } from 'uploadthing/client';
+import { deleteImage } from '@/serveractions/index';
 
 type DeleteImageDialogProps = {
 	key: string;

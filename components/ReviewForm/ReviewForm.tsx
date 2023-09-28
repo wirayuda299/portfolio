@@ -6,9 +6,9 @@ import { toast } from '../ui/use-toast';
 import { Input } from '../ui/input';
 import { Button } from '@/components/ui/button';
 import { Textarea } from '../ui/textarea';
-import { postReview } from '@/sanity/actions/review';
 import { FileUpload } from '../index';
 import { formReviewFields } from '@/constant';
+import { postReview } from '@/serveractions';
 
 export default function ReviewForm() {
 	const [image, setImage] = useState<ImageResult | null>(null);

@@ -36,8 +36,7 @@ export default function FileUpload({
 			) : (
 				<UploadDropzone<OurFileRouter>
 					className='min-h-[400px] w-full rounded-2xl border-0 text-black shadow-xl shadow-white-100 ut-button:mt-5 ut-button:rounded-md ut-button:bg-primary-light ut-button:px-5 ut-button:text-xs ut-button:text-white dark:shadow-black-100 ut-button:dark:bg-primary-dark ut-allowed-content:dark:text-white ut-label:dark:text-white ut-upload-icon:dark:text-white'
-						endpoint='imageUploader'
-						
+					endpoint='imageUploader'
 					onClientUploadComplete={(res) => {
 						setImage(res ? res[0] : null);
 						toast({

@@ -16,22 +16,6 @@ export const postReview = async (data: FormData, image: ImageResult | null) => {
 			token: process.env.NEXT_PUBLIC_SANITY_WRITE_TOKEN,
 		});
 	} catch (error) {
-		console.log(error);
-
 		throw error;
 	}
 };
-
-export async function getReview() {
-	try {
-		const res = await client.fetch(`*[_type == "review"]`, {
-			cache: 'no-store',
-			next: {
-				tags: ['review'],
-			},
-		});
-		return res as Review[];
-	} catch (error) {
-		throw error;
-	}
-}
