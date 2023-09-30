@@ -1,5 +1,3 @@
-import type { Image as SanityImage } from 'sanity';
-
 import FeaturedProjectTechStacks from './TechStacks';
 import Thumbnail from './Thumbnail';
 import ProjectTitle from './ProjectTitle';
@@ -10,7 +8,7 @@ type FeatureProjectCardProps = {
 	title: string;
 	techStacks: TechStacks;
 	backgroundColor: string;
-	thumbnail: SanityImage;
+	thumbnail: string;
 	_id: string;
 	subTitle: string;
 };

@@ -1,14 +1,12 @@
 'use client';
 
 import Image from 'next/image';
-import type { Image as SanityImage } from 'sanity';
 
-import { urlForImage } from '@/sanity/lib/image';
 import { useRef } from 'react';
 import useIntersectionObserver from '@/hooks/useInterSectionObserver';
 
 type ThumbnailProps = {
-	thumbnail: SanityImage;
+	thumbnail: string;
 	title: string;
 };
 
@@ -23,7 +21,7 @@ export default function Thumbnail({ title, thumbnail }: ThumbnailProps) {
 	return (
 		<Image
 			ref={ref}
-			src={urlForImage(thumbnail).url()}
+			src={thumbnail}
 			width={800}
 			priority
 			className={`opacity-0 ${
