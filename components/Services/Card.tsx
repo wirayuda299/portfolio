@@ -1,7 +1,9 @@
 'use client';
+
 import { useRef } from 'react';
-import useIntersectionObserver from '@/hooks/useInterSectionObserver';
 import Image from 'next/image';
+
+import useIntersectionObserver from '@/hooks/useInterSectionObserver';
 
 type ServiceCardProps = {
 	title: string;
@@ -37,7 +39,7 @@ export default function ServiceCard({
 					alt={title}
 				/>
 			</div>
-			<h3 className='dar pt-9 text-2xl font-semibold text-black group-hover:text-white dark:text-white-800'>
+			<h3 className='pt-9 text-2xl font-semibold text-black group-hover:text-white dark:text-white-800'>
 				{title}
 			</h3>
 			<p className='pt-[10px] text-sm group-hover:text-white dark:text-white'>

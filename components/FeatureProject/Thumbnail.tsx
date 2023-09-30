@@ -1,8 +1,8 @@
 'use client';
 
 import Image from 'next/image';
-
 import { useRef } from 'react';
+
 import useIntersectionObserver from '@/hooks/useInterSectionObserver';
 
 type ThumbnailProps = {
