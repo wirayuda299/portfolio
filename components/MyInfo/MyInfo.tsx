@@ -4,7 +4,7 @@ import { socialLinks } from '@/constant';
 
 export default function MyInfo() {
 	return (
-		<section className='flex w-full max-w-xl flex-col justify-self-start sm1:pl-10 md:w-auto md:pl-0'>
+		<section className='flex w-full max-w-xl animate-fade-right flex-col justify-self-start opacity-0 animate-once sm1:pl-10 md:w-auto md:pl-0'>
 			<div>
 				<h2 className='text-sm font-light text-black dark:text-white'>
 					My Socials

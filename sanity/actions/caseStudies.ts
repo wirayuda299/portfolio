@@ -5,7 +5,14 @@ export const getCaseStudies = async (type: 'all' | 'featured') => {
 		let query: string;
 
 		if (type === 'featured') {
-			query = `*[_type == "caseStudies" && difficulty > 8][0..3]`;
+			query = `*[_type == "caseStudies" && difficulty > 8][0..3]{
+				backgroundColor,
+				techStacks,
+				'thumbnail':thumbnail.asset->url,
+				title,
+				_id,
+				subTitle
+			}`;
 		} else {
 			query = `*[_type == "caseStudies"]`;
 		}

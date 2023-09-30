@@ -1,4 +1,5 @@
 import Link from 'next/link';
+
 import Content from './Content';
 import { getReview } from '@/sanity/actions/review';
 

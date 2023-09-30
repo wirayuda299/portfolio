@@ -10,14 +10,14 @@ export default function CallToAction() {
 		<div className='flex flex-col gap-5 py-5 md:flex-row'>
 			<Button
 				variant='primary'
-				className=' h-12 w-full min-w-[150px] rounded-full text-sm text-white'
+				className=' h-12 w-full min-w-[150px] animate-fade-right rounded-full text-sm text-white animate-once'
 			>
 				My Work
 			</Button>
 			<Button
 				variant='contact'
 				title='wirayuda233@gmail.com'
-				className='h-12 w-full rounded-full text-center '
+				className='h-12 w-full animate-fade-right rounded-full text-center animate-once'
 				onClick={() => copyText('wirayuda233@gmail.com')}
 			>
 				<p className='flex w-full items-center justify-center gap-x-5 px-5 text-xs'>

@@ -44,7 +44,7 @@ export default function ContactForm() {
 				process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
 				process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
 				templateParams,
-				process.env.NEXT_PUBLIC_EMAILJS_API_KEY!
+				process.env.NEXT_PUBLIC_EMAILJS_API_KEY
 			);
 			toast({
 				title: 'Your message successfully sended',
@@ -61,7 +61,7 @@ export default function ContactForm() {
 		<Form {...form}>
 			<form
 				onSubmit={form.handleSubmit(onSubmit)}
-				className=' flex max-w-2xl flex-col space-y-8'
+				className=' flex max-w-2xl animate-fade-left flex-col space-y-8 opacity-0 animate-once'
 			>
 				{formFields.map((formField) => (
 					<FormField

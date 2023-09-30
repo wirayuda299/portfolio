@@ -22,16 +22,7 @@ export default function NavItem({
 	const pathname = usePathname();
 
 	return (
-		<li
-			style={{
-				animationDelay: `${delay * 200}ms`,
-			}}
-			onClick={() => setIsOpen(false)}
-			className={`before:ease 
-			 relative z-[1] flex ${
-					isOpen ? 'animate-fade-in' : ''
-				} items-center text-white-500 opacity-0 before:absolute before:bottom-0 before:left-0 before:z-[-1] before:h-1 before:w-full before:scale-x-0 before:rounded-full before:bg-primary-light before:transition-all before:duration-300 hover:before:scale-x-100 dark:text-white dark:before:bg-primary-dark md:opacity-100`}
-		>
+		<li className='flex items-center text-slate-600 dark:text-white'>
 			{title !== 'Resume' ? (
 				<Link
 					href={path}

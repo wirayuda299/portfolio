@@ -1,8 +1,12 @@
 /** @type {import('tailwindcss').Config} */
+
+import './types/tailwindcss-animated.d.ts'
+
 const { withUt } = require("uploadthing/tw");
 module.exports = withUt({
   darkMode: "class",
   content: [
+    './public/assets/icons/**/*.svg',
     './pages/**/*.{ts,tsx}',
     './components/**/*.{ts,tsx}',
     './app/**/*.{ts,tsx}',
@@ -27,7 +31,7 @@ module.exports = withUt({
         'primary-dark': '#428DFF',
         'secondary': '#FFBE62',
         'white-800': '#F3F8FF',
-        'white-500': '#6F74A7',
+        'white-500': '#475569',
         'white-100': '#ececec',
         'black-100': '#00000014',
         'black-200': '#151E2C',
@@ -78,22 +82,29 @@ module.exports = withUt({
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: 0 },
         },
+        'fade-in': {
+          from: { opacity: 0 },
+          to: { opacity: 1 }
+        },
+        'increasing': {
+          from: { width: 0 },
+          to: { width: '100%' }
+        },
+
         'icon-up': {
           '0%': {
             transform: 'translateY(-100%)'
           },
           '100%': { transform: 'translateY(0)' }
         },
-        'fade-in': {
-          from: { opacity: 0 },
-          to: { opacity: 1 }
-        }
+
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "fade-in": "fade-in 1s ease-in forwards",
+        "increasing": "increasing 1s forwards",
         "icon-up": "icon-up 0.5s linear",
-        "fade-in": "fade-in 1s ease-in forwards"
       },
       backgroundImage: {
         'conic-gradient': 'conic-gradient(from 180deg at 50% 75.56%, #0252CD 0deg, rgba(2, 82, 205, 0.33) 360deg);'
@@ -102,9 +113,11 @@ module.exports = withUt({
         600: '600px',
         1400: '1400px'
       },
-
+      fontSize: {
+        16: '64px'
+      }
     },
 
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [require("tailwindcss-animate"), require('tailwindcss-animated')],
 })
