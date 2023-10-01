@@ -9,7 +9,7 @@ import { jobLists } from '@/constant';
 export default function Background() {
 	const ref = useRef<HTMLDivElement>(null);
 	const importantKeywords = [
-		'git',
+		'git for version control',
 		'asana',
 		'full-stack',
 		'team meetings',
@@ -24,7 +24,10 @@ export default function Background() {
 		return text.split(regex).map((part, index) => {
 			const isInclude = importantKeywords.includes(part.toLowerCase());
 			return isInclude ? (
-				<span key={index} className='font-bold text-secondary'>
+				<span
+					key={index}
+					className='relative inline-block w-max font-bold text-secondary before:absolute before:bottom-1 before:left-0 before:z-[-1] before:h-3  before:w-1/2 '
+				>
 					{part}
 				</span>
 			) : (
