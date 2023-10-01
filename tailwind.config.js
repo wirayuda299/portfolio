@@ -6,6 +6,7 @@ const { withUt } = require("uploadthing/tw");
 module.exports = withUt({
   darkMode: "class",
   content: [
+    './public/assets/icons/**/*.svg',
     './pages/**/*.{ts,tsx}',
     './components/**/*.{ts,tsx}',
     './app/**/*.{ts,tsx}',
@@ -112,7 +113,9 @@ module.exports = withUt({
         600: '600px',
         1400: '1400px'
       },
-
+      fontSize: {
+        16: '64px'
+      }
     },
 
   },

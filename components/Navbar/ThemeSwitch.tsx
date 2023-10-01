@@ -29,7 +29,7 @@ export default function ThemeSwitch() {
 		<DropdownMenu>
 			<DropdownMenuTrigger
 				title='Switch theme'
-				className='h-7 w-7 overflow-hidden '
+				className='h-7 w-7 overflow-hidden'
 			>
 				<Image
 					ref={iconRef}
