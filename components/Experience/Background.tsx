@@ -8,6 +8,30 @@ import { jobLists } from '@/constant';
 
 export default function Background() {
 	const ref = useRef<HTMLDivElement>(null);
+	const importantKeywords = [
+		'git',
+		'asana',
+		'full-stack',
+		'team meetings',
+		'mentors',
+		'frontend',
+		'high-quality',
+		'skill enhancement',
+	];
+
+	const highlightKeywords = (text: string) => {
+		const regex = new RegExp(`\\b(${importantKeywords.join('|')})\\b`, 'gi');
+		return text.split(regex).map((part, index) => {
+			const isInclude = importantKeywords.includes(part.toLowerCase());
+			return isInclude ? (
+				<span key={index} className='font-bold text-secondary'>
+					{part}
+				</span>
+			) : (
+				part
+			);
+		});
+	};
 
 	useIntersectionObserver(ref, ['animate-fade-left']);
 
@@ -34,9 +58,9 @@ export default function Background() {
 				{jobLists.map((job) => (
 					<li
 						key={job}
-						className='text-xs text-black-300 dark:text-slate-200 md:text-base '
+						className='text-xs text-black dark:text-slate-200 md:text-base '
 					>
-						{job}
+						{highlightKeywords(job)}
 					</li>
 				))}
 			</ul>

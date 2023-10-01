@@ -40,7 +40,7 @@ export const jobLists = [
 	'Collaborated with a diverse international team, employing Git for version control and Asana for efficient project management and task tracking.',
 	'Led the development lifecycle of various projects, starting from frontend design and ending with robust full-stack applications, ensuring seamless user experiences and high-quality code.',
 	'Facilitated daily team meetings to discuss progress, challenges, and goals, fostering a collaborative environment and maintaining project momentum.',
-	'Engaged in regular one-on-one meetings with mentors, discussing technical challenges, career development, and skill enhancement, leading to personal and professional growth.',
+	'Engaged in regular one-on-one meetings with Mentors, discussing technical challenges, career development, and skill enhancement, leading to personal and professional growth.',
 ] as const;
 
 export const services = [
