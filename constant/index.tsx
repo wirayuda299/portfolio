@@ -37,53 +37,32 @@ export const themeOptions = [
 	},
 ] as const;
 
+export const jobLists = [
+	'Work Remotely with International Team using Git and Asana',
+	'Build Project from Front End to Full Stack',
+	'Daily Meeting',
+	'Personal Meeting with Mentor',
+] as const;
 export const services = [
 	{
 		title: 'Analytics & SEO',
 		text: 'Implement tracking & analytics tools to monitor website performance & improve SEO.',
 		lightIcon: '/assets/icons/services/pencil-light.svg',
-		darkIcon: '/assets/icons/services/pencil-dark.svg',
 	},
 	{
 		title: 'Front-End Dev',
 		text: 'Front-end dev includes creating the user interface and interactive elements of websites and apps.',
 		lightIcon: '/assets/icons/services/cursor-light.svg',
-		darkIcon: '/assets/icons/services/cursor-dark.svg',
 	},
 	{
 		title: 'Back-End Dev',
-		text: 'Front-end includes creating the user interface and interactive elements of websites and apps.',
+		text: 'Backend dev focus on server-side, databases, and APIs, ensuring seamless data management and communication between the user interface and the server.',
 		lightIcon: '/assets/icons/services/code-light.svg',
-		darkIcon: '/assets/icons/services/code-dark.svg',
 	},
 	{
 		title: 'Web Optimization',
 		text: 'Web optimization focuses on improving website performance for a smoother user experience',
 		lightIcon: '/assets/icons/services/speed-light.svg',
-		darkIcon: '/assets/icons/services/speed-dark.svg',
-	},
-] as const;
-
-export const backgrounds = [
-	{
-		title: 'Slack',
-		lightIcon: '/assets/icons/slack.svg',
-		subTitle: 'Product Design - 4 Years Experince',
-	},
-	{
-		title: 'Firefox',
-		lightIcon: '/assets/icons/firefox.svg',
-		subTitle: 'Product Design - 4 Years Experince',
-	},
-	{
-		title: 'Digital Ocean',
-		lightIcon: '/assets/icons/digitalocean.svg',
-		subTitle: 'Product Design - 4 Years Experince',
-	},
-	{
-		title: 'Mailchimp',
-		lightIcon: '/assets/icons/mailchimp.svg',
-		subTitle: 'Product Design - 4 Years Experince',
 	},
 ] as const;
 

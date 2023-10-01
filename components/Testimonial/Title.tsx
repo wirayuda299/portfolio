@@ -1,7 +1,8 @@
 'use client';
 
-import useIntersectionObserver from '@/hooks/useInterSectionObserver';
 import { useRef } from 'react';
+
+import useIntersectionObserver from '@/hooks/useInterSectionObserver';
 
 export default function TestimonialTitle() {
 	const ref = useRef<HTMLSpanElement>(null);

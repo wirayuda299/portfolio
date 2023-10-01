@@ -18,7 +18,7 @@ export default function ProjectLink({
 				className='inline-flex items-center gap-1 text-sm font-semibold text-primary-light'
 			>
 				<Image
-					className='h-3 w-3'
+					className='h-3 w-4'
 					src='/assets/icons/globe.svg'
 					width={40}
 					height={40}
@@ -26,8 +26,8 @@ export default function ProjectLink({
 				/>
 				<span>Demo Site</span>
 				<Image
-					className='h-3 w-3 invert dark:filter-none'
-					src='/assets/icons/next.svg'
+					className='h-3 w-4 '
+					src='/assets/icons/next-blue.svg'
 					width={40}
 					height={40}
 					alt='arrow icon'
@@ -48,8 +48,8 @@ export default function ProjectLink({
 				/>
 				<span>Source Code</span>
 				<Image
-					className='h-3 w-3 !text-primary-light invert  dark:filter-none'
-					src='/assets/icons/next.svg'
+					className='h-3 w-3 !text-primary-light '
+					src='/assets/icons/next-blue.svg'
 					width={40}
 					height={40}
 					alt='arrow icon'

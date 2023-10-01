@@ -1,49 +1,42 @@
 'use client';
 
-import useIntersectionObserver from '@/hooks/useInterSectionObserver';
 import Image from 'next/image';
 import { useRef } from 'react';
 
-type BackgroundProps = {
-	title: string;
-	subTitle: string;
-	lightIcon: string;
-	index: number;
-};
+import useIntersectionObserver from '@/hooks/useInterSectionObserver';
+import { jobLists } from '@/constant';
 
-export default function Background({
-	title,
-	lightIcon,
-	subTitle,
-	index,
-}: BackgroundProps) {
+export default function Background() {
 	const ref = useRef<HTMLDivElement>(null);
 
-	useIntersectionObserver(ref, ['animate-fade-in']);
+	useIntersectionObserver(ref, ['animate-fade-left']);
 
 	return (
-		<div
-			style={{
-				animationDelay: `${index * 100}ms`,
-			}}
-			ref={ref}
-			className='ease group flex w-full cursor-pointer flex-col items-start justify-start gap-3 rounded-lg bg-white p-5 opacity-0 shadow-xl shadow-white-100 transition-all duration-500 hover:shadow-white-100 dark:bg-black-200 dark:shadow-transparent dark:hover:bg-black-300 dark:hover:shadow-black-100 md:flex-row md:shadow-2xl md:shadow-transparent'
-		>
-			<Image
-				className='ease block brightness-[10%] filter transition-colors duration-500  group-hover:filter-none dark:brightness-0 dark:grayscale-0 dark:invert'
-				src={lightIcon}
-				width={50}
-				height={50}
-				alt={title}
-			/>
-			<div>
-				<h3 className='text-base font-semibold dark:text-white lg:text-2xl'>
-					{title}
-				</h3>
-				<p className='pt-2 text-sm text-white-500 dark:text-white'>
-					{subTitle}
-				</p>
+		<div className='flex flex-1 flex-col items-start p-5' ref={ref}>
+			<div className='ease group flex w-full cursor-pointer  flex-row items-center justify-start gap-3 '>
+				<Image
+					className='ease block brightness-[10%] filter transition-colors duration-500 group-hover:filter-none dark:brightness-0 dark:grayscale-0 dark:invert'
+					src={'/assets/jsm.png'}
+					width={50}
+					height={50}
+					alt={'Javascript Mastery'}
+				/>
+				<div>
+					<h3 className='text-base font-semibold dark:text-white lg:text-2xl'>
+						Javascript Mastery
+					</h3>
+				</div>
 			</div>
+			<ul className='mt-5 flex list-disc flex-col items-start gap-3 pl-5 dark:text-white'>
+				{jobLists.map((job) => (
+					<li
+						key={job}
+						className='text-xs font-semibold  md:text-base lg:text-lg'
+					>
+						{job}
+					</li>
+				))}
+			</ul>
 		</div>
 	);
 }

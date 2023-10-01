@@ -1,12 +1,13 @@
 'use client';
 
 import { UploadDropzone } from '@uploadthing/react';
-import { type Dispatch, type SetStateAction } from 'react';
+import { useRef, type Dispatch, type SetStateAction } from 'react';
 import Image from 'next/image';
 
 import { toast } from '../ui/use-toast';
 import { OurFileRouter } from '@/app/api/uploadthing/core';
 import { DeleteImageDialog } from '../index';
+import useIntersectionObserver from '@/hooks/useInterSectionObserver';
 
 type FileUploadProps = {
 	imagePreview: ImageResult | null;
@@ -17,8 +18,11 @@ export default function FileUpload({
 	setImage,
 	imagePreview,
 }: FileUploadProps) {
+	const ref = useRef<HTMLDivElement>(null);
+
+	useIntersectionObserver(ref, ['animate-fade-right']);
 	return (
-		<div className='h-full w-full max-w-[400px]'>
+		<div ref={ref} className='h-full w-full max-w-[400px] opacity-0'>
 			{imagePreview ? (
 				<>
 					<Image
