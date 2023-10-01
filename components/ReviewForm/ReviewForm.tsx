@@ -1,6 +1,6 @@
 'use client';
 
-import { useRef, useState } from 'react';
+import { useRef, useState, useTransition } from 'react';
 import { usePathname, useRouter } from 'next/navigation';
 
 import { toast } from '../ui/use-toast';
@@ -14,16 +14,13 @@ import { cn } from '@/lib/utils';
 import useIntersectionObserver from '@/hooks/useInterSectionObserver';
 
 type ReviewFormProps = {
-	textAreaStyles?: string;
-	inputStyles?: string;
+	styles?: string;
 };
 
-export default function ReviewForm({
-	textAreaStyles,
-	inputStyles,
-}: ReviewFormProps) {
+export default function ReviewForm({ styles }: ReviewFormProps) {
 	const [image, setImage] = useState<ImageResult | null>(null);
 	const { push, refresh } = useRouter();
+	const [pending, startTransition] = useTransition();
 	const pathname = usePathname();
 	const ref = useRef<HTMLDivElement>(null);
 	useIntersectionObserver(ref, ['animate-fade-left']);
@@ -46,9 +43,11 @@ export default function ReviewForm({
 					title: 'Please add profile image',
 				});
 
-			await postReview(data, image).then(() => {
-				handleSuccess();
-				toast({ title: 'Thank you for your feedback❤' });
+			startTransition(async () => {
+				await postReview(data, image).then(() => {
+					handleSuccess();
+					toast({ title: 'Thank you for your feedback❤' });
+				});
 			});
 		} catch (error) {
 			toast({
@@ -71,7 +70,7 @@ export default function ReviewForm({
 						<div key={formField.label} className='space-y-5'>
 							<label
 								htmlFor={formField.label}
-								className='pt-3 text-sm dark:text-white'
+								className='mt-4 inline-block text-sm dark:text-white'
 							>
 								{formField.title}
 							</label>
@@ -82,7 +81,7 @@ export default function ReviewForm({
 									name='comments'
 									className={cn(
 										'resize-none border border-white !bg-white-800 !py-3 focus:!ring-primary-light dark:!border-none dark:!bg-black-300  dark:text-white dark:focus:ring-primary-dark dark:focus-visible:!border-0 dark:focus-visible:!ring-offset-0',
-										textAreaStyles
+										styles
 									)}
 								/>
 							) : (
@@ -99,7 +98,7 @@ export default function ReviewForm({
 									name={formField.label}
 									className={cn(
 										'border border-white !bg-white-800 !py-5 focus:!ring-primary-light dark:!border-none dark:!bg-black-300 dark:text-white dark:focus:ring-primary-dark dark:focus-visible:!border-0 dark:focus-visible:!ring-offset-0',
-										inputStyles
+										styles
 									)}
 									inputMode={formField.label === 'star' ? 'numeric' : 'text'}
 									type={formField.label === 'star' ? 'number' : 'text'}
@@ -109,11 +108,12 @@ export default function ReviewForm({
 						</div>
 					))}
 					<Button
+						disabled={pending}
 						type='submit'
 						variant='primary'
 						className='mt-5 w-full text-white'
 					>
-						Submit
+						{pending ? 'Submitting...' : 'Submit'}
 					</Button>
 				</div>
 			</form>

@@ -18,6 +18,7 @@ import { Input } from '../ui/input';
 import { Textarea } from '../ui/textarea';
 import { formFields } from '@/constant';
 import { toast } from '../ui/use-toast';
+import { useTransition } from 'react';
 
 const formSchema = z.object({
 	name: z.string(),
@@ -27,7 +28,10 @@ const formSchema = z.object({
 });
 
 export default function ContactForm() {
+	const [pending, startTransition] = useTransition();
+
 	const form = useForm<z.infer<typeof formSchema>>({
+		// @ts-ignore
 		resolver: zodResolver(formSchema),
 	});
 
@@ -40,14 +44,19 @@ export default function ContactForm() {
 				to_message: messageText,
 				to_contact: senderContact,
 			};
-			await emailjs.send(
-				process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
-				process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
-				templateParams,
-				process.env.NEXT_PUBLIC_EMAILJS_API_KEY
-			);
-			toast({
-				title: 'Your message successfully sended',
+			startTransition(async () => {
+				await emailjs
+					.send(
+						process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
+						process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
+						templateParams,
+						process.env.NEXT_PUBLIC_EMAILJS_API_KEY
+					)
+					.then(() => {
+						toast({
+							title: 'Your message successfully sended',
+						});
+					});
 			});
 		} catch (error) {
 			toast({
@@ -61,13 +70,13 @@ export default function ContactForm() {
 		<Form {...form}>
 			<form
 				onSubmit={form.handleSubmit(onSubmit)}
-				className=' flex max-w-2xl animate-fade-left flex-col space-y-8 opacity-0 animate-once'
+				className='flex max-w-2xl animate-fade-left flex-col space-y-8 opacity-0 animate-once'
 			>
 				{formFields.map((formField) => (
 					<FormField
 						key={formField.label}
 						control={form.control}
-						name={formField.label as keyof z.infer<typeof formSchema>}
+						name={formField.label}
 						render={({ field }) => (
 							<FormItem>
 								<FormLabel className='flex flex-wrap gap-x-2 text-base text-black-300 dark:text-white'>
@@ -76,7 +85,7 @@ export default function ContactForm() {
 										{formField.subTitle}
 									</span>
 								</FormLabel>
-								<FormControl className='!bg-white-800  !py-3 focus:!ring-1  focus:!ring-primary-light dark:!border-none dark:!bg-black-300 dark:text-white dark:focus:!ring-primary-dark dark:focus-visible:!border-0 dark:focus-visible:!ring-offset-0'>
+								<FormControl className='h-12 !bg-white-800 focus:!ring-1  focus:!ring-primary-light dark:!border-none dark:!bg-black-300 dark:text-white dark:focus:!ring-primary-dark dark:focus-visible:!border-0 dark:focus-visible:!ring-offset-0'>
 									{formField.label === 'messageText' ? (
 										<Textarea
 											className='resize-none !bg-white-800 focus:!ring-1 focus:!ring-primary-light dark:!bg-black-300 dark:focus:!ring-primary-dark '
@@ -92,8 +101,11 @@ export default function ContactForm() {
 					/>
 				))}
 				<div className='flex justify-end'>
-					<Button className='rounded-full bg-primary-light px-12 hover:bg-blue-600 dark:bg-primary-dark dark:text-white '>
-						Send
+					<Button
+						disabled={pending}
+						className='rounded-full bg-primary-light px-12 hover:bg-blue-600 dark:bg-primary-dark dark:text-white '
+					>
+						{pending ? 'Sending...' : 'Send'}
 					</Button>
 				</div>
 			</form>

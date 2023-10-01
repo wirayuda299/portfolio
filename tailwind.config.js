@@ -27,6 +27,7 @@ module.exports = withUt({
       colors: {
         'primary-light': '#0252CD',
         'primary-dark': '#428DFF',
+        'light-gray': '#ffffff33',
         'secondary': '#FFBE62',
         'white-800': '#F3F8FF',
         'white-500': '#475569',
@@ -35,6 +36,7 @@ module.exports = withUt({
         'black-200': '#151E2C',
         'black-300': '#192333',
         'black-400': '#778295',
+        'light-blue': '#1F2E48',
 
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -66,6 +68,9 @@ module.exports = withUt({
           foreground: "hsl(var(--card-foreground))",
         },
       },
+      padding: {
+        10: '10px',
+      },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
@@ -88,7 +93,16 @@ module.exports = withUt({
           from: { width: 0 },
           to: { width: '100%' }
         },
-
+        'go-down': {
+          '0%': {
+            opacity: 1,
+            transform: 'translateY(0)'
+          },
+          '100%': {
+            opacity: 1,
+            transform: 'translateY(20px)'
+          }
+        },
         'icon-up': {
           '0%': {
             transform: 'translateY(-100%)'
@@ -103,16 +117,38 @@ module.exports = withUt({
         "fade-in": "fade-in 1s ease-in forwards",
         "increasing": "increasing 1s forwards",
         "icon-up": "icon-up 0.5s linear",
+        "down": "go-down 0.5s ease forwards",
       },
       backgroundImage: {
         'conic-gradient': 'conic-gradient(from 180deg at 50% 75.56%, #0252CD 0deg, rgba(2, 82, 205, 0.33) 360deg);'
       },
       maxWidth: {
+        450: '450px',
         600: '600px',
         1400: '1400px'
       },
+      width: {
+        53: '53px'
+      },
+      height: {
+        53: '53px'
+      },
+      minHeight: {
+        400: '400px',
+        500: '500px',
+      },
+      maxHeight: {
+        400: '400px',
+        530: '530px',
+        500: '500px',
+        600: '600px',
+      },
       fontSize: {
-        16: '64px'
+        16: '64px',
+        10: '10px'
+      },
+      boxShadow: {
+        'card': '32px 32px 71px 0px #428DFF'
       }
     },
 

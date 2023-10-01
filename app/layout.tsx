@@ -10,7 +10,9 @@ import './globals.css';
 
 export const metadata: Metadata = {
 	title: 'Portfolio',
-	description: 'Personal website',
+	description: 'React developer who translate code into high quality website',
+	keywords: ['react developer', 'frontend developer'],
+	creator: 'wirayuda',
 };
 
 const poppins = Poppins({

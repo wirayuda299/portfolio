@@ -7,7 +7,6 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/effect-fade';
 import 'swiper/css/navigation';
-import 'swiper/css/scrollbar';
 import 'swiper/css/pagination';
 
 export default function Content({ review }: { review: Review[] }) {
@@ -34,21 +33,21 @@ export default function Content({ review }: { review: Review[] }) {
 					<SwiperSlide key={item._id}>
 						<div className=' mx-auto flex w-full max-w-7xl grid-cols-1 flex-wrap items-center gap-6 md:justify-center  md:py-16'>
 							<Image
-								className='aspect-square h-full max-h-[500px] w-full rounded-lg object-cover md:max-h-[400px] md:max-w-[450px] '
+								className='aspect-square h-full max-h-500 w-full rounded-lg object-cover md:max-h-400 md:max-w-450'
 								src={item.profile}
 								width={400}
 								height={400}
 								alt='profile'
 								priority
 							/>
-							<div className='max-w-[450px] md:min-h-[400px]'>
-								<div className='inline-flex gap-3 '>
+							<div className='max-w-450 md:min-h-400'>
+								<div className='inline-flex gap-3'>
 									{Array.from({ length: item.star })
 										.fill(item.star)
 										.map((star, i) => (
 											<Image
 												className='w-6 rounded-lg '
-												key={Number(star) * i}
+												key={Number(star) * Math.random()}
 												src='/assets/icons/starFilled.svg'
 												width={40}
 												height={40}
