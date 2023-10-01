@@ -34,7 +34,7 @@ export default function Background() {
 				{jobLists.map((job) => (
 					<li
 						key={job}
-						className='text-xs font-medium text-black-300 dark:text-slate-200 md:text-base '
+						className='text-xs text-black-300 dark:text-slate-200 md:text-base '
 					>
 						{job}
 					</li>
