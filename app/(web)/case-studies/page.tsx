@@ -17,7 +17,7 @@ export default async function CaseStudies() {
 							Case Studies
 						</span>
 					</h1>
-					<p className='mx-auto max-w-full animate-fade-up px-1 pt-5 text-center text-sm text-white-500 animate-once md:animate-fade-right lg:text-xl'>
+					<p className='mx-auto max-w-full animate-fade-up px-1 pt-5 text-center text-sm text-white-100 animate-once md:animate-fade-right lg:text-xl'>
 						Dive into my recent success stories and discover how I&apos;ve
 						helped clients overcome challenges, innovate, and achieve their
 						goals

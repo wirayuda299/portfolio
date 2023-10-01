@@ -25,26 +25,27 @@ export default function FeaturedProjectTechStacks({
 	return (
 		<div className='flex flex-col lg:px-4'>
 			<div ref={ref} className='mt-6 inline-flex flex-wrap gap-4 opacity-0'>
-				<Button className='truncate bg-[#ffffff33] text-[10px] uppercase text-white hover:bg-white hover:text-black'>
-					{techStacks[0].frontend?.map((tech, index) => (
-						<span key={tech.name}>
-							{index > 0 && ', '} <span>{tech.name}</span>
-						</span>
-					))}
-				</Button>
-				{techStacks[0]?.backend && (
-					<Button className='flex truncate bg-[#ffffff33]  text-[10px]  uppercase text-white hover:bg-white hover:text-black'>
-						{techStacks[0]?.backend?.map((tech, index) => (
-							<span key={tech.name}>
-								{index > 0 && ', '} <span>{tech.name}</span>
-							</span>
-						))}
+				{techStacks[0].frontend?.map((tech) => (
+					<Button
+						className='truncate bg-light-gray text-10 uppercase text-white hover:bg-white hover:text-black'
+						key={tech.name}
+					>
+						<span>{tech.name}</span>
 					</Button>
-				)}
+				))}
+				{techStacks[0]?.backend &&
+					techStacks[0]?.backend?.map((tech) => (
+						<Button
+							key={tech.name}
+							className='flex truncate bg-light-gray text-10 uppercase text-white hover:bg-white hover:text-black'
+						>
+							<span>{tech.name}</span>
+						</Button>
+					))}
 			</div>
 			<Link
 				href={`/project/${_id}`}
-				className='inline-flex animate-fade-up items-center gap-3 pt-10 text-sm font-semibold text-white animate-once'
+				className='inline-flex animate-fade-up items-center gap-3 pt-10 text-sm font-medium text-white animate-once'
 			>
 				See Detail project
 				<Image

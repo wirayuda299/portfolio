@@ -20,7 +20,7 @@ export default async function Testimonial() {
 					<p className='pt-5 text-center text-xs font-semibold text-slate-400 md:text-sm'>
 						Be the first person to provide feedback.
 					</p>
-					<ReviewForm inputStyles={style} textAreaStyles={style} />
+					<ReviewForm styles={style} />
 				</div>
 			) : (
 				<Content review={review} />

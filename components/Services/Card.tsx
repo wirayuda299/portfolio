@@ -28,7 +28,7 @@ export default function ServiceCard({
 	return (
 		<div
 			ref={ref}
-			className='ease group mx-auto aspect-square w-80 rounded-lg bg-white-800 px-5 py-7 opacity-0 shadow-lg transition-all duration-500 hover:bg-primary-light dark:bg-black-200 dark:shadow-[#1F2E48] dark:hover:bg-primary-dark hover:dark:shadow-primary-dark sm:w-72'
+			className='ease group mx-auto aspect-square w-80 rounded-lg bg-white-800 px-5 py-7 opacity-0 shadow-md transition-all duration-500 hover:animate-down hover:bg-primary-light dark:bg-black-200 dark:shadow-light-blue dark:hover:bg-primary-dark dark:hover:shadow-lg hover:dark:shadow-primary-dark sm:w-72'
 		>
 			<div className=' flex h-16 w-16 items-center rounded-md bg-primary-light p-3 shadow-lg group-hover:bg-white'>
 				<Image
@@ -42,7 +42,7 @@ export default function ServiceCard({
 			<h3 className='pt-9 text-2xl font-semibold text-black group-hover:text-white dark:text-white-800'>
 				{title}
 			</h3>
-			<p className='pt-[10px] text-sm group-hover:text-white dark:text-white'>
+			<p className='pt-10 text-sm group-hover:text-white dark:text-white'>
 				{text}
 			</p>
 		</div>
