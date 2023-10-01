@@ -47,7 +47,7 @@ export default function MyInfo() {
 							alt='social icon'
 						/>
 						<span className='text-base font-semibold text-white-500 dark:text-white'>
-							+1 (206) 342-8631
+							+6287 833 328 287
 						</span>
 					</div>
 				</div>

@@ -1,29 +1,40 @@
 import Link from 'next/link';
 
-import Content from './Content';
 import { getReview } from '@/sanity/actions/review';
+import TestimonialTitle from './Title';
+import Content from './Content';
+import { ReviewForm } from '../index';
 
 export default async function Testimonial() {
 	const review = await getReview();
+	const style = '!bg-slate-100 dark:!bg-black-200';
 
 	return (
-		<section className='min-h-[500px] py-24 dark:bg-black-300' id='review'>
-			<h2 className='w-full text-center text-4xl  font-bold dark:text-white md:text-5xl'>
-				What{' '}
-				<span className='relative z-[1] w-max before:absolute before:bottom-3 before:left-0 before:z-[-1] before:h-3 before:w-full before:bg-secondary'>
-					they say
-				</span>{' '}
-				about me
-			</h2>
-			<Content review={review} />
-			<div className='flex w-full justify-center'>
-				<Link
-					href={'/review'}
-					className='mt-10 rounded-full bg-primary-light px-5 py-3 text-xs font-semibold text-white dark:bg-primary-dark'
-				>
-					Give your feedback
-				</Link>
-			</div>
+		<section
+			className='min-h-[500px] scroll-mt-10 py-24 dark:bg-black-300'
+			id='review'
+		>
+			<TestimonialTitle />
+			{review.length < 1 ? (
+				<div className='p-5'>
+					<p className='pt-5 text-center text-xs font-semibold text-slate-400 md:text-sm'>
+						Be the first person to provide feedback.
+					</p>
+					<ReviewForm inputStyles={style} textAreaStyles={style} />
+				</div>
+			) : (
+				<Content review={review} />
+			)}
+			{review.length > 0 && (
+				<div className='flex w-full justify-center'>
+					<Link
+						href={'/review'}
+						className='mt-10 rounded-full bg-primary-light px-5 py-3 text-xs font-semibold text-white dark:bg-primary-dark'
+					>
+						Give your feedback
+					</Link>
+				</div>
+			)}
 		</section>
 	);
 }

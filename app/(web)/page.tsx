@@ -8,6 +8,8 @@ import {
 } from '@/components/index';
 import { getCaseStudies } from '@/sanity/actions/caseStudies';
 
+export const revalidate = 0;
+
 export default async function Home() {
 	const caseStudies = await getCaseStudies('featured');
 

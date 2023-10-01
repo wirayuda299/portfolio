@@ -1,8 +1,9 @@
 'use client';
 
-import useIntersectionObserver from '@/hooks/useInterSectionObserver';
 import Image from 'next/image';
 import { useRef } from 'react';
+
+import useIntersectionObserver from '@/hooks/useInterSectionObserver';
 
 type TechIconProps = {
 	label: string;

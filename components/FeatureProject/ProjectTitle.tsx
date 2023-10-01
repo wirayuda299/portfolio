@@ -1,7 +1,8 @@
 'use client';
 
-import useIntersectionObserver from '@/hooks/useInterSectionObserver';
 import { useRef } from 'react';
+
+import useIntersectionObserver from '@/hooks/useInterSectionObserver';
 
 type FeatureProjectTitleProps = {
 	title: string;
@@ -14,6 +15,7 @@ export default function ProjectTitle({
 }: FeatureProjectTitleProps) {
 	const ref = useRef<HTMLHeadingElement>(null);
 	useIntersectionObserver(ref, ['animate-fade-up']);
+
 	return (
 		<h3
 			ref={ref}

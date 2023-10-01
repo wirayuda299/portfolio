@@ -1,49 +1,72 @@
 'use client';
 
-import useIntersectionObserver from '@/hooks/useInterSectionObserver';
 import Image from 'next/image';
 import { useRef } from 'react';
 
-type BackgroundProps = {
-	title: string;
-	subTitle: string;
-	lightIcon: string;
-	index: number;
-};
+import useIntersectionObserver from '@/hooks/useInterSectionObserver';
+import { jobLists } from '@/constant';
 
-export default function Background({
-	title,
-	lightIcon,
-	subTitle,
-	index,
-}: BackgroundProps) {
+export default function Background() {
 	const ref = useRef<HTMLDivElement>(null);
+	const importantKeywords = [
+		'git for version control',
+		'asana',
+		'full-stack',
+		'team meetings',
+		'mentors',
+		'frontend',
+		'high-quality',
+		'skill enhancement',
+	];
 
-	useIntersectionObserver(ref, ['animate-fade-in']);
+	const highlightKeywords = (text: string) => {
+		const regex = new RegExp(`\\b(${importantKeywords.join('|')})\\b`, 'gi');
+		return text.split(regex).map((part, index) => {
+			const isInclude = importantKeywords.includes(part.toLowerCase());
+			return isInclude ? (
+				<span
+					key={index}
+					className='relative inline-block w-max font-bold text-secondary before:absolute before:bottom-1 before:left-0 before:z-[-1] before:h-3  before:w-1/2 '
+				>
+					{part}
+				</span>
+			) : (
+				part
+			);
+		});
+	};
+
+	useIntersectionObserver(ref, ['animate-fade-left']);
 
 	return (
-		<div
-			style={{
-				animationDelay: `${index * 100}ms`,
-			}}
-			ref={ref}
-			className='ease group flex w-full cursor-pointer flex-col items-start justify-start gap-3 rounded-lg bg-white p-5 opacity-0 shadow-xl shadow-white-100 transition-all duration-500 hover:shadow-white-100 dark:bg-black-200 dark:shadow-transparent dark:hover:bg-black-300 dark:hover:shadow-black-100 md:flex-row md:shadow-2xl md:shadow-transparent'
-		>
-			<Image
-				className='ease block brightness-[10%] filter transition-colors duration-500  group-hover:filter-none dark:brightness-0 dark:grayscale-0 dark:invert'
-				src={lightIcon}
-				width={50}
-				height={50}
-				alt={title}
-			/>
-			<div>
-				<h3 className='text-base font-semibold dark:text-white lg:text-2xl'>
-					{title}
-				</h3>
-				<p className='pt-2 text-sm text-white-500 dark:text-white'>
-					{subTitle}
-				</p>
+		<div className='flex flex-1 flex-col items-start opacity-0' ref={ref}>
+			<div className='ease group flex w-full cursor-pointer  flex-row items-center justify-start gap-3 '>
+				<Image
+					className='ease block object-contain brightness-[10%] filter transition-colors duration-500 group-hover:filter-none dark:brightness-0 dark:grayscale-0 dark:invert'
+					src={'/assets/jsm.png'}
+					width={50}
+					height={50}
+					alt={'Javascript Mastery'}
+				/>
+				<div>
+					<h3 className='text-base font-semibold dark:text-white lg:text-2xl'>
+						Javascript Mastery
+					</h3>
+					<p className='text-xs font-medium uppercase dark:text-white'>
+						1 July 2023 - Now
+					</p>
+				</div>
 			</div>
+			<ul className='mt-5 flex list-disc flex-col items-start gap-8 pl-5 dark:text-white'>
+				{jobLists.map((job) => (
+					<li
+						key={job}
+						className='text-xs text-black dark:text-slate-200 md:text-base '
+					>
+						{highlightKeywords(job)}
+					</li>
+				))}
+			</ul>
 		</div>
 	);
 }

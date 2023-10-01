@@ -76,7 +76,7 @@ export default function ContactForm() {
 										{formField.subTitle}
 									</span>
 								</FormLabel>
-								<FormControl className='!bg-white-800  !py-3 focus:!ring-1 focus:!ring-primary-light dark:!bg-black-300 dark:text-white dark:focus:!ring-primary-dark'>
+								<FormControl className='!bg-white-800  !py-3 focus:!ring-1  focus:!ring-primary-light dark:!border-none dark:!bg-black-300 dark:text-white dark:focus:!ring-primary-dark dark:focus-visible:!border-0 dark:focus-visible:!ring-offset-0'>
 									{formField.label === 'messageText' ? (
 										<Textarea
 											className='resize-none !bg-white-800 focus:!ring-1 focus:!ring-primary-light dark:!bg-black-300 dark:focus:!ring-primary-dark '
