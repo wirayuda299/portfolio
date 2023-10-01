@@ -69,11 +69,15 @@ export default function ReviewForm({
 				<div className='h-full w-full max-w-sm'>
 					{formReviewFields.map((formField) => (
 						<div key={formField.label} className='space-y-5'>
-							<h2 className='pt-3 text-sm dark:text-white'>
+							<label
+								htmlFor={formField.label}
+								className='pt-3 text-sm dark:text-white'
+							>
 								{formField.title}
-							</h2>
+							</label>
 							{formField.label === 'comments' ? (
 								<Textarea
+									id='comments'
 									required
 									name='comments'
 									className={cn(
@@ -85,6 +89,7 @@ export default function ReviewForm({
 								<Input
 									min={1}
 									max={5}
+									id={formField.label}
 									accept={
 										formField.label === 'star'
 											? '[0-9]'
