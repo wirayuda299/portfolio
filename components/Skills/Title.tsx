@@ -6,7 +6,7 @@ import useIntersectionObserver from '@/hooks/useInterSectionObserver';
 
 export default function Title() {
 	const ref = useRef<HTMLSpanElement | null>(null);
-	useIntersectionObserver(ref, ['before:animate-increasing']);
+	useIntersectionObserver(ref, 'before:animate-increasing');
 
 	return (
 		<h2 className='py-3 text-center text-4xl font-bold dark:text-white md:text-5xl'>

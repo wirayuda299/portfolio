@@ -23,7 +23,7 @@ export default function ReviewForm({ styles }: ReviewFormProps) {
 	const [pending, startTransition] = useTransition();
 	const pathname = usePathname();
 	const ref = useRef<HTMLDivElement>(null);
-	useIntersectionObserver(ref, ['animate-fade-left']);
+	useIntersectionObserver(ref, 'animate-fade-left');
 
 	const handleSuccess = () => {
 		if (pathname === '/') {

@@ -135,12 +135,6 @@ export const skills = [
 
 export const socialLinks = [
 	{
-		link: 'https://www.instagram.com/wiiiraaaaa_/',
-		label: 'Instagram',
-		darkIcon: '/assets/icons/footer/instagram.svg',
-		lightIcon: '/assets/icons/footer/instagram-light.svg',
-	},
-	{
 		link: 'https://www.linkedin.com/in/wira-yuda29/',
 		label: 'Linkedln',
 		darkIcon: '/assets/icons/footer/linkedln.svg',

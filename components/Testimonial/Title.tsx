@@ -6,7 +6,7 @@ import useIntersectionObserver from '@/hooks/useInterSectionObserver';
 
 export default function TestimonialTitle() {
 	const ref = useRef<HTMLSpanElement>(null);
-	useIntersectionObserver(ref, ['before:animate-increasing']);
+	useIntersectionObserver(ref, 'before:animate-increasing');
 
 	return (
 		<h2 className='w-full text-center text-4xl font-bold dark:text-white md:text-5xl'>

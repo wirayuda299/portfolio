@@ -47,7 +47,7 @@ export default function Content({ review }: { review: Review[] }) {
 										.map((star, i) => (
 											<Image
 												className='w-6 rounded-lg '
-												key={Number(star) * Math.random()}
+												key={Number(star) * Math.random() * i}
 												src='/assets/icons/starFilled.svg'
 												width={40}
 												height={40}

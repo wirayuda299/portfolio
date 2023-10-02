@@ -23,7 +23,7 @@ export default function FeatureProjectCard({
 }: FeatureProjectCardProps) {
 	return (
 		<div
-			className={`w-full rounded-lg p-5 md:px-0 md:py-9`}
+			className='w-full rounded-lg p-5 md:px-0 md:py-9'
 			style={{
 				backgroundColor,
 			}}

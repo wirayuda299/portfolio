@@ -8,9 +8,7 @@ type ContentProps = {
 export default function Content({ contents, image, title }: ContentProps) {
 	return (
 		<div className='bg-white-800 p-5 dark:bg-black-300'>
-			<h3 className='text-lg font-semibold uppercase text-[#E15A46]'>
-				{title}
-			</h3>
+			<h3 className='text-lg font-semibold uppercase text-tomato'>{title}</h3>
 			<div className='flex flex-col gap-5 pt-9'>
 				{contents.map((c) => (
 					<div key={c} className='flex gap-3'>

@@ -20,13 +20,13 @@ export default function FileUpload({
 }: FileUploadProps) {
 	const ref = useRef<HTMLDivElement>(null);
 
-	useIntersectionObserver(ref, ['animate-fade-right']);
+	useIntersectionObserver(ref, 'animate-fade-right');
 	return (
-		<div ref={ref} className='h-full w-full max-w-[400px] opacity-0'>
+		<div ref={ref} className='h-full w-full max-w-400 opacity-0'>
 			{imagePreview ? (
 				<>
 					<Image
-						className='aspect-square max-h-[450px] max-w-[400px] object-cover'
+						className='aspect-square max-h-450 max-w-400 object-cover'
 						src={imagePreview.url}
 						alt='image'
 						width={500}
@@ -39,7 +39,7 @@ export default function FileUpload({
 				</>
 			) : (
 				<UploadDropzone<OurFileRouter>
-					className='min-h-[400px] w-full rounded-2xl border-0 text-black shadow-xl shadow-white-100 ut-button:mt-5 ut-button:rounded-md ut-button:bg-primary-light ut-button:px-5 ut-button:text-xs ut-button:text-white dark:shadow-black-100 ut-button:dark:bg-primary-dark ut-allowed-content:dark:text-white ut-label:dark:text-white ut-upload-icon:dark:text-white'
+					className='min-h-400 w-full rounded-2xl border-0 text-black shadow-xl shadow-white-100 ut-button:mt-5 ut-button:rounded-md ut-button:bg-primary-light ut-button:px-5 ut-button:text-xs ut-button:text-white dark:shadow-black-100 ut-button:dark:bg-primary-dark ut-allowed-content:dark:text-white ut-label:dark:text-white ut-upload-icon:dark:text-white'
 					endpoint='imageUploader'
 					onClientUploadComplete={(res) => {
 						setImage(res ? res[0] : null);

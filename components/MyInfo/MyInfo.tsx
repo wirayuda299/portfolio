@@ -4,7 +4,7 @@ import { socialLinks } from '@/constant';
 
 export default function MyInfo() {
 	return (
-		<section className='flex w-full max-w-xl animate-fade-right flex-col justify-self-start opacity-0 animate-once sm1:pl-10 md:w-auto md:pl-0'>
+		<section className='flex w-full max-w-xl animate-fade-right flex-col justify-self-start opacity-0 sm1:pl-10 md:w-auto md:pl-0'>
 			<div>
 				<h2 className='text-sm font-light text-black dark:text-white'>
 					My Socials
@@ -20,14 +20,7 @@ export default function MyInfo() {
 							<Image
 								src={item.darkIcon}
 								width={40}
-								className='h-5 w-5 dark:hidden'
-								height={40}
-								alt='social icon'
-							/>
-							<Image
-								src={item.lightIcon}
-								width={40}
-								className='hidden h-5 w-5 dark:block'
+								className='h-5 w-5 dark:brightness-0 dark:invert'
 								height={40}
 								alt='social icon'
 							/>

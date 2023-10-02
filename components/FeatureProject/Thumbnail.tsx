@@ -15,7 +15,7 @@ export default function Thumbnail({ title, thumbnail }: ThumbnailProps) {
 
 	useIntersectionObserver(
 		ref,
-		title === 'Morrent' ? ['animate-fade-left'] : ['animate-fade-right']
+		title === 'Morrent' ? 'animate-fade-left' : 'animate-fade-right'
 	);
 
 	return (

@@ -26,7 +26,7 @@ export default function ProjectCard({
 			style={{
 				animationDelay: `${index * 100}ms`,
 			}}
-			className='h-full w-full max-w-[400px] animate-fade-in opacity-0'
+			className='h-full w-full max-w-400 animate-fade-in opacity-0'
 			href={`/project/${_id}`}
 			prefetch={false}
 		>

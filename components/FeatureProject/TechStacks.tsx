@@ -20,7 +20,7 @@ export default function FeaturedProjectTechStacks({
 }: FeaturedProjectTechStacksProps) {
 	const ref = useRef<HTMLDivElement>(null);
 
-	useIntersectionObserver(ref, ['animate-fade-up']);
+	useIntersectionObserver(ref, 'animate-fade-up');
 
 	return (
 		<div className='flex flex-col lg:px-4'>
@@ -45,7 +45,7 @@ export default function FeaturedProjectTechStacks({
 			</div>
 			<Link
 				href={`/project/${_id}`}
-				className='inline-flex animate-fade-up items-center gap-3 pt-10 text-sm font-medium text-white animate-once'
+				className='animate-once inline-flex animate-fade-up items-center gap-3 pt-10 text-sm font-medium text-white'
 			>
 				See Detail project
 				<Image

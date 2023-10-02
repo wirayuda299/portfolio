@@ -8,7 +8,7 @@ export default function Hero() {
 			<Content />
 			<div className='h-full w-full'>
 				<Image
-					className='h-full max-h-600 w-full animate-fade-left object-contain object-right animate-once lg:max-w-600'
+					className='animate-once h-full max-h-600 w-full animate-fade-left object-contain object-right lg:max-w-600'
 					src={'/assets/images/hero.png'}
 					alt='illustration image'
 					priority

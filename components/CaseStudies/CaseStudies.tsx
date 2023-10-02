@@ -10,7 +10,7 @@ export default async function CaseStudies({ id }: { id: string }) {
 
 	return (
 		<section className='dark:bg-black-300'>
-			<div className='mx-auto mt-7 flex max-w-[650px] flex-col  gap-5 px-9 py-10 sm:px-3'>
+			<div className='mx-auto mt-7 flex max-w-650 flex-col  gap-5 px-9 py-10 sm:px-3'>
 				<p className='text-left text-sm font-semibold text-primary-light'>
 					Projects
 				</p>
@@ -20,11 +20,11 @@ export default async function CaseStudies({ id }: { id: string }) {
 				<div className='flex flex-wrap justify-center gap-6'>
 					{similarCaseStudies?.map((p) => (
 						<div
-							className='max-w-[300px] rounded-lg bg-white shadow-md dark:bg-black-300 dark:shadow-[#1F2C41] '
+							className='max-w-300 rounded-lg bg-white shadow-md dark:bg-black-300 dark:shadow-light-shadow'
 							key={p._id}
 						>
 							<Image
-								className=' rounded-lg'
+								className='rounded-lg'
 								src={urlForImage(p.mockup).url()}
 								width={500}
 								height={500}
@@ -34,7 +34,7 @@ export default async function CaseStudies({ id }: { id: string }) {
 								<h3 className='text-base font-semibold text-primary-light'>
 									{p.title}
 								</h3>
-								<p className='py-3  text-sm text-white-500 dark:text-white'>
+								<p className='py-3 text-sm text-white-500 dark:text-white'>
 									{p.descriptions?.slice(0, 100)}
 								</p>
 								<Link href={`/project/${p._id}`}>
