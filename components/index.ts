@@ -14,7 +14,7 @@ export { default as ChallengesLearning } from './ChallengesLearning/ChallengesLe
 export { default as ReviewForm } from './ReviewForm/ReviewForm';
 export { default as FileUpload } from './FileUpload/FileUpload';
 export { default as Hero } from './Hero/index';
-export { default as DeleteImageDialog } from './Dialog/DeleteImageDialog';
+export { default as DeleteImageDialog } from './Dialog/Dialog';
 export { default as MyInfo } from './MyInfo/MyInfo';
 export { default as Design } from './Design/Design';
 export { default as Process } from './Process/Process';
