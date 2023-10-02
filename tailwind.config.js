@@ -37,7 +37,8 @@ module.exports = withUt({
         'black-300': '#192333',
         'black-400': '#778295',
         'light-blue': '#1F2E48',
-
+        'light-shadow': '#1F2C41',
+        'tomato': '#E15A46',
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
@@ -89,6 +90,36 @@ module.exports = withUt({
           from: { opacity: 0 },
           to: { opacity: 1 }
         },
+        'fade-up': {
+          from: {
+            opacity: 0,
+            transform: 'translateY(50px)'
+          },
+          to: {
+            opacity: 1,
+            transform: 'translateY(0)'
+          },
+        },
+        'fade-right': {
+          from: {
+            opacity: 0,
+            transform: 'translateX(-50px)'
+          },
+          to: {
+            opacity: 1,
+            transform: 'translateX(0)'
+          },
+        },
+        'fade-left': {
+          from: {
+            opacity: 0,
+            transform: 'translateX(50px)'
+          },
+          to: {
+            opacity: 1,
+            transform: 'translateX(0)'
+          },
+        },
         'increasing': {
           from: { width: 0 },
           to: { width: '100%' }
@@ -115,6 +146,9 @@ module.exports = withUt({
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         "fade-in": "fade-in 1s ease-in forwards",
+        "fade-up": "fade-up 500ms ease forwards",
+        "fade-left": "fade-left 1s ease forwards",
+        "fade-right": "fade-right 1s ease forwards",
         "increasing": "increasing 1s forwards",
         "icon-up": "icon-up 0.5s linear",
         "down": "go-down 0.5s ease forwards",
@@ -123,8 +157,16 @@ module.exports = withUt({
         'conic-gradient': 'conic-gradient(from 180deg at 50% 75.56%, #0252CD 0deg, rgba(2, 82, 205, 0.33) 360deg);'
       },
       maxWidth: {
+        150: '150px',
+        200: '200px',
+        300: '300px',
+        350: '350px',
+        400: '400px',
         450: '450px',
+        500: '500px',
         600: '600px',
+        650: '650px',
+        700: '700px',
         1400: '1400px'
       },
       width: {
@@ -134,11 +176,16 @@ module.exports = withUt({
         53: '53px'
       },
       minHeight: {
+        300: '300px',
         400: '400px',
         500: '500px',
       },
+      minWidth: {
+        150: '150px'
+      },
       maxHeight: {
         400: '400px',
+        450: '450px',
         530: '530px',
         500: '500px',
         600: '600px',
@@ -153,5 +200,5 @@ module.exports = withUt({
     },
 
   },
-  plugins: [require("tailwindcss-animate"), require('tailwindcss-animated')],
+  plugins: [require("tailwindcss-animate")],
 })

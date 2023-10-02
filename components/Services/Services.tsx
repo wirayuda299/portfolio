@@ -8,8 +8,8 @@ export default function Services() {
 			<div className='mx-auto max-w-1400'>
 				<Title />
 				<div className='mt-10 flex flex-wrap justify-center gap-x-5 gap-y-14 px-5 '>
-					{services.map((service, index) => (
-						<ServiceCard {...service} key={service.title} index={index} />
+					{services.map((service) => (
+						<ServiceCard {...service} key={service.title} />
 					))}
 				</div>
 			</div>

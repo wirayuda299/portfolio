@@ -36,11 +36,11 @@ export default function Background() {
 		});
 	};
 
-	useIntersectionObserver(ref, ['animate-fade-left']);
+	useIntersectionObserver(ref, 'animate-fade-left');
 
 	return (
 		<div className='flex flex-1 flex-col items-start opacity-0' ref={ref}>
-			<div className='ease group flex w-full cursor-pointer  flex-row items-center justify-start gap-3 '>
+			<div className='ease group flex w-full cursor-pointer flex-row items-center justify-start gap-3 '>
 				<Image
 					className='ease block object-contain brightness-[10%] filter transition-colors duration-500 group-hover:filter-none dark:brightness-0 dark:grayscale-0 dark:invert'
 					src={'/assets/jsm.png'}

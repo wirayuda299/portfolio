@@ -17,14 +17,7 @@ export default function Menu({ setIsOpen }: MenuProps) {
 				width={40}
 				height={40}
 				alt='menu'
-				className='hidden h-6 w-6 dark:block'
-			/>
-			<Image
-				src='/assets/icons/menu.svg'
-				width={40}
-				height={40}
-				alt='menu'
-				className='block h-6 w-6  dark:hidden'
+				className=' h-6 w-6 invert dark:invert-0'
 			/>
 		</button>
 	);

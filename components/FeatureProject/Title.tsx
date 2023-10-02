@@ -7,7 +7,7 @@ import useIntersectionObserver from '@/hooks/useInterSectionObserver';
 export default function FeatureProjectTitle() {
 	const ref = useRef<HTMLSpanElement>(null);
 
-	useIntersectionObserver(ref, ['before:animate-increasing']);
+	useIntersectionObserver(ref, 'before:animate-increasing');
 
 	return (
 		<div className='w-full text-center'>

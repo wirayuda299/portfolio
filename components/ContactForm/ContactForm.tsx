@@ -70,7 +70,7 @@ export default function ContactForm() {
 		<Form {...form}>
 			<form
 				onSubmit={form.handleSubmit(onSubmit)}
-				className='flex max-w-2xl animate-fade-left flex-col space-y-8 opacity-0 animate-once'
+				className='flex max-w-2xl animate-fade-left flex-col space-y-8 opacity-0'
 			>
 				{formFields.map((formField) => (
 					<FormField

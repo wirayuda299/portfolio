@@ -16,7 +16,7 @@ export default function FeatureProject({ projects }: { projects: Projects[] }) {
 					<Link
 						title='See more case studies'
 						href='/case-studies'
-						className='mx-auto my-10 inline-flex max-w-[350px] animate-fade-up gap-5 truncate rounded-full bg-primary-light px-5 py-3 text-xs text-white opacity-0 dark:bg-primary-dark sm:px-10 sm:text-sm'
+						className='mx-auto my-10 inline-flex max-w-350 animate-fade-up gap-5 truncate rounded-full bg-primary-light px-5 py-3 text-xs text-white opacity-0 dark:bg-primary-dark sm:px-10 sm:text-sm'
 					>
 						See more case studies
 						<Image

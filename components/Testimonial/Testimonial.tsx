@@ -11,12 +11,12 @@ export default async function Testimonial() {
 
 	return (
 		<section
-			className='min-h-[500px] scroll-mt-10 py-24 dark:bg-black-300'
+			className='min-h-500 scroll-mt-10 py-24 dark:bg-black-300'
 			id='review'
 		>
 			<TestimonialTitle />
 			{review.length < 1 ? (
-				<div className='p-5'>
+				<div className='w-full overflow-x-hidden p-5'>
 					<p className='pt-5 text-center text-xs font-semibold text-slate-400 md:text-sm'>
 						Be the first person to provide feedback.
 					</p>

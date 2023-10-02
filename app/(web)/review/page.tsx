@@ -1,4 +1,9 @@
 import { ReviewForm } from '@/components/index';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+	title: 'Review | Wirayuda',
+};
 
 export default function Review() {
 	return (

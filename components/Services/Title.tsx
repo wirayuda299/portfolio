@@ -7,10 +7,10 @@ import useIntersectionObserver from '@/hooks/useInterSectionObserver';
 export default function Title() {
 	const ref = useRef<HTMLSpanElement>(null);
 
-	useIntersectionObserver(ref, ['before:animate-increasing']);
+	useIntersectionObserver(ref, 'before:animate-increasing');
 
 	return (
-		<h2 className='  flex w-full flex-wrap justify-center gap-2 space-x-2 px-2 text-center text-4xl font-bold dark:text-white-800 md:text-5xl'>
+		<h2 className='flex w-full flex-wrap justify-center gap-2 space-x-2 px-2 text-center text-4xl font-bold dark:text-white-800 md:text-5xl'>
 			What
 			<span
 				ref={ref}

@@ -11,14 +11,14 @@ export default function CallToAction() {
 		<div className='flex flex-col gap-5 pt-5 md:flex-row'>
 			<Link
 				href={'/case-studies'}
-				className=' flex h-12 w-full min-w-[150px] animate-fade-right items-center justify-center rounded-full bg-primary-light text-center text-sm text-white animate-once dark:bg-primary-dark'
+				className=' flex h-12 w-full min-w-150 animate-fade-right items-center justify-center rounded-full bg-primary-light text-center text-sm text-white  dark:bg-primary-dark'
 			>
 				My Work
 			</Link>
 			<Button
 				variant='contact'
 				title='wirayuda233@gmail.com'
-				className='h-12 w-full animate-fade-right rounded-full text-center animate-once'
+				className='h-12 w-full animate-fade-right rounded-full text-center'
 				onClick={() => copyText('wirayuda233@gmail.com')}
 			>
 				<p className='flex w-full items-center justify-center gap-x-5 px-5 text-xs md:w-56'>

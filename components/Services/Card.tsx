@@ -9,26 +9,21 @@ type ServiceCardProps = {
 	title: string;
 	lightIcon: string;
 	text: string;
-	index: number;
 };
 
 export default function ServiceCard({
 	title,
 	lightIcon,
 	text,
-	index,
 }: ServiceCardProps) {
 	const ref = useRef<HTMLDivElement>(null);
 
-	const stylesOdd = ['animate-fade-left', 'md:animate-fade-up'];
-	const styleven = ['animate-fade-right', 'md:animate-fade-up'];
-
-	useIntersectionObserver(ref, index % 2 !== 0 ? stylesOdd : styleven);
+	useIntersectionObserver(ref, 'animate-fade-up');
 
 	return (
 		<div
 			ref={ref}
-			className='ease group mx-auto aspect-square w-80 rounded-lg bg-white-800 px-5 py-7 opacity-0 shadow-md transition-all duration-500 hover:animate-down hover:bg-primary-light dark:bg-black-200 dark:shadow-light-blue dark:hover:bg-primary-dark dark:hover:shadow-lg hover:dark:shadow-primary-dark sm:w-72'
+			className='ease animate-once group mx-auto aspect-square w-80 rounded-lg bg-white-800 px-5  py-7 opacity-0 shadow-md transition-all duration-500 hover:animate-down hover:bg-primary-light group-hover:animate-none dark:bg-black-200 dark:shadow-light-blue dark:hover:bg-primary-dark dark:hover:shadow-lg hover:dark:shadow-primary-dark sm:w-72'
 		>
 			<div className=' flex h-16 w-16 items-center rounded-md bg-primary-light p-3 shadow-lg group-hover:bg-white'>
 				<Image
