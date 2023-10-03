@@ -22,11 +22,23 @@ export function robots(): MetadataRoute.Robots {
 export const metadata: Metadata = {
 	title: 'Home | Wirayuda',
 	description: 'React developer who translate code into high quality website',
-	keywords: ['react developer', 'frontend developer'],
+	keywords: [
+		'react developer',
+		'frontend developer',
+		'portfolio',
+		'nextjs developer',
+		'indonesia',
+		'bali',
+	],
 	creator: 'wirayuda',
 	referrer: 'origin-when-cross-origin',
+	robots: {
+		follow: true,
+		index: true,
+		notranslate: true,
+	},
 	authors: [
-		{ name: 'wirayuda' },
+		{ name: 'Wirayuda' },
 		{ name: 'Wirayuda', url: 'https://wirayuda.vercel.app' },
 	],
 	colorScheme: 'dark',
@@ -47,12 +59,15 @@ export const metadata: Metadata = {
 			},
 		],
 	},
+	category: 'technology',
+
 	manifest: '/site.webmanifest.json',
 };
 
 const poppins = Poppins({
 	display: 'swap',
 	subsets: ['latin'],
+	preload: true,
 	fallback: ['sans-serif'],
 	weight: ['400', '500', '600', '700'],
 });

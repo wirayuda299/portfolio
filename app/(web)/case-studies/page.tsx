@@ -5,6 +5,8 @@ import Loader from '@/components/Loader/Loader';
 import { CallToAction, ProjectCard } from '@/components/index';
 import { getCaseStudies } from '@/sanity/actions/caseStudies';
 
+export const revalidate = 360000;
+
 export const metadata: Metadata = {
 	title: 'Case Studies | Wirayuda',
 };

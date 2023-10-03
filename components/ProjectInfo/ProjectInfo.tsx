@@ -1,7 +1,6 @@
 import Image from 'next/image';
 
 import ProjectInfoLabel from './Label';
-import { urlForImage } from '@/sanity/lib/image';
 
 type ProjectInfoProps = {
 	projectInfo: {
@@ -14,14 +13,27 @@ type ProjectInfoProps = {
 	techStacks: Pick<Projects, 'techStacks'>['techStacks'];
 };
 
+type IconObject = {
+	name: string;
+	_key: string;
+	icon: string;
+};
+
+type IconArray = IconObject;
+
+type IconData = [IconArray, IconArray];
+
 export default function ProjectInfo({
 	projectInfo,
 	techStacks,
 }: ProjectInfoProps) {
 	const { role, startDate, endDate } = projectInfo[0];
-	const frontend = techStacks[0].frontend;
-	const backend = techStacks[0]?.backend;
-	const allTechStacks = [...frontend, ...(backend ?? [])];
+	const frontend = techStacks.frontend;
+	const backend = techStacks?.backend;
+	const allTechStacks = [
+		...frontend,
+		...(backend ?? []),
+	] as unknown as IconData;
 
 	return (
 		<section className='mt-10 h-full w-full bg-white dark:bg-black-200'>
@@ -42,15 +54,9 @@ export default function ProjectInfo({
 						{allTechStacks.map((tech) => (
 							<div
 								key={tech._key}
-								className='h-16 w-16 rounded-full bg-white-800 p-3 shadow-lg dark:bg-black-300
-                  '
+								className='h-16 w-16 rounded-full bg-white-800 p-3 shadow-lg dark:bg-black-300'
 							>
-								<Image
-									src={urlForImage(tech.icon).url()}
-									alt={tech.name}
-									width={40}
-									height={40}
-								/>
+								<Image src={tech.icon} alt={tech.name} width={40} height={40} />
 							</div>
 						))}
 					</div>

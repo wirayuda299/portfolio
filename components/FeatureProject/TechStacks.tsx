@@ -25,7 +25,7 @@ export default function FeaturedProjectTechStacks({
 	return (
 		<div className='flex flex-col lg:px-4'>
 			<div ref={ref} className='mt-6 inline-flex flex-wrap gap-4 opacity-0'>
-				{techStacks[0].frontend?.slice(0, 1).map((tech) => (
+				{techStacks.frontend?.slice(0, 1).map((tech) => (
 					<Button
 						className='truncate bg-light-gray text-10 uppercase text-white hover:bg-white hover:text-black'
 						key={tech.name}
@@ -33,8 +33,8 @@ export default function FeaturedProjectTechStacks({
 						<span>{tech.name}</span>
 					</Button>
 				))}
-				{techStacks[0]?.backend &&
-					techStacks[0]?.backend?.slice(0, 1).map((tech) => (
+				{techStacks?.backend &&
+					techStacks?.backend?.slice(0, 1).map((tech) => (
 						<Button
 							key={tech.name}
 							className='flex truncate bg-light-gray text-10 uppercase text-white hover:bg-white hover:text-black'
