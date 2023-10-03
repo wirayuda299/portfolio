@@ -11,8 +11,11 @@ export default function Design({ design }: { design: string }) {
 			<div className='relative min-h-500 w-full'>
 				<Image
 					fill
-					className='object-cover'
+					sizes='100vw'
+					className='h-full w-full object-cover'
 					src={design}
+					priority
+					fetchPriority='high'
 					alt='figma design image'
 				/>
 			</div>

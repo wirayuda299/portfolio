@@ -19,9 +19,8 @@ const nextConfig = {
     dangerouslyAllowSVG: true
   },
   experimental: {
-    serverActions: true
-  }
-
+    serverActions: true,
+  },
 }
 
 module.exports = nextConfig
