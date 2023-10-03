@@ -81,7 +81,7 @@ export default function ContactForm() {
 							<FormItem>
 								<FormLabel className='flex flex-wrap gap-x-2 text-base text-black-300 dark:text-white'>
 									{formField.title}
-									<span className='text-xs font-light text-white-500 md:text-sm'>
+									<span className='text-xs font-light text-white-800 md:text-sm'>
 										{formField.subTitle}
 									</span>
 								</FormLabel>

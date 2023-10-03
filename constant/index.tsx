@@ -56,7 +56,7 @@ export const services = [
 	},
 	{
 		title: 'Back-End Dev',
-		text: 'Backend dev focus on server-side, databases, and APIs, ensuring seamless data management and communication between the user interface and the server.',
+		text: 'Focus on server-side, ensuring seamless data management and communication between the user interface and the server.',
 		lightIcon: '/assets/icons/services/code-light.svg',
 	},
 	{

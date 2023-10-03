@@ -25,13 +25,13 @@ export default function ProjectInfo({
 
 	return (
 		<section className='mt-10 h-full w-full bg-white dark:bg-black-200'>
-			<div className='mx-auto max-w-600 pb-10'>
-				<div className='flex flex-wrap justify-start gap-x-20 gap-y-6 px-5 py-10 sm:px-2'>
+			<div className='mx-auto max-w-880 pb-10'>
+				<div className='flex flex-wrap justify-between gap-x-20 gap-y-6 px-5 py-10 sm:px-2 md:px-7'>
 					<ProjectInfoLabel label='Role' value={role} />
 					<ProjectInfoLabel label='Start Date' value={startDate} />
 					<ProjectInfoLabel label='End Date' value={endDate} />
 				</div>
-				<div className='mt-20 flex flex-col items-start p-5 sm:p-3'>
+				<div className='mt-20 flex flex-col items-start p-5'>
 					<p className='text-sm font-semibold text-primary-light'>
 						Technologies used
 					</p>

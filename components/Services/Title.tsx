@@ -10,7 +10,7 @@ export default function Title() {
 	useIntersectionObserver(ref, 'before:animate-increasing');
 
 	return (
-		<h2 className='flex w-full flex-wrap justify-center gap-2 space-x-2 px-2 text-center text-4xl font-bold dark:text-white-800 md:text-5xl'>
+		<h2 className='flex w-full flex-wrap justify-center gap-2 space-x-2 text-center text-4xl font-bold dark:text-white-800 md:text-5xl'>
 			What
 			<span
 				ref={ref}

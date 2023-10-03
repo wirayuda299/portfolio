@@ -5,6 +5,7 @@ import {
 	Services,
 	Testimonial,
 	FeatureProject,
+	CallToAction,
 } from '@/components/index';
 import { getCaseStudies } from '@/sanity/actions/caseStudies';
 
@@ -21,6 +22,7 @@ export default async function Home() {
 			<Experience />
 			<FeatureProject projects={caseStudies} />
 			<Testimonial />
+			<CallToAction />
 		</>
 	);
 }

@@ -9,6 +9,7 @@ import {
 	ProjectTitle,
 	ProjectProblem,
 	ChallengesLearning,
+	CallToAction,
 } from '@/components/index';
 import { getSingleCaseStudy } from '@/sanity/actions/caseStudies';
 import { urlForImage } from '@/sanity/lib/image';
@@ -21,9 +22,9 @@ export default async function ProjectDetail({ params: { id } }: Params) {
 	const caseStudy = await getSingleCaseStudy(id);
 
 	return (
-		<div className='h-full w-full'>
+		<div className='h-full w-full '>
 			<ProjectTitle title={caseStudy.title} shortDesc={caseStudy.subTitle} />
-			<section className=' px-3 pt-7'>
+			<section className='pt-7'>
 				<Image
 					className='mx-auto'
 					src={urlForImage(caseStudy.mockup).url()}
@@ -43,8 +44,8 @@ export default async function ProjectDetail({ params: { id } }: Params) {
 				projectInfo={caseStudy.projectInfo}
 				techStacks={caseStudy.techStacks}
 			/>
-			<section className='mx-auto mt-7 flex max-w-600 flex-col gap-5 px-9 py-10 sm:px-3'>
-				<p className='text-sm text-white-500 dark:text-white lg:text-base'>
+			<section className='mx-auto mt-7 flex max-w-880 flex-col gap-5 px-4 py-10'>
+				<p className='text-left text-sm text-white-500 first-letter:capitalize dark:text-white lg:text-lg'>
 					{caseStudy.descriptions}
 				</p>
 			</section>
@@ -59,6 +60,7 @@ export default async function ProjectDetail({ params: { id } }: Params) {
 				learnings={caseStudy?.learnings}
 			/>
 			<CaseStudies id={caseStudy._id} />
+			<CallToAction />
 		</div>
 	);
 }

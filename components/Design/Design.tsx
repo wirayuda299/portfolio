@@ -5,8 +5,8 @@ import { urlForImage } from '@/sanity/lib/image';
 
 export default function Design({ design }: { design: SanityImage }) {
 	return (
-		<section className='mx-auto max-w-1400'>
-			<div className='bg-primary-light py-4 dark:bg-primary-dark '>
+		<section className='mx-auto max-w-1400 '>
+			<div className=' bg-primary-light py-4 dark:bg-primary-dark'>
 				<h2 className='text-center text-sm font-semibold uppercase text-white lg:text-3xl'>
 					High-Fidelity Figma Design
 				</h2>
