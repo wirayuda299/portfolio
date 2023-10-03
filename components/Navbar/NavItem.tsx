@@ -36,9 +36,7 @@ export default function NavItem({
 				<Link
 					href={path}
 					className={`text-lg font-normal uppercase md:text-sm md:capitalize ${
-						pathname === path
-							? 'duration-&lsqb;20000&rsqb animate-pulse font-semibold text-primary-light dark:text-primary-dark'
-							: ''
+						pathname === path ? 'font-semibold' : ''
 					}`}
 				>
 					<span>{title}</span>

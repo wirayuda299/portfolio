@@ -19,7 +19,7 @@ export default async function CaseStudies({ id }: { id: string }) {
 				<div className='flex h-fit snap-x snap-mandatory gap-6 overflow-x-scroll'>
 					{similarCaseStudies?.map((p) => (
 						<div
-							className='h-min min-w-[350px] snap-start rounded-lg bg-white p-3 shadow-md dark:bg-black-300 dark:shadow-light-shadow'
+							className='h-min min-w-300 max-w-450 snap-start rounded-lg bg-white p-3 shadow-md dark:bg-black-300 dark:shadow-light-shadow'
 							key={p._id}
 						>
 							<Image

@@ -25,11 +25,11 @@ export default function CallToAction() {
 			>
 				My Work
 			</Link>
-			<div className='flex h-12 w-full animate-fade-right items-center justify-center gap-3 truncate rounded-full bg-white px-5 text-center text-white-500 hover:bg-white-800 dark:bg-black-200 dark:text-white dark:hover:bg-black-300 '>
+			<div className='flex h-12 w-full min-w-250 animate-fade-right items-center justify-center gap-3 truncate rounded-full bg-white py-5 text-center text-white-500 hover:bg-white-800 dark:bg-black-200 dark:text-white dark:hover:bg-black-300 max-lg:min-w-250 lg:px-2'>
 				<a
 					href='mailto:wirayuda233@gmail.com'
 					target='_blank'
-					className='inline-block'
+					className='inline-block text-xs font-medium '
 				>
 					wirayuda233@gmail.com
 				</a>
@@ -38,7 +38,7 @@ export default function CallToAction() {
 						<CheckIcon color='#FFBE62' className='h-5 w-5' />
 					) : (
 						<Image
-							className='h-5 w-5'
+							className='w-5 object-contain'
 							src={'/assets/icons/copy.svg'}
 							alt='copy icon'
 							width={40}

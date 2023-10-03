@@ -26,7 +26,7 @@ module.exports = withUt({
       },
       colors: {
         'primary-light': '#0252CD',
-        'primary-dark': '#428DFF',
+        'primary-dark': '#1160f9',
         'light-gray': '#ffffff33',
         'secondary': '#FFBE62',
         'white-800': '#F3F8FF',
@@ -68,9 +68,6 @@ module.exports = withUt({
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-      },
-      padding: {
-        10: '10px',
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -172,7 +169,10 @@ module.exports = withUt({
       },
       minWidth: {
         150: '150px',
-        200: '200px'
+        200: '200px',
+        250: '250px',
+        280: '280px',
+        300: '300px'
       },
       maxHeight: {
         400: '400px',
@@ -181,6 +181,7 @@ module.exports = withUt({
         500: '500px',
         600: '600px',
         700: '700px',
+        750: '750px',
       },
       fontSize: {
         16: '64px',
