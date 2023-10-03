@@ -1,29 +1,20 @@
+type Icon = {
+	name: string;
+	_key: string;
+	icon: string;
+};
+
+type Frontend = Icon[];
+type Backend = Icon[];
+
 type Projects = {
 	backgroundColor: string;
 	thumbnail: SanityImage;
 	demoSite: string;
-	techStacks: [
-		{
-			_type: string;
-			_key: string;
-			frontend: [
-				{
-					_type: string;
-					_key: string;
-					name: string;
-					icon: SanityImage;
-				}
-			];
-			backend: [
-				{
-					_type: string;
-					_key: string;
-					name: string;
-					icon: SanityImage;
-				}
-			];
-		}
-	];
+	techStacks: {
+		frontend: Frontend;
+		backend: Backend;
+	};
 	challenges: string[];
 	descriptions: string;
 	sourceCode: string;

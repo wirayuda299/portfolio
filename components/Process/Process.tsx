@@ -1,12 +1,9 @@
 import Image from 'next/image';
-import type { Image as SanityImage } from 'sanity';
-
-import { urlForImage } from '@/sanity/lib/image';
 
 type ProcessProps = {
 	title: string;
 	_type: string;
-	icon: SanityImage;
+	icon: string;
 	_key: string;
 }[];
 
@@ -23,7 +20,7 @@ export default function Process({ process }: { process: ProcessProps }) {
 						<div key={p._key} className='flex flex-col items-center'>
 							<div className=' flex h-16 w-16 items-center justify-center rounded-full bg-white-800 dark:bg-black-300'>
 								<Image
-									src={urlForImage(p.icon).url()}
+									src={p.icon}
 									className='mx-auto'
 									width={40}
 									height={40}

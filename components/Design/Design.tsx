@@ -1,9 +1,6 @@
 import Image from 'next/image';
-import type { Image as SanityImage } from 'sanity';
 
-import { urlForImage } from '@/sanity/lib/image';
-
-export default function Design({ design }: { design: SanityImage }) {
+export default function Design({ design }: { design: string }) {
 	return (
 		<section className='mx-auto max-w-1400 '>
 			<div className=' bg-primary-light py-4 dark:bg-primary-dark'>
@@ -15,7 +12,7 @@ export default function Design({ design }: { design: SanityImage }) {
 				<Image
 					fill
 					className='object-cover'
-					src={urlForImage(design).url()}
+					src={design}
 					alt='figma design image'
 				/>
 			</div>

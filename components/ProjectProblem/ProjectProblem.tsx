@@ -1,10 +1,8 @@
-import { urlForImage } from '@/sanity/lib/image';
 import Image from 'next/image';
-import { Image as SanityImage } from 'sanity';
 
 type ProjectProblemProps = {
 	text: string;
-	image: SanityImage;
+	image: string;
 };
 
 export default function ProjectProblem({ text, image }: ProjectProblemProps) {
@@ -23,7 +21,7 @@ export default function ProjectProblem({ text, image }: ProjectProblemProps) {
 					height={500}
 					sizes='100vw'
 					className='mb-6 w-full object-contain'
-					src={urlForImage(image).url()}
+					src={image}
 					alt='illustration image'
 				/>
 			</div>

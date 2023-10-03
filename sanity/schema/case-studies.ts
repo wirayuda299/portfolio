@@ -135,17 +135,22 @@ export default {
 		{
 			name: 'problem',
 			title: 'Problem',
-			type: 'document',
-			fields: [
+			type: 'array',
+			of: [
 				{
-					name: 'description',
-					title: 'Descriptions',
-					type: 'string',
-				},
-				{
-					name: 'image',
-					title: 'Image',
-					type: 'image',
+					type: 'document',
+					fields: [
+						{
+							name: 'description',
+							title: 'Description',
+							type: 'string',
+						},
+						{
+							name: 'image',
+							title: 'Image',
+							type: 'image',
+						},
+					],
 				},
 			],
 		},

@@ -3,7 +3,6 @@ import Link from 'next/link';
 
 import { Button } from '../ui/button';
 import { getSimilarCaseStudies } from '@/sanity/actions/caseStudies';
-import { urlForImage } from '@/sanity/lib/image';
 
 export default async function CaseStudies({ id }: { id: string }) {
 	const similarCaseStudies = await getSimilarCaseStudies(id);
@@ -25,7 +24,7 @@ export default async function CaseStudies({ id }: { id: string }) {
 						>
 							<Image
 								className='h-full w-full rounded-lg object-contain '
-								src={urlForImage(p.mockup).url()}
+								src={p.mockup}
 								width={500}
 								height={500}
 								alt={p.title}

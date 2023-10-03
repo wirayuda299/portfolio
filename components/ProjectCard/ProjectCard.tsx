@@ -1,12 +1,9 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import type { Image as SanityImage } from 'sanity';
-
-import { urlForImage } from '@/sanity/lib/image';
 
 type ProjectCardProps = {
 	backgroundColor: string;
-	mockup: SanityImage;
+	mockup: string;
 	title: string;
 	subTitle: string;
 	_id: string;
@@ -34,7 +31,7 @@ export default function ProjectCard({
 				style={{
 					backgroundColor,
 				}}
-				src={urlForImage(mockup).url()}
+				src={mockup}
 				width={500}
 				height={500}
 				priority

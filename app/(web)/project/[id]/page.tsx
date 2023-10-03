@@ -12,7 +12,6 @@ import {
 	CallToAction,
 } from '@/components/index';
 import { getSingleCaseStudy } from '@/sanity/actions/caseStudies';
-import { urlForImage } from '@/sanity/lib/image';
 
 type Params = {
 	params: { id: string };
@@ -27,7 +26,7 @@ export default async function ProjectDetail({ params: { id } }: Params) {
 			<section className='pt-7'>
 				<Image
 					className='mx-auto'
-					src={urlForImage(caseStudy.mockup).url()}
+					src={caseStudy.mockup}
 					width={500}
 					priority
 					fetchPriority='high'
