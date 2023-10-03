@@ -11,7 +11,7 @@ export default function ChallengesLearning({
 }: ChallengesLearningProps) {
 	return (
 		<section className='bg-white dark:bg-black-200'>
-			<div className='mx-auto flex max-w-600 flex-col gap-5 px-9 py-10 sm:px-3'>
+			<div className='mx-auto flex max-w-880 flex-col gap-5 px-3 py-10'>
 				<p className='text-sm font-semibold text-primary-light'>Problem</p>
 				<h2 className='text-2xl font-semibold text-black dark:text-white'>
 					Challenges & Learnings

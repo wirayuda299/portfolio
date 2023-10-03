@@ -10,19 +10,20 @@ type ProjectProblemProps = {
 export default function ProjectProblem({ text, image }: ProjectProblemProps) {
 	return (
 		<section className='mt-10 h-full w-full bg-white dark:bg-black-200'>
-			<div className='mx-auto mt-7 flex max-w-600 flex-col gap-5 px-9 py-10 sm:px-3'>
+			<div className='mx-auto mt-7 flex max-w-880 flex-col gap-5 px-3 py-10 '>
 				<p className='text-sm font-semibold text-primary-light'>Problem</p>
 				<h2 className='text-lg font-semibold dark:text-white'>
 					Problem Statement
 				</h2>
-				<p className='py-6 text-sm text-white-500 dark:text-white lg:text-base'>
+				<p className='py-6 text-sm text-white-500 dark:text-white lg:text-lg'>
 					{text}
 				</p>
 				<Image
-					className='w-full object-cover'
-					src={urlForImage(image).url()}
-					width={500}
+					width={1000}
 					height={500}
+					sizes='100vw'
+					className='mb-6 w-full object-contain'
+					src={urlForImage(image).url()}
 					alt='illustration image'
 				/>
 			</div>

@@ -1,37 +1,52 @@
 'use client';
 
+import Link from 'next/link';
+import { CheckIcon } from '@radix-ui/react-icons';
+import { useState } from 'react';
 import Image from 'next/image';
 
-import { Button } from '../ui/button';
 import { copyText } from '@/utils/copy';
-import Link from 'next/link';
 
 export default function CallToAction() {
+	const [isChecked, setIsChecked] = useState<boolean>(false);
+
+	const handleCLick = () => {
+		copyText('wirayuda233@gmail.com');
+		setIsChecked(true);
+
+		setTimeout(() => setIsChecked(false), 2000);
+	};
+
 	return (
-		<div className='flex flex-col gap-5 pt-5 md:flex-row'>
+		<div className='flex flex-col gap-5 pt-8 md:flex-row'>
 			<Link
 				href={'/case-studies'}
-				className=' flex h-12 w-full min-w-150 animate-fade-right items-center justify-center rounded-full bg-primary-light text-center text-sm text-white  dark:bg-primary-dark'
+				className='flex h-12 w-full min-w-200 animate-fade-right items-center justify-center rounded-full bg-primary-light text-center text-sm text-white  dark:bg-primary-dark'
 			>
 				My Work
 			</Link>
-			<Button
-				variant='contact'
-				title='wirayuda233@gmail.com'
-				className='h-12 w-full animate-fade-right rounded-full text-center'
-				onClick={() => copyText('wirayuda233@gmail.com')}
-			>
-				<p className='flex w-full items-center justify-center gap-x-5 px-5 text-xs md:w-56'>
+			<div className='flex h-12 w-full animate-fade-right items-center justify-center gap-3 truncate rounded-full bg-white px-5 text-center text-white-500 hover:bg-white-800 dark:bg-black-200 dark:text-white dark:hover:bg-black-300 '>
+				<a
+					href='mailto:wirayuda233@gmail.com'
+					target='_blank'
+					className='inline-block'
+				>
 					wirayuda233@gmail.com
-					<Image
-						className='h-5 w-5'
-						src='/assets/icons/copy.svg'
-						width={40}
-						height={40}
-						alt='copy icon'
-					/>
-				</p>
-			</Button>
+				</a>
+				<button onClick={handleCLick}>
+					{isChecked ? (
+						<CheckIcon color='#FFBE62' className='h-5 w-5' />
+					) : (
+						<Image
+							className='h-5 w-5'
+							src={'/assets/icons/copy.svg'}
+							alt='copy icon'
+							width={40}
+							height={40}
+						/>
+					)}
+				</button>
+			</div>
 		</div>
 	);
 }

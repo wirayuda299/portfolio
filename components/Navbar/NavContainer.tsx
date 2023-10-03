@@ -13,8 +13,8 @@ export default function NavContainer() {
 	return (
 		<>
 			<ul
-				className={`ease list-container overflow-x-hidden transition-all duration-500 ${
-					isOpen ? 'left-0' : '!-left-[200%]'
+				className={`ease fixed top-0 z-50 flex h-screen w-full flex-col  items-center justify-evenly overflow-hidden bg-white-800 pr-3 backdrop-blur transition-all duration-500 dark:border-r-white-500 dark:bg-black-200 md:static md:h-auto md:flex-row  md:justify-end  md:gap-x-9  md:border-r-2 md:!bg-transparent md:!bg-none md:backdrop-blur-0 ${
+					!isOpen ? '-left-full' : 'left-0'
 				}`}
 			>
 				{navItems.map((item, i) => (

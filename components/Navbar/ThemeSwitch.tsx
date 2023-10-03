@@ -33,11 +33,7 @@ export default function ThemeSwitch() {
 			>
 				<Image
 					ref={iconRef}
-					src={`/assets/icons/${
-						(theme === undefined && 'sun.svg') || theme === 'light'
-							? 'sun.svg'
-							: 'moon.svg'
-					}`}
+					src={`/assets/icons/${theme === 'light' ? 'sun.svg' : 'moon.svg'}`}
 					width={24}
 					height={24}
 					alt='menu'

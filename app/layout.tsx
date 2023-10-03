@@ -64,7 +64,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
 				className={`bg-white-800 text-black dark:bg-black-300 ${poppins.className}`}
 			>
 				<Toaster />
-				<main className='h-full w-full'>{children}</main>
+				<main className='h-full w-full select-none'>{children}</main>
 				<NextSSRPlugin routerConfig={extractRouterConfig(ourFileRouter)} />
 			</body>
 		</html>

@@ -124,16 +124,6 @@ module.exports = withUt({
           from: { width: 0 },
           to: { width: '100%' }
         },
-        'go-down': {
-          '0%': {
-            opacity: 1,
-            transform: 'translateY(0)'
-          },
-          '100%': {
-            opacity: 1,
-            transform: 'translateY(20px)'
-          }
-        },
         'icon-up': {
           '0%': {
             transform: 'translateY(-100%)'
@@ -146,12 +136,11 @@ module.exports = withUt({
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         "fade-in": "fade-in 1s ease-in forwards",
-        "fade-up": "fade-up 500ms ease forwards",
+        "fade-up": "fade-up 500ms ease forwards ",
         "fade-left": "fade-left 1s ease forwards",
         "fade-right": "fade-right 1s ease forwards",
         "increasing": "increasing 1s forwards",
         "icon-up": "icon-up 0.5s linear",
-        "down": "go-down 0.5s ease forwards",
       },
       backgroundImage: {
         'conic-gradient': 'conic-gradient(from 180deg at 50% 75.56%, #0252CD 0deg, rgba(2, 82, 205, 0.33) 360deg);'
@@ -167,6 +156,7 @@ module.exports = withUt({
         600: '600px',
         650: '650px',
         700: '700px',
+        880: '880px',
         1400: '1400px'
       },
       width: {
@@ -181,7 +171,8 @@ module.exports = withUt({
         500: '500px',
       },
       minWidth: {
-        150: '150px'
+        150: '150px',
+        200: '200px'
       },
       maxHeight: {
         400: '400px',
@@ -189,6 +180,7 @@ module.exports = withUt({
         530: '530px',
         500: '500px',
         600: '600px',
+        700: '700px',
       },
       fontSize: {
         16: '64px',

@@ -25,7 +25,7 @@ export default function FeaturedProjectTechStacks({
 	return (
 		<div className='flex flex-col lg:px-4'>
 			<div ref={ref} className='mt-6 inline-flex flex-wrap gap-4 opacity-0'>
-				{techStacks[0].frontend?.map((tech) => (
+				{techStacks[0].frontend?.slice(0, 1).map((tech) => (
 					<Button
 						className='truncate bg-light-gray text-10 uppercase text-white hover:bg-white hover:text-black'
 						key={tech.name}
@@ -34,7 +34,7 @@ export default function FeaturedProjectTechStacks({
 					</Button>
 				))}
 				{techStacks[0]?.backend &&
-					techStacks[0]?.backend?.map((tech) => (
+					techStacks[0]?.backend?.slice(0, 1).map((tech) => (
 						<Button
 							key={tech.name}
 							className='flex truncate bg-light-gray text-10 uppercase text-white hover:bg-white hover:text-black'
@@ -45,9 +45,9 @@ export default function FeaturedProjectTechStacks({
 			</div>
 			<Link
 				href={`/project/${_id}`}
-				className='animate-once inline-flex animate-fade-up items-center gap-3 pt-10 text-sm font-medium text-white'
+				className='inline-flex items-center gap-3 pt-5 text-sm font-medium text-white'
 			>
-				See Detail project
+				See Case Study
 				<Image
 					src='/assets/icons/arrow.svg'
 					width={50}

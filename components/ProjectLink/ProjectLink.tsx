@@ -15,7 +15,7 @@ export default function ProjectLink({
 				href={demoLink}
 				target='_blank'
 				rel='noopener noreferrer'
-				className='inline-flex items-center gap-1 text-sm font-semibold text-primary-light'
+				className='inline-flex items-center gap-1 text-sm font-semibold text-primary-light lg:text-lg'
 			>
 				<Image
 					className='h-3 w-4'
@@ -37,7 +37,7 @@ export default function ProjectLink({
 				href={githubLink}
 				target='_blank'
 				rel='noopener noreferrer'
-				className='inline-flex items-center gap-1 text-sm font-semibold text-primary-light'
+				className='inline-flex items-center gap-1 text-sm font-semibold text-primary-light lg:text-lg'
 			>
 				<Image
 					className='h-3 w-3 '

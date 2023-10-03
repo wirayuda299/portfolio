@@ -7,11 +7,10 @@ export default function useIntersectionObserver<T>(
 	useEffect(() => {
 		const observer = new IntersectionObserver(
 			(entries) => {
-				if (entries[0].isIntersecting) {
-					entries[0].target.classList.add(classString);
-				} else {
-					entries[0].target.classList.remove(classString);
-				}
+				entries[0].target.classList.toggle(
+					classString,
+					entries[0].isIntersecting
+				);
 			},
 			{
 				threshold: 0.5,
