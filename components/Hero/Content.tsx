@@ -4,7 +4,7 @@ import CallToAction from './CallToAction';
 export default function Content() {
 	return (
 		<div className='flex h-full max-h-full w-full flex-col justify-center lg:max-w-500'>
-			<h1 className='animate-once animate-fade-up text-sm uppercase text-white md:pb-7 md:text-xl'>
+			<h1 className='animate-once animate-fade-up text-sm uppercase text-primary-light dark:text-white md:pb-7 md:text-xl'>
 				Hi, I am Wirayuda
 			</h1>
 			<h2 className='animate-once z-0 w-fit animate-fade-up pt-5 text-3xl font-bold text-black-200  dark:text-white sm:text-5xl xl:text-16'>
