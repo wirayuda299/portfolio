@@ -10,6 +10,10 @@ import { Toaster } from '@/components/ui/toaster';
 import { ourFileRouter } from './api/uploadthing/core';
 
 export const metadata: Metadata = {
+	metadataBase: new URL(
+		`https://${process.env.VERCEL_URL}` ||
+			`http://localhost:${process.env.PORT || 3000}`
+	),
 	title: 'Home | Wirayuda',
 	description: 'React developer who translate code into high quality website',
 	keywords: [
