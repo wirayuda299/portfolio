@@ -35,7 +35,6 @@ export const metadata: Metadata = {
 		{ name: 'Wirayuda' },
 		{ name: 'Wirayuda', url: 'https://wirayuda.vercel.app' },
 	],
-	colorScheme: 'dark',
 	publisher: 'Wirayuda',
 	formatDetection: {
 		email: false,

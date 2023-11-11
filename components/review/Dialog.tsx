@@ -27,18 +27,20 @@ export default function DeleteImageDialog({
 			<DialogTrigger asChild className='mt-2 w-full'>
 				<Button variant='destructive'>Delete</Button>
 			</DialogTrigger>
-			<DialogContent>
+			<DialogContent className='border-none dark:text-white'>
 				<DialogHeader>
-					<DialogTitle>Are you sure to delete this image?</DialogTitle>
+					<DialogTitle className='dark:text-white'>
+						Are you sure to delete this image?
+					</DialogTitle>
 					<div className='flex w-full items-center justify-center gap-2 pt-3'>
 						<Button
 							className='w-full'
 							variant={'destructive'}
-							onClick={() =>
-								deleteImage(key).then(() => {
+							onClick={async () => {
+								await deleteImage(key).then(() => {
 									setImagePreview(null);
-								})
-							}
+								});
+							}}
 						>
 							Yes
 						</Button>

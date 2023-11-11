@@ -18,9 +18,10 @@ const nextConfig = {
     ],
     dangerouslyAllowSVG: true
   },
-  experimental: {
-    serverActions: true,
-  },
+  // compiler: {
+  //   removeConsole: true
+  // },
+
 }
 
 module.exports = nextConfig

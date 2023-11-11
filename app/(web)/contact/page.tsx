@@ -1,5 +1,8 @@
-import { ContactForm, MyInfo } from '@/components/index';
 import type { Metadata } from 'next';
+import Image from 'next/image';
+
+import { socialLinks } from '@/constant';
+import { ContactForm } from '@/components/index';
 
 export const metadata: Metadata = {
 	title: 'Contact | Wirayuda',
@@ -19,7 +22,56 @@ export default function Contact() {
 			</div>
 			<section className='flex flex-col items-center gap-10 bg-white p-8 dark:bg-black-200 md:flex-row-reverse md:items-start md:justify-center md:gap-14 md:p-12'>
 				<ContactForm />
-				<MyInfo />
+				<section className='flex w-full max-w-xl animate-fade-right flex-col justify-self-start opacity-0 sm1:pl-10 md:w-auto md:pl-0'>
+					<div>
+						<h2 className='text-sm font-light text-black dark:text-white'>
+							My Socials
+						</h2>
+						<div className='inline-flex gap-6 pt-3'>
+							{socialLinks.map((item) => (
+								<a
+									href={item.link}
+									key={item.label}
+									target='_blank'
+									title={item.label}
+								>
+									<Image
+										src={item.darkIcon}
+										width={40}
+										className='h-5 w-5 dark:brightness-0 dark:invert'
+										height={40}
+										alt='social icon'
+									/>
+								</a>
+							))}
+						</div>
+						<div className='pt-9'>
+							<h2 className='text-sm font-light text-black dark:text-white'>
+								Phone Number
+							</h2>
+							<div className='inline-flex gap-x-2 pt-1'>
+								<Image
+									src={'/assets/icons/phone.svg'}
+									width={40}
+									className='h-5 w-5 dark:hidden'
+									height={40}
+									alt='social icon'
+								/>
+								<span className='text-base font-semibold text-white-500 dark:text-white'>
+									+6287 833 328 287
+								</span>
+							</div>
+						</div>
+						<div className='pt-9'>
+							<h2 className='text-sm font-light text-black dark:text-white'>
+								Email Address
+							</h2>
+							<p className='text-base font-semibold text-white-500 dark:text-white'>
+								wirayuda233@gmail.com
+							</p>
+						</div>
+					</div>
+				</section>
 			</section>
 		</>
 	);

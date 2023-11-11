@@ -2,6 +2,9 @@ import { client } from '@/sanity/lib/client';
 
 export const postReview = async (data: FormData, image: ImageResult | null) => {
 	try {
+		const datas = data.forEach((d) => {
+			console.log(d);
+		});
 		const formData = {
 			_type: 'review',
 			star: Number(data.get('star')),

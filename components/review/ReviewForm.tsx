@@ -7,7 +7,7 @@ import { toast } from '../ui/use-toast';
 import { Input } from '../ui/input';
 import { Button } from '@/components/ui/button';
 import { Textarea } from '../ui/textarea';
-import { FileUpload } from '../index';
+import FileUpload from './FileUpload';
 import { formReviewFields } from '@/constant';
 import { postReview } from '@/serveractions';
 import { cn } from '@/lib/utils';
@@ -19,20 +19,10 @@ type ReviewFormProps = {
 
 export default function ReviewForm({ styles }: ReviewFormProps) {
 	const [image, setImage] = useState<ImageResult | null>(null);
-	const { push, refresh } = useRouter();
+	const { push } = useRouter();
 	const [pending, startTransition] = useTransition();
-	const pathname = usePathname();
 	const ref = useRef<HTMLDivElement>(null);
 	useIntersectionObserver(ref, 'animate-fade-left');
-
-	const handleSuccess = () => {
-		if (pathname === '/') {
-			refresh();
-			return;
-		}
-		push('/#review');
-		refresh();
-	};
 
 	const handleSubmit = async (data: FormData) => {
 		try {
@@ -45,7 +35,8 @@ export default function ReviewForm({ styles }: ReviewFormProps) {
 
 			startTransition(async () => {
 				await postReview(data, image).then(() => {
-					handleSuccess();
+					push('/#review');
+
 					toast({ title: 'Thank you for your feedback❤' });
 				});
 			});

@@ -4,7 +4,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { useRef } from 'react';
 
-import { Button } from '../ui/button';
+import { Button } from '../../ui/button';
 import useIntersectionObserver from '@/hooks/useInterSectionObserver';
 
 type TechStacks = Pick<Projects, 'techStacks'>['techStacks'];

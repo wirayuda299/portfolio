@@ -1,4 +1,5 @@
 import { client } from '@/sanity/lib/client';
+import { revalidatePath } from 'next/cache';
 
 export const postReview = async (data: FormData, image: ImageResult | null) => {
 	try {
@@ -15,6 +16,7 @@ export const postReview = async (data: FormData, image: ImageResult | null) => {
 		await client.create(formData, {
 			token: process.env.NEXT_PUBLIC_SANITY_WRITE_TOKEN,
 		});
+		revalidatePath('/');
 	} catch (error) {
 		throw error;
 	}

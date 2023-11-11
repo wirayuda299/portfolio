@@ -4,12 +4,10 @@ import {
 	Experience,
 	Services,
 	Testimonial,
-	FeatureProject,
+	FeaturedProject,
 	CallToAction,
 } from '@/components/index';
 import { getCaseStudies } from '@/sanity/actions/caseStudies';
-
-export const revalidate = 0;
 
 export default async function Home() {
 	const caseStudies = await getCaseStudies('featured');
@@ -20,7 +18,7 @@ export default async function Home() {
 			<Skills />
 			<Services />
 			<Experience />
-			<FeatureProject projects={caseStudies} />
+			<FeaturedProject projects={caseStudies} />
 			<Testimonial />
 			<CallToAction />
 		</>
