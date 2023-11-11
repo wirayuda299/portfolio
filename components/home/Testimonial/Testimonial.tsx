@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { getReview } from '@/sanity/actions/review';
 import TestimonialTitle from './Title';
 import Content from './Content';
-import { ReviewForm } from '../index';
+import { ReviewForm } from '../../index';
 
 export default async function Testimonial() {
 	const review = await getReview();

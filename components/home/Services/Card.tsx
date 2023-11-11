@@ -35,7 +35,7 @@ export default function ServiceCard({
 				<h3 className='pt-9 text-2xl font-semibold text-black group-hover:text-white dark:text-white-800'>
 					{title}
 				</h3>
-				<p className='pt-10 text-sm group-hover:text-white dark:text-white'>
+				<p className='pt-4 text-sm group-hover:text-white dark:text-white'>
 					{text}
 				</p>
 			</div>

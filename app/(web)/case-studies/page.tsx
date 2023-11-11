@@ -1,8 +1,10 @@
 import { Suspense } from 'react';
 import type { Metadata } from 'next';
+import Image from 'next/image';
+import Link from 'next/link';
 
-import Loader from '@/components/Loader/Loader';
-import { CallToAction, ProjectCard } from '@/components/index';
+import Loader from '@/components/shared/Loader';
+import { CallToAction } from '@/components/index';
 import { getCaseStudies } from '@/sanity/actions/caseStudies';
 
 export const revalidate = 360000;
@@ -33,7 +35,31 @@ export default async function CaseStudies() {
 					<div className='mx-auto flex max-w-1400 flex-wrap justify-center gap-9 '>
 						{caseStudies.map((project, i) => (
 							<Suspense key={project.title} fallback={<Loader />}>
-								<ProjectCard {...project} index={i} />
+								<Link
+									style={{
+										animationDelay: `${i * 100}ms`,
+									}}
+									className='h-full w-full max-w-400 animate-fade-in opacity-0'
+									href={`/project/${project._id}`}
+									prefetch={false}
+								>
+									<Image
+										style={{
+											backgroundColor: project.backgroundColor,
+										}}
+										src={project.mockup}
+										width={500}
+										height={500}
+										priority
+										fetchPriority='high'
+										alt={project.title}
+										className='mx-auto rounded-md object-cover object-bottom px-5 pt-5 lg:px-10 lg:pt-10'
+									/>
+									<h2 className='pt-5 text-xl font-semibold dark:text-white'>
+										{project.title}
+									</h2>
+									<p className='text-sm text-white-500'>{project.subTitle}</p>
+								</Link>
 							</Suspense>
 						))}
 					</div>

@@ -25,5 +25,5 @@ export default function useIntersectionObserver<T>(
 				observer.unobserve(element.current as unknown as Element);
 			}
 		};
-	}, [element]);
+	}, []);
 }
