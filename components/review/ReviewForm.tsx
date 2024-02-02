@@ -52,10 +52,10 @@ export default function ReviewForm({ styles }: ReviewFormProps) {
 		<div className='mt-9 w-full opacity-0' ref={ref}>
 			<form
 				action={handleSubmit}
-				className='flex h-full w-full flex-wrap items-center justify-center gap-20 '
+				className='flex size-full flex-wrap items-center justify-center gap-20 '
 			>
 				<FileUpload setImage={setImage} imagePreview={image} />
-				<div className='h-full w-full max-w-sm'>
+				<div className='size-full max-w-sm'>
 					{formReviewFields.map((formField) => (
 						<div key={formField.label} className='space-y-5'>
 							<label

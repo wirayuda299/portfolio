@@ -18,7 +18,7 @@ export default function Menu({ setIsOpen }: MenuProps) {
 				height={40}
 				alt='menu'
 				loading='lazy'
-				className='aspect-auto h-6 w-6 object-contain invert dark:invert-0'
+				className='aspect-auto size-6 object-contain invert dark:invert-0'
 			/>
 		</button>
 	);

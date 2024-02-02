@@ -13,7 +13,7 @@ export default function Content({ contents, image, title }: ContentProps) {
 				{contents.map((c) => (
 					<div key={c} className='flex gap-3'>
 						<Image
-							className='h-5 w-5'
+							className='size-5'
 							src={image}
 							width={40}
 							height={40}

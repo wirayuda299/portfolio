@@ -29,7 +29,7 @@ export default function ThemeSwitch() {
 		<DropdownMenu>
 			<DropdownMenuTrigger
 				title='Switch theme'
-				className='h-7 w-7 overflow-hidden'
+				className='size-7 overflow-hidden'
 			>
 				<Image
 					ref={iconRef}
@@ -38,7 +38,7 @@ export default function ThemeSwitch() {
 					height={24}
 					alt='menu'
 					loading='lazy'
-					className='ease aspect-auto h-6 w-6 object-contain transition-all duration-300 '
+					className='ease aspect-auto size-6 object-contain transition-all duration-300 '
 				/>
 			</DropdownMenuTrigger>
 			<DropdownMenuContent className='!border-none'>

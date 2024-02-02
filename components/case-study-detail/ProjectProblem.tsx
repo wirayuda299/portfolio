@@ -7,7 +7,7 @@ type ProjectProblemProps = {
 
 export default function ProjectProblem({ text, image }: ProjectProblemProps) {
 	return (
-		<section className='mt-10 h-full w-full bg-white dark:bg-black-200'>
+		<section className='mt-10 size-full bg-white dark:bg-black-200'>
 			<div className='mx-auto mt-7 flex max-w-880 flex-col gap-5 px-3 py-10 '>
 				<p className='text-sm font-semibold text-primary-light'>Problem</p>
 				<h2 className='text-lg font-semibold dark:text-white'>

@@ -33,12 +33,12 @@ export default function Content({ review }: { review: Review[] }) {
 					<SwiperSlide key={item._id}>
 						<div className=' mx-auto flex w-full max-w-7xl grid-cols-1 flex-wrap items-center gap-6 md:justify-center  md:py-16'>
 							<Image
-								className='aspect-square h-full max-h-500 w-full rounded-lg object-cover md:max-h-400 md:max-w-450'
+								className='aspect-square size-full max-h-500 rounded-lg object-cover md:max-h-400 md:max-w-450'
 								src={item.profile}
 								width={400}
 								height={400}
 								alt='profile'
-								priority
+								loading='lazy'
 							/>
 							<div className='max-w-450 md:min-h-400'>
 								<div className='inline-flex gap-3'>

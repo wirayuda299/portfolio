@@ -3,7 +3,7 @@ import CallToAction from './CallToAction';
 
 export default function Content() {
 	return (
-		<div className='flex h-full max-h-full w-full flex-col justify-center lg:max-w-500'>
+		<div className='flex size-full max-h-full flex-col justify-center lg:max-w-500'>
 			<h1 className='animate-once animate-fade-up text-sm uppercase text-primary-light dark:text-white md:pb-7 md:text-xl'>
 				Hi, I am Wirayuda
 			</h1>
@@ -14,7 +14,7 @@ export default function Content() {
 				</div>{' '}
 				based in Bali
 				<Image
-					className='animate-delay-300 animate-duration-1000 animate-once inline-block h-12 w-12 animate-fade-right object-contain lg:h-14 lg:w-14'
+					className='animate-delay-300 animate-duration-1000 animate-once inline-block size-12 animate-fade-right object-contain lg:size-14'
 					src={'/assets/images/flower.png'}
 					width={50}
 					height={50}

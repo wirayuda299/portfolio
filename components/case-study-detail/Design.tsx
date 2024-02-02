@@ -12,7 +12,7 @@ export default function Design({ design }: { design: string }) {
 				<Image
 					fill
 					sizes='100vw'
-					className='h-full w-full object-cover'
+					className='size-full object-cover'
 					src={design}
 					priority
 					fetchPriority='high'

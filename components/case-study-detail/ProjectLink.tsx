@@ -40,7 +40,7 @@ export default function ProjectLink({
 				className='inline-flex items-center gap-1 text-sm font-semibold text-primary-light lg:text-lg'
 			>
 				<Image
-					className='h-3 w-3 '
+					className='size-3 '
 					src='/assets/icons/skills/github.svg'
 					width={40}
 					height={40}
@@ -48,7 +48,7 @@ export default function ProjectLink({
 				/>
 				<span>Source Code</span>
 				<Image
-					className='h-3 w-3 !text-primary-light '
+					className='size-3 !text-primary-light '
 					src='/assets/icons/next-blue.svg'
 					width={40}
 					height={40}
