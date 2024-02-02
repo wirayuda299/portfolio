@@ -2,9 +2,6 @@ import { client } from '@/sanity/lib/client';
 
 export const postReview = async (data: FormData, image: ImageResult | null) => {
 	try {
-		const datas = data.forEach((d) => {
-			console.log(d);
-		});
 		const formData = {
 			_type: 'review',
 			star: Number(data.get('star')),
@@ -27,12 +24,7 @@ export const postReview = async (data: FormData, image: ImageResult | null) => {
 
 export async function getReview() {
 	try {
-		const res = await client.fetch(`*[_type == "review"]`, {
-			cache: 'no-store',
-			next: {
-				tags: ['review'],
-			},
-		});
+		const res = await client.fetch(`*[_type == "review"]`);
 		return res as Review[];
 	} catch (error) {
 		throw error;
