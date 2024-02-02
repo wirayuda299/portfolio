@@ -9,7 +9,6 @@ import {
 	ProjectTitle,
 	ProjectProblem,
 	ChallengesLearning,
-	CallToAction,
 } from '@/components/index';
 import { getSingleCaseStudy } from '@/sanity/actions/caseStudies';
 
@@ -21,7 +20,7 @@ export default async function ProjectDetail({ params: { id } }: Params) {
 	const caseStudy = await getSingleCaseStudy(id);
 
 	return (
-		<div className='h-full w-full '>
+		<div className='size-full '>
 			<ProjectTitle title={caseStudy.title} shortDesc={caseStudy.subTitle} />
 			<section className='pt-7'>
 				<Image
@@ -59,7 +58,6 @@ export default async function ProjectDetail({ params: { id } }: Params) {
 				learnings={caseStudy?.learnings}
 			/>
 			<CaseStudies id={caseStudy._id} />
-			<CallToAction />
 		</div>
 	);
 }

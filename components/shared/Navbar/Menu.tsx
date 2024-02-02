@@ -8,7 +8,7 @@ type MenuProps = {
 export default function Menu({ setIsOpen }: MenuProps) {
 	return (
 		<button
-			className='aspect-auto object-contain md:hidden'
+			className='md:hidden'
 			type='button'
 			onClick={() => setIsOpen((prev) => !prev)}
 		>
@@ -17,7 +17,8 @@ export default function Menu({ setIsOpen }: MenuProps) {
 				width={40}
 				height={40}
 				alt='menu'
-				className=' h-6 w-6 invert dark:invert-0'
+				loading='lazy'
+				className='aspect-auto h-6 w-6 object-contain invert dark:invert-0'
 			/>
 		</button>
 	);

@@ -23,8 +23,9 @@ export default function Footer() {
 								<Image
 									src={item.darkIcon}
 									width={40}
-									className='h-5 w-5 dark:brightness-0 dark:invert'
+									className='aspect-auto h-5 w-5 object-contain dark:brightness-0 dark:invert'
 									height={40}
+									loading='lazy'
 									alt='social icon'
 								/>
 							</a>

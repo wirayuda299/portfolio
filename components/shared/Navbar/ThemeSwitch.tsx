@@ -37,7 +37,8 @@ export default function ThemeSwitch() {
 					width={24}
 					height={24}
 					alt='menu'
-					className='ease h-6 w-6 transition-all duration-300 '
+					loading='lazy'
+					className='ease aspect-auto h-6 w-6 object-contain transition-all duration-300 '
 				/>
 			</DropdownMenuTrigger>
 			<DropdownMenuContent className='!border-none'>

@@ -38,7 +38,7 @@ export default function Contact() {
 									<Image
 										src={item.darkIcon}
 										width={40}
-										className='h-5 w-5 dark:brightness-0 dark:invert'
+										className='size-5 dark:brightness-0 dark:invert'
 										height={40}
 										alt='social icon'
 									/>
@@ -53,7 +53,7 @@ export default function Contact() {
 								<Image
 									src={'/assets/icons/phone.svg'}
 									width={40}
-									className='h-5 w-5 dark:hidden'
+									className='size-5 dark:hidden'
 									height={40}
 									alt='social icon'
 								/>
