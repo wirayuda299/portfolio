@@ -36,7 +36,6 @@ export default function ReviewForm({ styles }: ReviewFormProps) {
 			startTransition(async () => {
 				await postReview(data, image).then(() => {
 					push('/#review');
-
 					toast({ title: 'Thank you for your feedback❤' });
 				});
 			});

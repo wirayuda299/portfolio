@@ -1,4 +1,4 @@
-import { MutableRefObject, useEffect } from 'react';
+import { type MutableRefObject, useEffect } from 'react';
 
 export default function useIntersectionObserver<T>(
 	element: MutableRefObject<T | undefined>,
@@ -12,9 +12,7 @@ export default function useIntersectionObserver<T>(
 					entries[0].isIntersecting
 				);
 			},
-			{
-				threshold: 0.5,
-			}
+			{ threshold: 0.5 }
 		);
 
 		if (element.current) {

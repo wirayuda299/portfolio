@@ -24,6 +24,7 @@ export default function NavItem({
 
 	return (
 		<li
+			role='listitem'
 			style={{
 				animationDelay: `${delay * 200}ms`,
 			}}

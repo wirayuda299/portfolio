@@ -1,9 +1,16 @@
-import { CallToAction, ReviewForm } from '@/components/index';
 import type { Metadata } from 'next';
+import dynamic from 'next/dynamic';
 
 export const metadata: Metadata = {
 	title: 'Review | Wirayuda',
 };
+
+const CallToAction = dynamic(() =>
+	import('@/components/index').then((mod) => mod.CallToAction)
+);
+const ReviewForm = dynamic(() =>
+	import('@/components/index').then((mod) => mod.ReviewForm)
+);
 
 export default function Review() {
 	return (

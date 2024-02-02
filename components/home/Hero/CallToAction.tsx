@@ -43,6 +43,7 @@ export default function CallToAction() {
 							alt='copy icon'
 							width={40}
 							height={40}
+							priority
 						/>
 					)}
 				</button>

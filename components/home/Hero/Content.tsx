@@ -19,6 +19,7 @@ export default function Content() {
 					width={50}
 					height={50}
 					priority
+					fetchPriority='high'
 					alt='jepun flower image'
 				/>
 			</h2>

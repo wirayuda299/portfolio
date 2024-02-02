@@ -5,9 +5,9 @@ import {
 	Services,
 	Testimonial,
 	FeaturedProject,
-	CallToAction,
-} from '@/components/index';
-import { getCaseStudies } from '@/sanity/actions/caseStudies';
+} from '../../../components/index';
+import { getCaseStudies } from '../../../sanity/actions/caseStudies';
+import { Suspense } from 'react';
 
 export default async function Home() {
 	const caseStudies = await getCaseStudies('featured');
@@ -18,9 +18,10 @@ export default async function Home() {
 			<Skills />
 			<Services />
 			<Experience />
-			<FeaturedProject projects={caseStudies} />
+			<Suspense>
+				<FeaturedProject projects={caseStudies} />
+			</Suspense>
 			<Testimonial />
-			<CallToAction />
 		</>
 	);
 }
