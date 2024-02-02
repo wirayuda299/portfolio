@@ -35,7 +35,7 @@ export default function CallToAction() {
 				</a>
 				<button onClick={handleCLick}>
 					{isChecked ? (
-						<CheckIcon color='#FFBE62' className='h-5 w-5' />
+						<CheckIcon color='#FFBE62' className='size-5' />
 					) : (
 						<Image
 							className='w-5 object-contain'

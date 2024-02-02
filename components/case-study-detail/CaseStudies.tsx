@@ -23,7 +23,7 @@ export default async function CaseStudies({ id }: { id: string }) {
               key={p._id}
             >
               <Image
-                className="h-full w-full rounded-lg object-contain "
+                className="size-full rounded-lg object-contain "
                 src={p.mockup}
                 width={500}
                 height={500}

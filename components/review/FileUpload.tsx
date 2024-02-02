@@ -18,7 +18,7 @@ export default function FileUpload({
 	imagePreview,
 }: FileUploadProps) {
 	return (
-		<div className='h-full w-full max-w-400 '>
+		<div className='size-full max-w-400 '>
 			{imagePreview ? (
 				<>
 					<Image

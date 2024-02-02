@@ -18,7 +18,7 @@ export default function CloseButton({ setIsOpen }: CloseButtonProps) {
 				width={40}
 				height={40}
 				alt='menu'
-				className='aspect-auto h-6 w-6 object-contain'
+				className='aspect-auto size-6 object-contain'
 			/>
 		</button>
 	);

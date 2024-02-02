@@ -36,7 +36,7 @@ export default function ProjectInfo({
 	] as unknown as IconData;
 
 	return (
-		<section className='mt-10 h-full w-full bg-white dark:bg-black-200'>
+		<section className='mt-10 size-full bg-white dark:bg-black-200'>
 			<div className='mx-auto max-w-880 pb-10'>
 				<div className='flex flex-wrap justify-between gap-x-20 gap-y-6 px-5 py-10 sm:px-2 md:px-7'>
 					<ProjectInfoLabel label='Role' value={role} />
@@ -54,7 +54,7 @@ export default function ProjectInfo({
 						{allTechStacks.map((tech) => (
 							<div
 								key={tech._key}
-								className='h-16 w-16 rounded-full bg-white-800 p-3 shadow-lg dark:bg-black-300'
+								className='size-16 rounded-full bg-white-800 p-3 shadow-lg dark:bg-black-300'
 							>
 								<Image src={tech.icon} alt={tech.name} width={40} height={40} />
 							</div>

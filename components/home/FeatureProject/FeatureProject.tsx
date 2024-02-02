@@ -20,7 +20,7 @@ export default function FeatureProject({ projects }: { projects: Projects[] }) {
 					>
 						See more case studies
 						<Image
-							className='h-auto w-5'
+							className='aspect-auto h-auto w-5 object-contain'
 							src={'/assets/icons/short-arrow.svg'}
 							width={40}
 							height={40}

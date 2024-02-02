@@ -45,7 +45,7 @@ export default function NavItem({
 			) : (
 				<div className='inline-flex items-center gap-2'>
 					<Image
-						className=' h-5 w-5 gap-3 dark:invert'
+						className=' size-5 gap-3 dark:invert'
 						src={'/assets/icons/download.svg'}
 						width={40}
 						height={40}

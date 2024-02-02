@@ -23,12 +23,12 @@ export default function Thumbnail({ title, thumbnail }: ThumbnailProps) {
 			ref={ref}
 			src={thumbnail}
 			width={800}
-			priority
 			className={`opacity-0 ${
 				title === 'Morrent' ? 'lg:order-1 lg:-ml-12 ' : 'order-2 lg:ml-8'
 			} object-cover object-center`}
 			height={800}
-			alt='Morent'
+			loading='lazy'
+			alt={title}
 		/>
 	);
 }

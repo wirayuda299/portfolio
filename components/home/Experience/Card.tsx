@@ -26,7 +26,7 @@ export default function Card() {
 			<div className='flex items-center pt-10'>
 				<div className='h-0.5 w-full bg-white dark:bg-black' />
 				<div className='rounded-full ring-1 ring-white dark:ring-black'>
-					<div className='m-2 h-8 w-8  rounded-full bg-white dark:bg-black'></div>
+					<div className='m-2 size-8 rounded-full  bg-white dark:bg-black'></div>
 				</div>
 			</div>
 		</div>

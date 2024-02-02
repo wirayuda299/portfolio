@@ -18,7 +18,7 @@ export default function Process({ process }: { process: ProcessProps }) {
 				<div className='flex flex-wrap justify-start gap-11 pt-8'>
 					{process.map((p) => (
 						<div key={p._key} className='flex flex-col items-center'>
-							<div className=' flex h-16 w-16 items-center justify-center rounded-full bg-white-800 dark:bg-black-300'>
+							<div className=' flex size-16 items-center justify-center rounded-full bg-white-800 dark:bg-black-300'>
 								<Image
 									src={p.icon}
 									className='mx-auto'

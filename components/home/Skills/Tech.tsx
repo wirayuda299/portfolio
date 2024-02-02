@@ -22,10 +22,10 @@ export default function TechIcon({ label, lightIcon, delay }: TechIconProps) {
 				animationDelay: `${delay * 100}ms`,
 			}}
 			title={label}
-			className='ease group flex h-14 w-14 items-center justify-center rounded-full bg-white-800 opacity-0 grayscale filter transition-all duration-500 hover:shadow-lg hover:filter-none dark:bg-black-200 dark:bg-opacity-30 md:h-24 md:w-24'
+			className='ease group flex size-14 items-center justify-center rounded-full bg-white-800 opacity-0 grayscale filter transition-all duration-500 hover:shadow-lg hover:filter-none dark:bg-black-200 dark:bg-opacity-30 md:size-24'
 		>
 			<Image
-				className={`ease h-12 w-12 p-1 group-hover:animate-pulse md:h-14 md:w-14 md:p-0`}
+				className={`ease size-12 p-1 group-hover:animate-pulse md:size-14 md:p-0`}
 				src={lightIcon}
 				width={55}
 				priority
