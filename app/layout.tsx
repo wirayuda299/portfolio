@@ -10,10 +10,7 @@ import { Toaster } from '@/components/ui/toaster';
 import { ourFileRouter } from './api/uploadthing/core';
 
 export const metadata: Metadata = {
-	metadataBase: new URL(
-		`https://${process.env.VERCEL_URL}` ||
-			`http://localhost:${process.env.PORT || 3000}`
-	),
+	metadataBase: new URL('https://wirayuda.vercel.app'),
 	title: 'Home | Wirayuda',
 	description: 'React developer who translate code into high quality website',
 	keywords: [
@@ -23,6 +20,45 @@ export const metadata: Metadata = {
 		'nextjs developer',
 		'indonesia',
 		'bali',
+		'front end developer',
+		'web developer',
+		'seo',
+		'expert',
+		'web builder',
+		'web developer service',
+		'React development Bali',
+		'Bali React developer',
+		'wira',
+		'wirayuda',
+		'bali',
+		'Full-stack developer Bali',
+		'React Native development Indonesia',
+		'Single-page applications Bali',
+		'Cross-platform development Bali',
+		'E-commerce website developer Bali',
+		'Progressive web apps Indonesia',
+		'Bali tech solutions',
+		'User interface design Bali',
+		'Web development company Indonesia',
+		'Agile software development Bali',
+		'Modern web design Bali',
+		'Custom software solutions Indonesia',
+		'Frontend optimization Bali',
+		'SEO-friendly web development Bali',
+		'Code optimization services Indonesia',
+		'Frontend development Indonesia',
+		'UI/UX design Bali',
+		'Web development services Bali',
+		'JavaScript developer Bali',
+		'Responsive web design Indonesia',
+		'React.js consulting Bali',
+		'Bali software development',
+		'Web app development Bali',
+		'Best React developers Indonesia',
+		'Hire React developer Bali',
+		'Custom web solutions Bali',
+		'Mobile-friendly web development Bali',
+		'Professional React development Bali',
 	],
 	creator: 'wirayuda',
 	referrer: 'origin-when-cross-origin',
@@ -41,7 +77,6 @@ export const metadata: Metadata = {
 		address: false,
 		telephone: false,
 	},
-
 	category: 'technology',
 };
 
