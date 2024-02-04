@@ -1,3 +1,4 @@
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
@@ -14,14 +15,11 @@ const nextConfig = {
         pathname: '/**/*',
         port: ''
       },
-
     ],
     dangerouslyAllowSVG: true
   },
   compiler: {
-    removeConsole: true
-  },
-
+    removeConsole: true,
+  }
 }
-
 module.exports = nextConfig

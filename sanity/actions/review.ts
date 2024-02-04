@@ -16,8 +16,6 @@ export const postReview = async (data: FormData, image: ImageResult | null) => {
 			token: process.env.NEXT_PUBLIC_SANITY_WRITE_TOKEN,
 		});
 	} catch (error) {
-		console.log(error);
-
 		throw error;
 	}
 };
