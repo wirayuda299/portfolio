@@ -13,13 +13,13 @@ import {
 import { getSingleCaseStudy } from '@/sanity/actions/caseStudies';
 import { Metadata, ResolvingMetadata } from 'next/types';
 
-type Props = {
+type Props = Readonly<{
 	params: { id: string };
 	searchParams: { [key: string]: string | string[] | undefined };
-};
+}>;
 
 export async function generateMetadata(
-	{ params, searchParams }: Props,
+	{ params }: Props,
 	parent: ResolvingMetadata
 ): Promise<Metadata> {
 	const caseStudy = await getSingleCaseStudy(params.id);

@@ -1,6 +1,5 @@
 import Image from 'next/image';
 import type { Dispatch, SetStateAction } from 'react';
-
 type CloseButtonProps = {
 	setIsOpen: Dispatch<SetStateAction<boolean>>;
 };

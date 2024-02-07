@@ -8,7 +8,7 @@ import { getCaseStudies } from '@/sanity/actions/caseStudies';
 export const dynamic = 'force-dynamic';
 
 export const metadata = {
-	title: 'Case Studies ',
+	title: 'Case Studies',
 };
 export default async function CaseStudies() {
 	const caseStudies = await getCaseStudies('all');
@@ -37,7 +37,6 @@ export default async function CaseStudies() {
 								}}
 								className='size-full max-w-400 animate-fade-in opacity-0'
 								href={`/project/${project._id}`}
-								prefetch={false}
 							>
 								<Image
 									style={{
