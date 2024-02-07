@@ -4,8 +4,21 @@ import { socialLinks } from '@/constant';
 import { ContactForm } from '@/components/index';
 
 export const metadata = {
-	title: 'Contact ',
+	title: 'Contact',
 };
+
+function PhoneIcon() {
+	return (
+		<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='none'>
+			<path
+				fill-rule='evenodd'
+				d='M11.532 12.472c3.989 3.988 4.894-.626 7.434 1.912 2.449 2.448 3.856 2.938.754 6.04-.389.312-2.858 4.07-11.535-4.605S3.262 4.672 3.574 4.284c3.11-3.11 3.592-1.695 6.041.753 2.54 2.539-2.072 3.447 1.917 7.435z'
+				fill='#778295'
+			/>
+		</svg>
+	);
+}
+
 export default function Contact() {
 	return (
 		<main className='w-full'>
@@ -49,13 +62,7 @@ export default function Contact() {
 								Phone Number
 							</h2>
 							<div className='inline-flex gap-x-2 pt-1'>
-								<Image
-									src={'/assets/icons/phone.svg'}
-									width={40}
-									className='size-5 dark:hidden'
-									height={40}
-									alt='social icon'
-								/>
+								<PhoneIcon />
 								<span className='text-base font-semibold text-white-500 dark:text-white'>
 									+6287 833 328 287
 								</span>

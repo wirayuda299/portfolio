@@ -1,7 +1,7 @@
-import Image from 'next/image';
 import Link from 'next/link';
 
 import { Button } from '../ui/button';
+import { NextIcon } from './next-icon';
 
 export default function CallToAction() {
 	return (
@@ -18,14 +18,7 @@ export default function CallToAction() {
 				>
 					<Button className='flex w-full items-center gap-3 truncate rounded-full bg-primary-light text-sm font-semibold hover:bg-blue-600 dark:bg-primary-dark dark:text-white sm:text-xs lg:px-7'>
 						Get in Touch with Me
-						<Image
-							className='aspect-auto w-4 object-contain'
-							src={'/assets/icons/next.svg'}
-							width={40}
-							loading='lazy'
-							height={40}
-							alt='next arrow icon'
-						/>
+						<NextIcon />
 					</Button>
 				</Link>
 			</div>

@@ -1,11 +1,11 @@
 'use client';
 
 import Link from 'next/link';
-import Image from 'next/image';
 import { useRef } from 'react';
 
 import { Button } from '../../ui/button';
 import useIntersectionObserver from '@/hooks/useInterSectionObserver';
+import { NextIcon } from '@/components/shared/next-icon';
 
 type TechStacks = Pick<Projects, 'techStacks'>['techStacks'];
 
@@ -48,12 +48,7 @@ export default function FeaturedProjectTechStacks({
 				className='inline-flex items-center gap-3 pt-5 text-sm font-medium text-white'
 			>
 				See Case Study
-				<Image
-					src='/assets/icons/arrow.svg'
-					width={50}
-					height={50}
-					alt='Arrow icon'
-				/>
+				<NextIcon />
 			</Link>
 		</div>
 	);
