@@ -28,6 +28,7 @@ export default function ServiceCard({
 						className='mx-auto aspect-auto size-8 object-contain brightness-0 invert group-hover:brightness-100 group-hover:invert-0 dark:group-hover:brightness-200'
 						src={lightIcon}
 						width={50}
+						loading='lazy'
 						height={50}
 						alt={title}
 					/>

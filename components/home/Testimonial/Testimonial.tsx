@@ -1,5 +1,3 @@
-import Link from 'next/link';
-
 import { getReview } from '@/sanity/actions/review';
 import TestimonialTitle from './Title';
 import Content from './Content';
@@ -24,16 +22,6 @@ export default async function Testimonial() {
 				</div>
 			) : (
 				<Content review={review} />
-			)}
-			{review.length > 0 && (
-				<div className='flex w-full justify-center'>
-					<Link
-						href={'/review'}
-						className='mt-10 rounded-full bg-primary-light px-5 py-3 text-xs font-semibold text-white dark:bg-primary-dark'
-					>
-						Give your feedback
-					</Link>
-				</div>
 			)}
 		</section>
 	);

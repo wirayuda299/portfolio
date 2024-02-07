@@ -1,8 +1,7 @@
-import type { Metadata } from 'next';
 import dynamic from 'next/dynamic';
 
-export const metadata: Metadata = {
-	title: 'Review | Wirayuda',
+export const metadata = {
+	title: 'Review ',
 };
 
 const CallToAction = dynamic(() =>
@@ -14,7 +13,7 @@ const ReviewForm = dynamic(() =>
 
 export default function Review() {
 	return (
-		<>
+		<main className='w-full'>
 			<div className='w-full py-6 text-center'>
 				<h2 className='inline-flex flex-wrap justify-center gap-3 text-4xl font-bold capitalize dark:text-white md:text-5xl'>
 					Give your{' '}
@@ -30,6 +29,6 @@ export default function Review() {
 				<ReviewForm />
 			</div>
 			<CallToAction />
-		</>
+		</main>
 	);
 }

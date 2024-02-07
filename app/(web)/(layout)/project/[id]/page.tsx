@@ -11,16 +11,41 @@ import {
 	ChallengesLearning,
 } from '@/components/index';
 import { getSingleCaseStudy } from '@/sanity/actions/caseStudies';
+import { Metadata, ResolvingMetadata } from 'next/types';
 
-type Params = {
+type Props = {
 	params: { id: string };
+	searchParams: { [key: string]: string | string[] | undefined };
 };
 
-export default async function ProjectDetail({ params: { id } }: Params) {
+export async function generateMetadata(
+	{ params, searchParams }: Props,
+	parent: ResolvingMetadata
+): Promise<Metadata> {
+	const caseStudy = await getSingleCaseStudy(params.id);
+	const previousImages = (await parent).openGraph?.images || [];
+	return {
+		title: caseStudy.title,
+		openGraph: {
+			images: [caseStudy.thumbnail, ...previousImages],
+			description: caseStudy.descriptions,
+			title: caseStudy.title,
+		},
+		twitter: {
+			images: caseStudy.thumbnail,
+			title: caseStudy.title,
+			description: caseStudy.descriptions,
+			card: 'summary_large_image',
+		},
+		description: caseStudy.descriptions,
+	};
+}
+
+export default async function ProjectDetail({ params: { id } }: Props) {
 	const caseStudy = await getSingleCaseStudy(id);
 
 	return (
-		<div className='size-full '>
+		<main className='size-full'>
 			<ProjectTitle title={caseStudy.title} shortDesc={caseStudy.subTitle} />
 			<section className='pt-7'>
 				<Image
@@ -58,6 +83,6 @@ export default async function ProjectDetail({ params: { id } }: Params) {
 				learnings={caseStudy?.learnings}
 			/>
 			<CaseStudies id={caseStudy._id} />
-		</div>
+		</main>
 	);
 }
