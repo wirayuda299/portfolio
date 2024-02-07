@@ -1,5 +1,4 @@
 import { Suspense } from 'react';
-import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -8,14 +7,14 @@ import { getCaseStudies } from '@/sanity/actions/caseStudies';
 
 export const dynamic = 'force-dynamic';
 
-export const metadata: Metadata = {
-	title: 'Case Studies | Wirayuda',
+export const metadata = {
+	title: 'Case Studies ',
 };
 export default async function CaseStudies() {
 	const caseStudies = await getCaseStudies('all');
 
 	return (
-		<div className='mx-auto size-full '>
+		<main className='mx-auto size-full'>
 			<div className='mx-auto max-w-700 p-0.5 sm:p-0'>
 				<h1 className='ease animate-fade-up px-4 text-center text-3xl font-bold leading-normal transition-all duration-500 dark:text-white md:px-0 lg:text-16'>
 					Recent{' '}
@@ -61,6 +60,6 @@ export default async function CaseStudies() {
 					))}
 				</div>
 			</section>
-		</div>
+		</main>
 	);
 }

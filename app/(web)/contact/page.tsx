@@ -1,15 +1,14 @@
-import type { Metadata } from 'next';
 import Image from 'next/image';
 
 import { socialLinks } from '@/constant';
 import { ContactForm } from '@/components/index';
 
-export const metadata: Metadata = {
-	title: 'Contact | Wirayuda',
+export const metadata = {
+	title: 'Contact ',
 };
 export default function Contact() {
 	return (
-		<>
+		<main className='w-full'>
 			<div className='w-full py-6 text-center'>
 				<h1 className='mx-auto w-max animate-fade-up text-4xl font-bold md:text-5xl'>
 					<span className='relative z-[1] w-full before:absolute before:bottom-1 before:left-0 before:z-[-1] before:h-3 before:w-0 before:animate-increasing before:bg-secondary dark:text-white '>
@@ -73,6 +72,6 @@ export default function Contact() {
 					</div>
 				</section>
 			</section>
-		</>
+		</main>
 	);
 }

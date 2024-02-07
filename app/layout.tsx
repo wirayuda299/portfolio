@@ -11,7 +11,11 @@ import { ourFileRouter } from './api/uploadthing/core';
 
 export const metadata: Metadata = {
 	metadataBase: new URL('https://wirayuda.vercel.app'),
-	title: 'Home | Wirayuda',
+	title: {
+		template: '%s  |  Wirayuda',
+		default: 'Wirayuda',
+		absolute: '',
+	},
 	description: 'React developer who translate code into high quality website',
 	keywords: [
 		'react developer',

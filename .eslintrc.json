@@ -5,6 +5,7 @@
 		"plugin:tailwindcss/recommended",
 		"prettier"
 	],
+
 	"rules": {
 		"react-hooks/exhaustive-deps": "off",
 		"eslint-disable-next-line": "off",

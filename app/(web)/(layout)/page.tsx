@@ -13,7 +13,7 @@ export default async function Home() {
 	const caseStudies = await getCaseStudies('featured');
 
 	return (
-		<>
+		<main className='w-full'>
 			<Hero />
 			<Skills />
 			<Services />
@@ -21,7 +21,9 @@ export default async function Home() {
 			<Suspense>
 				<FeaturedProject projects={caseStudies} />
 			</Suspense>
-			<Testimonial />
-		</>
+			<Suspense fallback={'loading...'}>
+				<Testimonial />
+			</Suspense>
+		</main>
 	);
 }
