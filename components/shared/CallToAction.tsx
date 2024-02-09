@@ -18,7 +18,7 @@ export default function CallToAction() {
 				>
 					<Button className='flex w-full items-center gap-3 truncate rounded-full bg-primary-light text-sm font-semibold hover:bg-blue-600 dark:bg-primary-dark dark:text-white sm:text-xs lg:px-7'>
 						Get in Touch with Me
-						<NextIcon />
+						<NextIcon color='#fff' />
 					</Button>
 				</Link>
 			</div>
