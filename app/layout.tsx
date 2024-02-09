@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 		default: 'Wirayuda',
 		absolute: '',
 	},
-	description: 'React developer who translate code into high quality website',
+	description: 'Web developer who translate code into high quality website',
 	keywords: [
 		'react developer',
 		'frontend developer',

@@ -1,5 +1,3 @@
-import Image from 'next/image';
-
 import { socialLinks } from '@/constant';
 
 export default function Footer() {
@@ -20,14 +18,7 @@ export default function Footer() {
 								target='_blank'
 								title={item.label}
 							>
-								<Image
-									src={item.darkIcon}
-									width={40}
-									className='aspect-auto size-5 object-contain dark:brightness-0 dark:invert'
-									height={40}
-									loading='lazy'
-									alt='social icon'
-								/>
+								{item.darkIcon}
 							</a>
 						))}
 					</div>
