@@ -197,7 +197,7 @@ export const skills = [
 	},
 	{
 		label: 'Github',
-		lightIcon: <Github />,
+		lightIcon: <Github height={50} width={50} />,
 	},
 	{
 		label: 'Node JS',
@@ -222,7 +222,7 @@ export const socialLinks = [
 	{
 		link: 'https://github.com/wirayuda299',
 		label: 'Github',
-		darkIcon: <Github />,
+		darkIcon: <Github width={25} height={24} />,
 	},
 ] as const;
 

@@ -55,18 +55,25 @@ export default function Contact() {
 							</h2>
 							<div className='inline-flex gap-x-2 pt-1'>
 								<PhoneIcon />
-								<span className='text-base font-semibold text-white-500 dark:text-white'>
+								<a
+									href='tel:+6287 833 328 287'
+									className='text-base font-semibold text-white-500 dark:text-white'
+								>
 									+6287 833 328 287
-								</span>
+								</a>
 							</div>
 						</div>
 						<div className='pt-9'>
 							<h2 className='text-sm font-light text-black dark:text-white'>
 								Email Address
 							</h2>
-							<p className='text-base font-semibold text-white-500 dark:text-white'>
+							<a
+								href='mailto:wirayuda233@gmail.com'
+								target='_blank'
+								className='text-base font-semibold text-white-500 dark:text-white'
+							>
 								wirayuda233@gmail.com
-							</p>
+							</a>
 						</div>
 					</div>
 				</section>

@@ -12,12 +12,21 @@ import { ourFileRouter } from './api/uploadthing/core';
 export const metadata: Metadata = {
 	metadataBase: new URL('https://wirayuda.vercel.app'),
 	title: {
-		template: '%s  |  Wirayuda',
-		default: 'Wirayuda',
+		template:
+			'%s  | Bali-Based React Developer | Expert in Web Development | Wirayuda',
+		default:
+			'Bali-Based React Developer | Expert in Web Development | Wirayuda',
 		absolute: '',
 	},
-	description: 'Web developer who translate code into high quality website',
+	description:
+		'Looking for a skilled React developer in Bali? Wirayuda offers expert web development services tailored to your needs. Contact us today for top-notch solutions!',
 	keywords: [
+		'React developer Bali',
+		'javascript',
+		'front end development',
+		'bali tech community',
+		'react js',
+		'web development Bali',
 		'react developer',
 		'frontend developer',
 		'portfolio',
@@ -81,7 +90,7 @@ export const metadata: Metadata = {
 		address: false,
 		telephone: false,
 	},
-	category: 'technology',
+	category: 'Web Development',
 };
 
 const poppins = Poppins({

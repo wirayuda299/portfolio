@@ -1,6 +1,6 @@
 'use client';
 
-import { ElementRef, useRef } from 'react';
+import { useRef } from 'react';
 
 import useIntersectionObserver from '@/hooks/useInterSectionObserver';
 
@@ -11,7 +11,7 @@ type TechIconProps = {
 };
 
 export default function TechIcon({ label, lightIcon, delay }: TechIconProps) {
-	const ref = useRef<ElementRef<'div'>>(null);
+	const ref = useRef(null);
 	useIntersectionObserver(ref, 'animate-fade-up');
 
 	return (
