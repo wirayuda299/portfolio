@@ -48,7 +48,7 @@ export default function FeaturedProjectTechStacks({
 				className='inline-flex items-center gap-3 pt-5 text-sm font-medium text-white'
 			>
 				See Case Study
-				<NextIcon />
+				<NextIcon color='#fff' />
 			</Link>
 		</div>
 	);

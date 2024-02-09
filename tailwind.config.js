@@ -75,14 +75,6 @@ module.exports = withUt({
         sm: "calc(var(--radius) - 4px)",
       },
       keyframes: {
-        "accordion-down": {
-          from: { height: 0 },
-          to: { height: "var(--radix-accordion-content-height)" },
-        },
-        "accordion-up": {
-          from: { height: "var(--radix-accordion-content-height)" },
-          to: { height: 0 },
-        },
         'fade-in': {
           from: { opacity: 0 },
           to: { opacity: 1 }
@@ -130,8 +122,6 @@ module.exports = withUt({
 
       },
       animation: {
-        "accordion-down": "accordion-down 0.2s ease-out",
-        "accordion-up": "accordion-up 0.2s ease-out",
         "fade-in": "fade-in 1s ease-in forwards",
         "fade-up": "fade-up 500ms ease forwards ",
         "fade-left": "fade-left 1s ease forwards",
@@ -139,9 +129,7 @@ module.exports = withUt({
         "increasing": "increasing 1s forwards",
         "icon-up": "icon-up 0.5s linear",
       },
-      backgroundImage: {
-        'conic-gradient': 'conic-gradient(from 180deg at 50% 75.56%, #0252CD 0deg, rgba(2, 82, 205, 0.33) 360deg);'
-      },
+
       maxWidth: {
         150: '150px',
         200: '200px',

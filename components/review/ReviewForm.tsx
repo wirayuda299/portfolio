@@ -9,7 +9,6 @@ import { Button } from '@/components/ui/button';
 import { Textarea } from '../ui/textarea';
 import FileUpload from './FileUpload';
 import { formReviewFields } from '@/constant';
-import { postReview } from '@/serveractions';
 import { cn } from '@/lib/utils';
 import useIntersectionObserver from '@/hooks/useInterSectionObserver';
 
@@ -34,8 +33,12 @@ export default function ReviewForm({ styles }: ReviewFormProps) {
 				});
 
 			startTransition(async () => {
+				const postReview = await import('@/serveractions').then(
+					(mod) => mod.postReview
+				);
 				await postReview(data, image).then(() => {
 					push('/#review');
+
 					toast({ title: 'Thank you for your feedback❤' });
 				});
 			});

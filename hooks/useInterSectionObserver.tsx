@@ -2,14 +2,17 @@ import { type MutableRefObject, useEffect } from 'react';
 
 export default function useIntersectionObserver<T>(
 	element: MutableRefObject<T | undefined>,
-	styles: string
+	stylesString: string
 ) {
 	useEffect(() => {
 		const observer = new IntersectionObserver(
 			(entries) => {
-				entries[0].target.classList.toggle(styles, entries[0].isIntersecting);
+				entries[0].target.classList.toggle(
+					stylesString,
+					entries[0].isIntersecting
+				);
 			},
-			{ threshold: 0.5, rootMargin: '50px' }
+			{ threshold: 0.7, rootMargin: '50px' }
 		);
 
 		if (element.current) {

@@ -26,6 +26,7 @@ function MenuWhite() {
 export default function Menu({ setIsOpen }: MenuProps) {
 	return (
 		<button
+			name='menu'
 			className='md:hidden'
 			type='button'
 			onClick={() => setIsOpen((prev) => !prev)}
