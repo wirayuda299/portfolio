@@ -1,6 +1,5 @@
 'use client';
 
-import { useRef } from 'react';
 import { useTheme } from 'next-themes';
 
 import {
@@ -14,6 +13,7 @@ import { themeOptions } from '@/constant';
 function SunIcon() {
 	return (
 		<svg
+			className='animate-icon-up'
 			xmlns='http://www.w3.org/2000/svg'
 			width='20'
 			height='21'
@@ -26,7 +26,13 @@ function SunIcon() {
 
 function MoonIcon() {
 	return (
-		<svg xmlns='http://www.w3.org/2000/svg' width='20' height='21' fill='none'>
+		<svg
+			className='animate-icon-up'
+			xmlns='http://www.w3.org/2000/svg'
+			width='20'
+			height='21'
+			fill='none'
+		>
 			<path
 				d='M10.685 11.185a7.02 7.02 0 0 0 0-9.923c-.281-.281-.103-.799.293-.76a9.98 9.98 0 0 1 6.086 2.886c3.915 3.915 3.915 10.261 0 14.176s-10.261 3.915-14.176 0a9.98 9.98 0 0 1-2.886-6.086c-.04-.396.478-.574.76-.293a7.02 7.02 0 0 0 9.923 0z'
 				fill='#428dff'
@@ -36,19 +42,9 @@ function MoonIcon() {
 }
 
 export default function ThemeSwitch() {
-	const iconRef = useRef<HTMLImageElement | null>(null);
 	const { setTheme, theme } = useTheme();
 
-	const switchTheme = (label: string) => {
-		setTheme(label);
-
-		iconRef.current?.classList.add('animate-icon-up');
-		setTimeout(() => {
-			iconRef.current?.classList.remove('animate-icon-up');
-		}, 500);
-	};
-
-	console.log(theme);
+	const switchTheme = (label: string) => setTheme(label);
 
 	return (
 		<DropdownMenu>
@@ -57,7 +53,7 @@ export default function ThemeSwitch() {
 				title='Switch theme'
 				className='size-7 overflow-hidden'
 			>
-				{theme === 'light' ? <SunIcon /> : <MoonIcon />}
+				{!theme || theme === 'light' ? <SunIcon /> : <MoonIcon />}
 			</DropdownMenuTrigger>
 			<DropdownMenuContent className='!border-none'>
 				{themeOptions.map((item) => (

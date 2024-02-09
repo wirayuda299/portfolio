@@ -14,7 +14,7 @@ import ReduxIcon from '@/components/home/Skills/icons/redux';
 import SassIcon from '@/components/home/Skills/icons/sass';
 import TailwindIcon from '@/components/home/Skills/icons/tailwind';
 import TypescriptIcon from '@/components/home/Skills/icons/typescript';
-import { SunIcon, MoonIcon, DesktopIcon } from '@radix-ui/react-icons';
+import { SunIcon, MoonIcon } from '@radix-ui/react-icons';
 
 function PencilLight() {
 	return (
@@ -113,11 +113,6 @@ export const themeOptions = [
 		label: 'dark',
 		title: 'Dark',
 		icon: <MoonIcon />,
-	},
-	{
-		label: 'system',
-		title: 'System',
-		icon: <DesktopIcon />,
 	},
 ] as const;
 

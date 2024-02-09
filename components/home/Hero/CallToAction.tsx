@@ -53,7 +53,9 @@ export default function CallToAction() {
 					wirayuda233@gmail.com
 				</a>
 				<button
-					name='check icon'
+					title='copy'
+					aria-label='copy'
+					name='check'
 					disabled={isChecked}
 					aria-disabled={isChecked}
 					onClick={handleCLick}
