@@ -17,6 +17,8 @@ export default function Background() {
 		'frontend',
 		'high-quality',
 		'skill enhancement',
+		'challenges',
+		'goals',
 	];
 
 	const highlightKeywords = (text: string) => {

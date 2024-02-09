@@ -53,7 +53,7 @@ export default function ThemeSwitch() {
 				title='Switch theme'
 				className='size-7 overflow-hidden'
 			>
-				{!theme || theme === 'light' ? <SunIcon /> : <MoonIcon />}
+				{theme === 'light' ? <SunIcon /> : <MoonIcon />}
 			</DropdownMenuTrigger>
 			<DropdownMenuContent className='!border-none'>
 				{themeOptions.map((item) => (
