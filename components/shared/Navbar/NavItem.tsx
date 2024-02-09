@@ -40,8 +40,7 @@ export default function NavItem({
 	const pathname = usePathname();
 
 	return (
-		<li
-			role='listitem'
+		<div
 			style={{
 				animationDelay: `${delay * 200}ms`,
 			}}
@@ -71,6 +70,6 @@ export default function NavItem({
 					</a>
 				</div>
 			)}
-		</li>
+		</div>
 	);
 }

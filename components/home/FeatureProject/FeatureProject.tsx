@@ -3,8 +3,11 @@ import Link from 'next/link';
 import FeatureProjectCard from './Card';
 import FeatureProjectTitle from './Title';
 import { NextIcon } from '@/components/shared/next-icon';
+import { getCaseStudies } from '@/sanity/actions/caseStudies';
 
-export default function FeatureProject({ projects }: { projects: Projects[] }) {
+export default async function FeatureProject() {
+	const projects = await getCaseStudies('featured');
+
 	return (
 		<section className='px-5 pt-20 dark:bg-black-200'>
 			<div className='mx-auto max-w-1400'>

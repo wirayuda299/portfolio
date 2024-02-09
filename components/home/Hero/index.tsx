@@ -9,10 +9,11 @@ export default function Hero() {
 				<Content />
 				<div className='size-full'>
 					<Image
-						className='	size-full animate-fade-left object-cover object-center md2:max-h-750 lg:max-w-600 xl:object-contain xl:pt-5'
+						className='size-full animate-fade-left object-cover object-center md2:max-h-750 lg:max-w-600 xl:object-contain xl:pt-5'
 						src={'/assets/images/hero.png'}
 						alt='illustration image'
 						priority
+						sizes='50%'
 						fetchPriority='high'
 						width={823}
 						height={523}

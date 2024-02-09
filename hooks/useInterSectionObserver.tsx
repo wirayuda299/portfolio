@@ -12,7 +12,7 @@ export default function useIntersectionObserver<T>(
 					entries[0].isIntersecting
 				);
 			},
-			{ threshold: 0.7, rootMargin: '50px' }
+			{ threshold: 0.5, rootMargin: '100px' }
 		);
 
 		if (element.current) {
