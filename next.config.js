@@ -62,9 +62,9 @@ const nextConfig = {
     ],
     dangerouslyAllowSVG: true
   },
-  // compiler: {
-  //   removeConsole: true,
-  // },
+  compiler: {
+    removeConsole: true,
+  },
   eslint: {
     ignoreDuringBuilds: true
   },
