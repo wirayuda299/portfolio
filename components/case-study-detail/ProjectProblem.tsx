@@ -22,6 +22,7 @@ export default function ProjectProblem({ text, image }: ProjectProblemProps) {
 					sizes='100vw'
 					className='mb-6 w-full object-contain'
 					src={image}
+					loading='lazy'
 					alt='illustration image'
 				/>
 			</div>

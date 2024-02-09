@@ -5,7 +5,7 @@ import { useRef } from 'react';
 import useIntersectionObserver from '@/hooks/useInterSectionObserver';
 
 export default function Card() {
-	const ref = useRef<HTMLDivElement>(null);
+	const ref = useRef(null);
 	useIntersectionObserver(ref, 'animate-fade-right');
 
 	return (

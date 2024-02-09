@@ -13,8 +13,8 @@ import { themeOptions } from '@/constant';
 function SunIcon() {
 	return (
 		<svg
-			className='animate-icon-up'
 			xmlns='http://www.w3.org/2000/svg'
+			className='animate-icon-up'
 			width='20'
 			height='21'
 			fill='#0252cd'
@@ -27,8 +27,8 @@ function SunIcon() {
 function MoonIcon() {
 	return (
 		<svg
-			className='animate-icon-up'
 			xmlns='http://www.w3.org/2000/svg'
+			className='animate-icon-up'
 			width='20'
 			height='21'
 			fill='none'
