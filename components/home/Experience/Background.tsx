@@ -7,7 +7,7 @@ import useIntersectionObserver from '@/hooks/useInterSectionObserver';
 import { jobLists } from '@/constant';
 
 export default function Background() {
-	const ref = useRef<HTMLDivElement>(null);
+	const ref = useRef(null);
 	const importantKeywords = [
 		'git for version control',
 		'asana',

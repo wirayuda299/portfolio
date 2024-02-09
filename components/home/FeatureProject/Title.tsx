@@ -5,7 +5,7 @@ import { useRef } from 'react';
 import useIntersectionObserver from '@/hooks/useInterSectionObserver';
 
 export default function FeatureProjectTitle() {
-	const ref = useRef<HTMLSpanElement>(null);
+	const ref = useRef(null);
 
 	useIntersectionObserver(ref, 'before:animate-increasing');
 

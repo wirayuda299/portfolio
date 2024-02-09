@@ -13,7 +13,6 @@ export default function Hero() {
 						src={'/assets/images/hero.png'}
 						alt='illustration image'
 						priority
-						sizes='50%'
 						fetchPriority='high'
 						width={823}
 						height={523}
