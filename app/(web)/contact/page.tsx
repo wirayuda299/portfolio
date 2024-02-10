@@ -1,5 +1,10 @@
+import dynamic from 'next/dynamic';
+
 import { socialLinks } from '@/constant';
-import { ContactForm } from '@/components/index';
+
+const ContactForm = dynamic(() =>
+	import('@/components/index').then((mod) => mod.ContactForm)
+);
 
 export const metadata = {
 	title: 'Contact',

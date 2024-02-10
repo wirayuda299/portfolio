@@ -56,7 +56,10 @@ const nextConfig = {
   eslint: {
     ignoreDuringBuilds: true
   },
-
+  experimental: {
+    optimizeServerReact: true,
+    serverMinification: true,
+  },
   productionBrowserSourceMaps: false,
 
 }

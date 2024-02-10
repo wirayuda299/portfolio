@@ -1,12 +1,15 @@
 export default function Github({
 	width,
 	height,
+	styles,
 }: {
 	width: number;
 	height: number;
+	styles?: string;
 }) {
 	return (
 		<svg
+			className={styles}
 			xmlns='http://www.w3.org/2000/svg'
 			width={width}
 			height={height}

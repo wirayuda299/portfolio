@@ -10,6 +10,7 @@ import { navItems } from '@/constant';
 function MenuWhite() {
 	return (
 		<svg
+			className='invert dark:invert-0'
 			xmlns='http://www.w3.org/2000/svg'
 			width='20'
 			height='20'

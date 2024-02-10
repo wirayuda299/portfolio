@@ -4,18 +4,18 @@ import Link from 'next/link';
 
 import Loader from '@/components/shared/Loader';
 import { getCaseStudies } from '@/sanity/actions/caseStudies';
+import { CallToAction } from '@/components/index';
 
 export const dynamic = 'force-dynamic';
 
-export const metadata = {
-	title: 'Case Studies',
-};
+export const metadata = { title: 'Case Studies' };
+
 export default async function CaseStudies() {
 	const caseStudies = await getCaseStudies('all');
 
 	return (
 		<main className='mx-auto size-full'>
-			<div className='mx-auto max-w-700 p-0.5 sm:p-0'>
+			<section className='mx-auto max-w-700 p-0.5 sm:p-0'>
 				<h1 className='ease animate-fade-up px-4 text-center text-3xl font-bold leading-normal transition-all duration-500 dark:text-white md:px-0 lg:text-16'>
 					Recent{' '}
 					<span className='relative z-[1] inline-block w-max  before:absolute before:bottom-1 before:left-0 before:z-[-1] before:h-3 before:w-full before:bg-secondary lg:before:bottom-5 lg:before:h-4'>
@@ -26,12 +26,13 @@ export default async function CaseStudies() {
 					Dive into my recent success stories and discover how I&apos;ve helped
 					clients overcome challenges, innovate, and achieve their goals
 				</p>
-			</div>
+			</section>
 			<section className='bg-white px-5 py-10 pt-20 dark:bg-black-200'>
 				<div className='mx-auto flex max-w-1400 flex-wrap justify-center gap-9 '>
 					{caseStudies.map((project, i) => (
 						<Suspense key={project.title} fallback={<Loader />}>
 							<Link
+								prefetch={false}
 								style={{
 									animationDelay: `${i * 100}ms`,
 								}}
@@ -45,8 +46,9 @@ export default async function CaseStudies() {
 									src={project.mockup}
 									width={500}
 									height={500}
-									priority
-									fetchPriority='high'
+									loading='lazy'
+									placeholder='blur'
+									blurDataURL={project.backgroundColor}
 									alt={project.title}
 									className='mx-auto rounded-md object-cover object-bottom px-5 pt-5 lg:px-10 lg:pt-10'
 								/>
@@ -59,6 +61,7 @@ export default async function CaseStudies() {
 					))}
 				</div>
 			</section>
+			<CallToAction />
 		</main>
 	);
 }

@@ -214,7 +214,9 @@ export const skills = [
 	},
 	{
 		label: 'Github',
-		lightIcon: <Github height={50} width={50} />,
+		lightIcon: (
+			<Github height={50} width={50} styles='grayscale  invert-[50%]' />
+		),
 	},
 	{
 		label: 'Node JS',

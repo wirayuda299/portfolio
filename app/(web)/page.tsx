@@ -5,6 +5,7 @@ import {
 	Services,
 	Testimonial,
 	FeaturedProject,
+	CallToAction,
 } from '@/components/index';
 import { Suspense } from 'react';
 
@@ -21,6 +22,7 @@ export default async function Home() {
 			<Suspense fallback='Loading...'>
 				<Testimonial />
 			</Suspense>
+			<CallToAction />
 		</>
 	);
 }

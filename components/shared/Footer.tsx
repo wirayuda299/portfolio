@@ -13,6 +13,7 @@ export default function Footer() {
 					<div className='inline-flex gap-6'>
 						{socialLinks.map((item) => (
 							<a
+								className='invert dark:invert-0'
 								href={item.link}
 								key={item.label}
 								target='_blank'
