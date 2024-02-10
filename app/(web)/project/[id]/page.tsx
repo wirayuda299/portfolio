@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import { Metadata, ResolvingMetadata } from 'next/types';
 
 import {
 	Design,
@@ -9,9 +10,9 @@ import {
 	ProjectTitle,
 	ProjectProblem,
 	ChallengesLearning,
+	CallToAction,
 } from '@/components/index';
 import { getSingleCaseStudy } from '@/sanity/actions/caseStudies';
-import { Metadata, ResolvingMetadata } from 'next/types';
 
 type Props = Readonly<{
 	params: { id: string };
@@ -52,8 +53,9 @@ export default async function ProjectDetail({ params: { id } }: Props) {
 					className='mx-auto'
 					src={caseStudy.mockup}
 					width={500}
-					priority
-					fetchPriority='high'
+					loading='lazy'
+					placeholder='blur'
+					blurDataURL={caseStudy.backgroundColor}
 					height={500}
 					alt={caseStudy.title}
 				/>
@@ -83,6 +85,7 @@ export default async function ProjectDetail({ params: { id } }: Props) {
 				learnings={caseStudy?.learnings}
 			/>
 			<CaseStudies id={caseStudy._id} />
+			<CallToAction />
 		</main>
 	);
 }

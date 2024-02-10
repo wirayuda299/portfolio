@@ -101,6 +101,7 @@ export default function ReviewForm({ styles }: ReviewFormProps) {
 						</div>
 					))}
 					<Button
+						aria-disabled={pending}
 						disabled={pending}
 						type='submit'
 						variant='primary'

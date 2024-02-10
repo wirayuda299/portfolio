@@ -20,7 +20,6 @@ module.exports = withUt({
     },
     extend: {
       screens: {
-        'md1': '780px',
         'sm1': '517px',
         'md2': '850px'
       },
