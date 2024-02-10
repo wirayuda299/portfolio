@@ -94,9 +94,7 @@ export const metadata: Metadata = {
 };
 
 const poppins = Poppins({
-	display: 'swap',
 	subsets: ['latin'],
-	preload: true,
 	fallback: ['sans-serif'],
 	weight: ['400', '500', '600', '700'],
 });

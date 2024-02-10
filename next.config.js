@@ -1,5 +1,6 @@
 
-const SVGR_CONFIG = {
+/** @type {import('next').NextConfig} */
+const nextConfig = {
   webpack(config) {
     // Grab the existing rule that handles SVG imports
     const fileLoaderRule = config.module.rules.find((rule) =>
@@ -27,11 +28,6 @@ const SVGR_CONFIG = {
 
     return config
   },
-}
-
-
-/** @type {import('next').NextConfig} */
-const nextConfig = {
   images: {
     formats: ['image/avif', 'image/webp'],
     remotePatterns: [
@@ -56,7 +52,14 @@ const nextConfig = {
   eslint: {
     ignoreDuringBuilds: true
   },
-  ...SVGR_CONFIG,
+  env: {
+    UPLOADTHING_APP_ID: process.env.UPLOADTHING_APP_ID,
+    SANITY_PROJECT_ID: process.env.SANITY_PROJECT_ID,
+    SANITY_WRITE_TOKEN: process.env.SANITY_WRITE_TOKEN,
+    EMAILJS_SERVICE_ID: process.env.EMAILJS_SERVICE_ID,
+    EMAILJS_TEMPLATE_ID: process.env.EMAILJS_TEMPLATE_ID,
+    EMAILJS_API_KEY: process.env.EMAILJS_API_KEY
+  },
 
 }
 module.exports = nextConfig
