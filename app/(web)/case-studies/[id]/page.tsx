@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import { Metadata, ResolvingMetadata } from 'next/types';
 
 import {
 	Design,
@@ -19,29 +18,6 @@ type Props = Readonly<{
 	searchParams: { [key: string]: string | string[] | undefined };
 }>;
 
-export async function generateMetadata(
-	{ params }: Props,
-	parent: ResolvingMetadata
-): Promise<Metadata> {
-	const caseStudy = await getSingleCaseStudy(params.id);
-	const previousImages = (await parent).openGraph?.images || [];
-	return {
-		title: caseStudy.title,
-		openGraph: {
-			images: [caseStudy.thumbnail, ...previousImages],
-			description: caseStudy.descriptions,
-			title: caseStudy.title,
-		},
-		twitter: {
-			images: caseStudy.thumbnail,
-			title: caseStudy.title,
-			description: caseStudy.descriptions,
-			card: 'summary_large_image',
-		},
-		description: caseStudy.descriptions,
-	};
-}
-
 export default async function ProjectDetail({ params: { id } }: Props) {
 	const caseStudy = await getSingleCaseStudy(id);
 
@@ -53,9 +29,8 @@ export default async function ProjectDetail({ params: { id } }: Props) {
 					className='mx-auto'
 					src={caseStudy.mockup}
 					width={500}
-					loading='lazy'
-					placeholder='blur'
-					blurDataURL={caseStudy.backgroundColor}
+					priority
+					fetchPriority='high'
 					height={500}
 					alt={caseStudy.title}
 				/>

@@ -33,6 +33,7 @@ const SVGR_CONFIG = {
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
+    formats: ['image/avif', 'image/webp'],
     remotePatterns: [
       {
         protocol: 'https',
@@ -50,7 +51,7 @@ const nextConfig = {
     dangerouslyAllowSVG: true
   },
   compiler: {
-    removeConsole: true,
+    removeConsole: process.env.NODE_ENV === 'production',
   },
   eslint: {
     ignoreDuringBuilds: true

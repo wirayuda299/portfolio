@@ -13,12 +13,12 @@ export default async function FeatureProject() {
 			<div className='mx-auto max-w-1400'>
 				<FeatureProjectTitle />
 				<div className='mt-9 flex flex-col gap-5'>
-					{projects?.map((item) => (
+					{projects.map((item) => (
 						<FeatureProjectCard
 							backgroundColor={item.backgroundColor}
 							techStacks={item.techStacks}
 							thumbnail={item.thumbnail}
-							title={item.thumbnail}
+							title={item.title}
 							_id={item._id}
 							subTitle={item.subTitle}
 							key={item.title}

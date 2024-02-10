@@ -1,46 +1,26 @@
-import { useEffect, useRef, MutableRefObject } from 'react';
+import { type MutableRefObject, useEffect } from 'react';
 
-interface Options {
-	root?: Element;
-	rootMargin?: string;
-	threshold?: number | number[];
-}
-
-export default function useIntersectionObserver<T extends HTMLElement>(
-	element: MutableRefObject<T | null>,
-	stylesString: string,
-	options: Options = {}
+export default function useIntersectionObserver<T>(
+	element: MutableRefObject<T | undefined>,
+	stylesString: string
 ) {
-	const observer = useRef<IntersectionObserver | null>(null);
-
 	useEffect(() => {
-		if (!element.current) return;
-
-		if (!observer.current) {
-			observer.current = new IntersectionObserver(
-				(entries) => {
-					entries.forEach((entry) => {
-						if (entry.isIntersecting) {
-							entry.target.classList.add(stylesString);
-						} else {
-							entry.target.classList.remove(stylesString);
-						}
-					});
-				},
-				{
-					...options,
-					threshold: options.threshold || 0.5,
-					rootMargin: options.rootMargin || '100px',
+		const observer = new IntersectionObserver(
+			(entries) => {
+				if (entries[0].isIntersecting) {
+					entries[0].target.classList.add(stylesString);
 				}
-			);
+			},
+			{ threshold: 0.5, rootMargin: '100px' }
+		);
+
+		if (element.current) {
+			observer.observe(element.current as unknown as Element);
 		}
-
-		observer.current.observe(element.current);
-
 		return () => {
-			if (observer.current && element.current) {
-				observer.current.unobserve(element.current);
+			if (element.current) {
+				observer.unobserve(element.current as unknown as Element);
 			}
 		};
-	}, [element, stylesString, options]); // Add options to the dependency array
+	}, []);
 }
