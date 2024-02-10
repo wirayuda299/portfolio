@@ -9,7 +9,12 @@ export default function Skills() {
 				<Title />
 				<div className='mt-10 flex flex-wrap justify-center gap-4 md:gap-8'>
 					{skills.map((skill, i) => (
-						<TechIcon {...skill} key={skill.label} delay={i} />
+						<TechIcon
+							label={skill.label}
+							lightIcon={skill.lightIcon}
+							key={skill.label}
+							delay={i}
+						/>
 					))}
 				</div>
 			</div>

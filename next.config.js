@@ -1,3 +1,4 @@
+
 const SVGR_CONFIG = {
   webpack(config) {
     // Grab the existing rule that handles SVG imports
@@ -29,10 +30,8 @@ const SVGR_CONFIG = {
 }
 
 
-
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  ...SVGR_CONFIG,
   images: {
     remotePatterns: [
       {
@@ -56,11 +55,7 @@ const nextConfig = {
   eslint: {
     ignoreDuringBuilds: true
   },
-  experimental: {
-    optimizeServerReact: true,
-    serverMinification: true,
-  },
-  productionBrowserSourceMaps: false,
+  ...SVGR_CONFIG,
 
 }
 module.exports = nextConfig

@@ -18,14 +18,14 @@ export default function FeaturedProjectTechStacks({
 	techStacks,
 	_id,
 }: FeaturedProjectTechStacksProps) {
-	const ref = useRef<HTMLDivElement>(null);
+	const ref = useRef(null);
 
 	useIntersectionObserver(ref, 'animate-fade-up');
 
 	return (
 		<div className='flex flex-col lg:px-4'>
 			<div ref={ref} className='mt-6 inline-flex flex-wrap gap-4 opacity-0'>
-				{techStacks.frontend?.slice(0, 1).map((tech) => (
+				{techStacks.frontend?.map((tech) => (
 					<Button
 						className='truncate bg-light-gray text-10 uppercase text-white hover:bg-white hover:text-black'
 						key={tech.name}

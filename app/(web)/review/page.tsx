@@ -1,7 +1,7 @@
 import dynamic from 'next/dynamic';
 
 export const metadata = {
-	title: 'Review ',
+	title: 'Review',
 };
 
 const CallToAction = dynamic(() =>

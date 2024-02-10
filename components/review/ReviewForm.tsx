@@ -1,6 +1,6 @@
 'use client';
 
-import { useRef, useState, useTransition } from 'react';
+import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 
 import { toast } from '../ui/use-toast';
@@ -10,21 +10,15 @@ import { Textarea } from '../ui/textarea';
 import FileUpload from './FileUpload';
 import { formReviewFields } from '@/constant';
 import { cn } from '@/lib/utils';
-import useIntersectionObserver from '@/hooks/useInterSectionObserver';
 
-type ReviewFormProps = {
-	styles?: string;
-};
-
-export default function ReviewForm({ styles }: ReviewFormProps) {
+export default function ReviewForm({ styles }: { styles?: string }) {
 	const [image, setImage] = useState<ImageResult | null>(null);
 	const { push } = useRouter();
-	const [pending, startTransition] = useTransition();
-	const ref = useRef<HTMLDivElement>(null);
-	useIntersectionObserver(ref, 'animate-fade-left');
+	const [pending, setIsPending] = useState(false);
 
 	const handleSubmit = async (data: FormData) => {
 		try {
+			setIsPending(true);
 			if (image === null)
 				return toast({
 					className: 'text-white',
@@ -32,15 +26,13 @@ export default function ReviewForm({ styles }: ReviewFormProps) {
 					title: 'Please add profile image',
 				});
 
-			startTransition(async () => {
-				const postReview = await import('@/serveractions').then(
-					(mod) => mod.postReview
-				);
-				await postReview(data, image).then(() => {
-					push('/#review');
+			const postReview = await import('@/serveractions').then(
+				(mod) => mod.postReview
+			);
+			await postReview(data, image).then(() => {
+				push('/#review');
 
-					toast({ title: 'Thank you for your feedback❤' });
-				});
+				toast({ title: 'Thank you for your feedback ❤' });
 			});
 		} catch (error) {
 			toast({
@@ -48,11 +40,13 @@ export default function ReviewForm({ styles }: ReviewFormProps) {
 				variant: 'destructive',
 				title: 'Something went wrong, Please try again later',
 			});
+		} finally {
+			setIsPending(false);
 		}
 	};
 
 	return (
-		<div className='mt-9 w-full opacity-0' ref={ref}>
+		<div className='mt-9 w-full '>
 			<form
 				action={handleSubmit}
 				className='flex size-full flex-wrap items-center justify-center gap-20 '

@@ -1,18 +1,16 @@
+import Image from 'next/image';
+
 import FeaturedProjectTechStacks from './TechStacks';
-import Thumbnail from './Thumbnail';
 import ProjectTitle from './ProjectTitle';
 
-type TechStacks = Pick<Projects, 'techStacks'>['techStacks'];
-
-type FeatureProjectCardProps = {
-	title: string;
-	techStacks: TechStacks;
+type Props = {
 	backgroundColor: string;
+	techStacks: Projects['techStacks'];
 	thumbnail: string;
+	title: string;
 	_id: string;
 	subTitle: string;
 };
-
 export default function FeatureProjectCard({
 	backgroundColor,
 	techStacks,
@@ -20,7 +18,7 @@ export default function FeatureProjectCard({
 	title,
 	_id,
 	subTitle,
-}: FeatureProjectCardProps) {
+}: Props) {
 	return (
 		<div
 			className='w-full rounded-lg p-5 md:px-0 md:py-9'
@@ -37,7 +35,18 @@ export default function FeatureProjectCard({
 					<ProjectTitle title={title} subTitle={subTitle} />
 					<FeaturedProjectTechStacks techStacks={techStacks} _id={_id} />
 				</div>
-				<Thumbnail thumbnail={thumbnail} title={title} />
+				<Image
+					src={thumbnail}
+					width={800}
+					className={` ${
+						title === 'Morrent' ? 'lg:order-1 lg:-ml-12 ' : 'order-2 lg:ml-8'
+					} object-cover object-center`}
+					height={800}
+					loading='lazy'
+					placeholder='blur'
+					blurDataURL={thumbnail}
+					alt={title}
+				/>
 			</div>
 		</div>
 	);

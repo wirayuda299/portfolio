@@ -15,7 +15,7 @@ export default function Content() {
 				based in Bali
 				<Flower />
 			</h2>
-			<p className=' animate-fade-up pt-4 text-xs  text-white-500 dark:text-white sm:text-sm'>
+			<p className=' animate-fade-up pt-4 text-xs text-white-500 dark:text-white sm:text-sm'>
 				Transforming the web one line of code at a time: Crafting cutting-edge
 				digital experiences with precision, passion, and a profound commitment
 				to excellence
