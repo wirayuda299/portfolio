@@ -45,6 +45,7 @@ export default function Contact() {
 						<div className='inline-flex gap-6 pt-3'>
 							{socialLinks.map((item) => (
 								<a
+									className='invert dark:invert-0'
 									href={item.link}
 									key={item.label}
 									target='_blank'
