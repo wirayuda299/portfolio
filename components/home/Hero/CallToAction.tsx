@@ -21,9 +21,8 @@ export default function CallToAction() {
 	const [isChecked, setIsChecked] = useState<boolean>(false);
 
 	const handleCLick = () => {
-		copyText('wirayuda233@gmail.com');
 		setIsChecked(true);
-
+		copyText('wirayuda233@gmail.com');
 		setTimeout(() => setIsChecked(false), 2000);
 	};
 

@@ -13,13 +13,21 @@ export default async function FeatureProject() {
 			<div className='mx-auto max-w-1400'>
 				<FeatureProjectTitle />
 				<div className='mt-9 flex flex-col gap-5'>
-					{projects.map((item) => (
-						<FeatureProjectCard {...item} key={item.title} />
+					{projects?.map((item) => (
+						<FeatureProjectCard
+							backgroundColor={item.backgroundColor}
+							techStacks={item.techStacks}
+							thumbnail={item.thumbnail}
+							title={item.thumbnail}
+							_id={item._id}
+							subTitle={item.subTitle}
+							key={item.title}
+						/>
 					))}
 					<Link
 						title='See more case studies'
 						href='/case-studies'
-						className='mx-auto my-10 inline-flex max-w-350 animate-fade-up gap-5 truncate rounded-full bg-primary-light px-5 py-3 text-xs text-white opacity-0 dark:bg-primary-dark sm:px-10 sm:text-sm'
+						className='mx-auto my-10 inline-flex max-w-350 animate-fade-up items-center gap-5 truncate rounded-full bg-primary-light px-5 py-3 text-xs text-white opacity-0 dark:bg-primary-dark sm:px-10 sm:text-sm'
 					>
 						See more case studies
 						<NextIcon color='#fff' />

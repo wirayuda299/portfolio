@@ -14,9 +14,7 @@ export default function CallToAction() {
 					className='min-h-[300px] w-full'
 					src={'/assets/images/cta.png'}
 					alt='cta'
-					loading='lazy'
-					placeholder='blur'
-					blurDataURL='/assets/images/cta.png'
+					priority
 				/>
 				<div className='absolute flex w-full max-w-5xl flex-col items-center justify-between p-2 md:flex-row'>
 					<div className='max-w-xl'>
@@ -25,7 +23,6 @@ export default function CallToAction() {
 						</h2>
 					</div>
 					<Link
-						prefetch={false}
 						href={'/contact'}
 						className=' max-w-350 pt-4 min-[350px]:w-auto sm:pt-7 '
 					>
