@@ -1,63 +1,46 @@
-'use client';
-
 import Image from 'next/image';
-import { useCallback, useMemo, useRef } from 'react';
 
-import useIntersectionObserver from '@/hooks/useInterSectionObserver';
 import { jobLists } from '@/constant';
+const importantKeywords = [
+	'git for version control',
+	'asana',
+	'full-stack',
+	'team meetings',
+	'mentors',
+	'frontend',
+	'high-quality',
+	'skill enhancement',
+	'challenges',
+	'goals',
+];
+const highlightRegex = () =>
+	new RegExp(`\\b(${importantKeywords.join('|')})\\b`, 'gi');
+
+const highlightKeywords = (text: string) => {
+	return text.split(highlightRegex()).map((part) => {
+		const isInclude = importantKeywords.includes(part.toLowerCase());
+		return isInclude ? (
+			<span
+				key={part}
+				className='relative inline-block w-max font-bold text-secondary before:absolute before:bottom-1 before:left-0 before:z-[-1] before:h-3  before:w-1/2 '
+			>
+				{part}
+			</span>
+		) : (
+			part
+		);
+	});
+};
 
 export default function Background() {
-	const ref = useRef(null);
-
-	const importantKeywords = useMemo(
-		() => [
-			'git for version control',
-			'asana',
-			'full-stack',
-			'team meetings',
-			'mentors',
-			'frontend',
-			'high-quality',
-			'skill enhancement',
-			'challenges',
-			'goals',
-		],
-		[]
-	);
-
-	const highlightRegex = useMemo(
-		() => new RegExp(`\\b(${importantKeywords.join('|')})\\b`, 'gi'),
-		[importantKeywords]
-	);
-
-	const highlightKeywords = useCallback(
-		(text: string) => {
-			return text.split(highlightRegex).map((part, index) => {
-				const isInclude = importantKeywords.includes(part.toLowerCase());
-				return isInclude ? (
-					<span
-						key={part}
-						className='relative inline-block w-max font-bold text-secondary before:absolute before:bottom-1 before:left-0 before:z-[-1] before:h-3  before:w-1/2 '
-					>
-						{part}
-					</span>
-				) : (
-					part
-				);
-			});
-		},
-		[importantKeywords, highlightRegex]
-	);
-
-	useIntersectionObserver(ref, 'animate-fade-left');
-
 	return (
-		<div className='flex flex-1 flex-col items-start opacity-0' ref={ref}>
+		<div className='flex flex-1 flex-col items-start'>
 			<div className='ease group flex w-full cursor-pointer flex-row items-center justify-start gap-3 '>
 				<Image
 					className='ease block object-contain brightness-[10%] filter transition-colors duration-500 group-hover:filter-none dark:brightness-0 dark:grayscale-0 dark:invert'
 					src={'/assets/jsm.png'}
 					width={50}
+					loading='lazy'
 					height={50}
 					alt={'Javascript Mastery'}
 				/>
