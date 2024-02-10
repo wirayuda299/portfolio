@@ -18,7 +18,7 @@ import { Input } from '../ui/input';
 import { Textarea } from '../ui/textarea';
 import { formFields } from '@/constant';
 import { toast } from '../ui/use-toast';
-import { useTransition } from 'react';
+import { useState } from 'react';
 
 const formSchema = z.object({
 	name: z.string(),
@@ -28,7 +28,7 @@ const formSchema = z.object({
 });
 
 export default function ContactForm() {
-	const [pending, startTransition] = useTransition();
+	const [pending, setPending] = useState(false);
 
 	const form = useForm<z.infer<typeof formSchema>>({
 		// @ts-ignore
@@ -38,31 +38,29 @@ export default function ContactForm() {
 	const onSubmit = async (data: z.infer<typeof formSchema>) => {
 		const { name, email, messageText, senderContact } = data;
 		try {
+			setPending(true);
 			const templateParams = {
 				to_name: name,
 				to_email: email,
 				to_message: messageText,
 				to_contact: senderContact,
 			};
-			startTransition(async () => {
-				await emailjs
-					.send(
-						process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
-						process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
-						templateParams,
-						process.env.NEXT_PUBLIC_EMAILJS_API_KEY
-					)
-					.then(() => {
-						toast({
-							title: 'Your message successfully sended',
-						});
-					});
+			await emailjs.send(
+				process.env.EMAILJS_SERVICE_ID!,
+				process.env.EMAILJS_TEMPLATE_ID!,
+				templateParams,
+				process.env.EMAILJS_API_KEY
+			);
+			toast({
+				title: 'Your message successfully sended',
 			});
 		} catch (error) {
 			toast({
 				variant: 'destructive',
 				title: 'Something went wrong when send your message',
 			});
+		} finally {
+			setPending(false);
 		}
 	};
 
