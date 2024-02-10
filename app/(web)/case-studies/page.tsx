@@ -32,12 +32,11 @@ export default async function CaseStudies() {
 					{caseStudies.map((project, i) => (
 						<Suspense key={project.title} fallback={<Loader />}>
 							<Link
-								prefetch={false}
 								style={{
 									animationDelay: `${i * 100}ms`,
 								}}
 								className='size-full max-w-400 animate-fade-in opacity-0'
-								href={`/project/${project._id}`}
+								href={`/case-studies/${project._id}`}
 							>
 								<Image
 									style={{
@@ -46,10 +45,9 @@ export default async function CaseStudies() {
 									src={project.mockup}
 									width={500}
 									height={500}
-									loading='lazy'
-									placeholder='blur'
-									blurDataURL={project.backgroundColor}
 									alt={project.title}
+									priority
+									fetchPriority='high'
 									className='mx-auto rounded-md object-cover object-bottom px-5 pt-5 lg:px-10 lg:pt-10'
 								/>
 								<h2 className='pt-5 text-xl font-semibold dark:text-white'>

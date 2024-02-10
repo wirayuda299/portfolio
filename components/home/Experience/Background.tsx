@@ -1,42 +1,53 @@
 'use client';
 
 import Image from 'next/image';
-import { useRef } from 'react';
+import { useCallback, useMemo, useRef } from 'react';
 
 import useIntersectionObserver from '@/hooks/useInterSectionObserver';
 import { jobLists } from '@/constant';
 
 export default function Background() {
 	const ref = useRef(null);
-	const importantKeywords = [
-		'git for version control',
-		'asana',
-		'full-stack',
-		'team meetings',
-		'mentors',
-		'frontend',
-		'high-quality',
-		'skill enhancement',
-		'challenges',
-		'goals',
-	];
 
-	const highlightKeywords = (text: string) => {
-		const regex = new RegExp(`\\b(${importantKeywords.join('|')})\\b`, 'gi');
-		return text.split(regex).map((part, index) => {
-			const isInclude = importantKeywords.includes(part.toLowerCase());
-			return isInclude ? (
-				<span
-					key={index}
-					className='relative inline-block w-max font-bold text-secondary before:absolute before:bottom-1 before:left-0 before:z-[-1] before:h-3  before:w-1/2 '
-				>
-					{part}
-				</span>
-			) : (
-				part
-			);
-		});
-	};
+	const importantKeywords = useMemo(
+		() => [
+			'git for version control',
+			'asana',
+			'full-stack',
+			'team meetings',
+			'mentors',
+			'frontend',
+			'high-quality',
+			'skill enhancement',
+			'challenges',
+			'goals',
+		],
+		[]
+	);
+
+	const highlightRegex = useMemo(
+		() => new RegExp(`\\b(${importantKeywords.join('|')})\\b`, 'gi'),
+		[importantKeywords]
+	);
+
+	const highlightKeywords = useCallback(
+		(text: string) => {
+			return text.split(highlightRegex).map((part, index) => {
+				const isInclude = importantKeywords.includes(part.toLowerCase());
+				return isInclude ? (
+					<span
+						key={part}
+						className='relative inline-block w-max font-bold text-secondary before:absolute before:bottom-1 before:left-0 before:z-[-1] before:h-3  before:w-1/2 '
+					>
+						{part}
+					</span>
+				) : (
+					part
+				);
+			});
+		},
+		[importantKeywords, highlightRegex]
+	);
 
 	useIntersectionObserver(ref, 'animate-fade-left');
 

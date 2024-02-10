@@ -121,11 +121,11 @@ module.exports = withUt({
 
       },
       animation: {
-        "fade-in": "fade-in 1s ease-in forwards",
-        "fade-up": "fade-up 500ms ease forwards ",
-        "fade-left": "fade-left 1s ease forwards",
-        "fade-right": "fade-right 1s ease forwards",
-        "increasing": "increasing 1s forwards",
+        "fade-in": "fade-in 500ms ease-in forwards",
+        "fade-up": "fade-up 400ms ease forwards ",
+        "fade-left": "fade-left 500ms ease forwards",
+        "fade-right": "fade-right 500ms ease forwards",
+        "increasing": "increasing 500ms forwards",
         "icon-up": "icon-up 0.5s linear",
       },
 

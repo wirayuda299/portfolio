@@ -2,6 +2,8 @@ import { client } from '@/sanity/lib/client';
 
 export const getCaseStudies = async (type: 'all' | 'featured') => {
 	try {
+		console.time('case studies');
+
 		let query: string;
 
 		if (type === 'featured') {
@@ -35,6 +37,7 @@ export const getCaseStudies = async (type: 'all' | 'featured') => {
 		}
 
 		const res = await client.fetch(query);
+		console.timeEnd('case studies');
 
 		return res as Projects[];
 	} catch (error) {

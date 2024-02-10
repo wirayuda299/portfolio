@@ -1,10 +1,5 @@
-import { Github } from 'lucide-react';
+import Github from '../home/Skills/icons/github';
 import { NextIcon } from '../shared/next-icon';
-
-type ProjectLinkProps = {
-	githubLink: string;
-	demoLink: string;
-};
 
 function GlobeIcon() {
 	return (
@@ -20,7 +15,10 @@ function GlobeIcon() {
 export default function ProjectLink({
 	demoLink,
 	githubLink,
-}: ProjectLinkProps) {
+}: {
+	githubLink: string;
+	demoLink: string;
+}) {
 	return (
 		<div className='flex justify-center gap-5 pt-6'>
 			<a
@@ -39,7 +37,7 @@ export default function ProjectLink({
 				rel='noopener noreferrer'
 				className='inline-flex items-center gap-1 text-sm font-semibold text-primary-light lg:text-lg'
 			>
-				<Github stroke='#000' />
+				<Github height={24} width={25} />
 				<span>Source Code</span>
 				<NextIcon color='#0252cd' />
 			</a>
