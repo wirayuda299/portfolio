@@ -1,12 +1,12 @@
 import Link from 'next/link';
 import Image from 'next/image';
+import { ArrowRight } from 'lucide-react';
 
 import { Button } from '../ui/button';
-import { NextIcon } from './next-icon';
 
 export default function CallToAction() {
 	return (
-		<section className='mt-10 flex size-full min-h-500 items-center justify-center p-3 dark:bg-black-200 sm:p-6'>
+		<section className='mt-10 flex size-full min-h-500 items-center justify-center p-3 bg-black-200 sm:p-6'>
 			<div className='relative mx-auto flex size-full h-full max-w-1400  items-center justify-center '>
 				<Image
 					width={800}
@@ -26,9 +26,9 @@ export default function CallToAction() {
 						href={'/contact'}
 						className=' max-w-350 pt-4 min-[350px]:w-auto sm:pt-7 '
 					>
-						<Button className='flex w-full items-center gap-3 truncate rounded-full bg-primary-light text-sm font-semibold hover:bg-blue-600 dark:bg-primary-dark dark:text-white sm:text-xs lg:px-7'>
+						<Button className='flex w-full items-center gap-3 truncate rounded-full text-sm font-semibold hover:bg-blue-600 bg-primary-dark text-white sm:text-xs lg:px-7'>
 							Get in Touch with Me
-							<NextIcon color='#fff' />
+							<ArrowRight color='#fff' />
 						</Button>
 					</Link>
 				</div>

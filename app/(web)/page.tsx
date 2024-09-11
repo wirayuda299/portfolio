@@ -1,28 +1,24 @@
 import {
-	Hero,
-	Skills,
-	Experience,
-	Services,
-	Testimonial,
-	FeaturedProject,
-	CallToAction,
+  Hero,
+  Skills,
+  Experience,
+  Services,
+  FeaturedProject,
+  CallToAction,
 } from '@/components/index';
-import { Suspense } from 'react';
 
+export const metadata = {
+  title: 'Home'
+}
 export default async function Home() {
-	return (
-		<>
-			<Hero />
-			<Skills />
-			<Services />
-			<Experience />
-			<Suspense fallback='Loading...'>
-				<FeaturedProject />
-			</Suspense>
-			<Suspense fallback='Loading...'>
-				<Testimonial />
-			</Suspense>
-			<CallToAction />
-		</>
-	);
+  return (
+    <>
+      <Hero />
+      <Skills />
+      <Services />
+      <Experience />
+      <FeaturedProject />
+      <CallToAction />
+    </>
+  );
 }

@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 
-import './types/tailwindcss-animated.d.ts'
+import './types/tailwindcss-animated.ts'
 const { withUt } = require("uploadthing/tw");
 
 module.exports = withUt({

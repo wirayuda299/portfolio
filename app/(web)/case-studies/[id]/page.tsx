@@ -45,7 +45,7 @@ export default async function ProjectDetail({ params: { id } }: Props) {
 				techStacks={caseStudy.techStacks}
 			/>
 			<section className='mx-auto mt-7 flex max-w-880 flex-col gap-5 px-4 py-10'>
-				<p className='text-left text-sm text-white-500 first-letter:capitalize dark:text-white lg:text-lg'>
+				<p className='text-left text-sm first-letter:capitalize text-white lg:text-lg'>
 					{caseStudy.descriptions}
 				</p>
 			</section>

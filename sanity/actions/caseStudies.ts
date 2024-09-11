@@ -1,8 +1,8 @@
 import { client } from '@/sanity/lib/client';
+import { Projects } from '@/types/project';
 
 export const getCaseStudies = async (type: 'all' | 'featured') => {
 	try {
-		console.time('case studies');
 
 		let query: string;
 
@@ -32,14 +32,12 @@ export const getCaseStudies = async (type: 'all' | 'featured') => {
         title,
         subTitle,
         "mockup":mockup.asset->url,
-				backgroundColor    
+				backgroundColor
 			}`;
 		}
 
-		const res = await client.fetch(query);
-		console.timeEnd('case studies');
+		return await client.fetch(query) as Projects[];
 
-		return res as Projects[];
 	} catch (error) {
 		throw error;
 	}
@@ -76,7 +74,7 @@ export const getSingleCaseStudy = async (id: string) => {
     },
     "design":design.asset->url,
     "process": process[]{
-      _key, 
+      _key,
       title,
       'icon':icon.asset->url
     },
@@ -106,7 +104,7 @@ export const getSimilarCaseStudies = async (id: string) => {
 			{ id }
 		);
 
-		return diffProject as Projects[];
+		return diffProject as Projects[]
 	} catch (error) {
 		throw error;
 	}

@@ -5,7 +5,8 @@ import { useRef } from 'react';
 
 import { Button } from '../../ui/button';
 import useIntersectionObserver from '@/hooks/useInterSectionObserver';
-import { NextIcon } from '@/components/shared/next-icon';
+import { ArrowRight } from 'lucide-react';
+import { Projects } from '@/types/project';
 
 type TechStacks = Pick<Projects, 'techStacks'>['techStacks'];
 
@@ -48,7 +49,7 @@ export default function FeaturedProjectTechStacks({
 				className='inline-flex items-center gap-3 pt-5 text-sm font-medium text-white'
 			>
 				See Case Study
-				<NextIcon color='#fff' />
+				<ArrowRight color='#fff' />
 			</Link>
 		</div>
 	);

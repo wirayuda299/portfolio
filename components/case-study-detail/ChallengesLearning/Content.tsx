@@ -7,7 +7,7 @@ type ContentProps = {
 };
 export default function Content({ contents, image, title }: ContentProps) {
 	return (
-		<div className='mb-5 bg-white-800 p-5 dark:bg-black-300'>
+		<div className='mb-5 p-5 bg-black-300'>
 			<h3 className='text-lg font-semibold uppercase text-tomato'>{title}</h3>
 			<div className='flex flex-col gap-5 pt-9'>
 				{contents.map((c) => (
@@ -19,7 +19,7 @@ export default function Content({ contents, image, title }: ContentProps) {
 							height={40}
 							alt='icon'
 						/>
-						<p className='text-sm text-white-500 dark:text-white lg:text-lg'>
+						<p className='text-sm text-white lg:text-lg'>
 							{c}
 						</p>
 					</div>

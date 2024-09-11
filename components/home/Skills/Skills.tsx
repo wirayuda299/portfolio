@@ -4,14 +4,14 @@ import Title from './Title';
 
 export default function Skills() {
 	return (
-		<section className='w-full bg-white p-6 dark:bg-black-200 md:p-16'>
+		<section className='w-full p-6 bg-black-200 md:p-16'>
 			<div className='mx-auto w-full max-w-1400'>
 				<Title />
 				<div className='mt-10 flex flex-wrap justify-center gap-4 md:gap-8'>
 					{skills.map((skill, i) => (
 						<TechIcon
 							label={skill.label}
-							lightIcon={skill.lightIcon}
+							icon={skill.icon}
 							key={skill.label}
 							delay={i}
 						/>

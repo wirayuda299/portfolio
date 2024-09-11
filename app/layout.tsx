@@ -3,23 +3,21 @@ import './globals.css';
 import type { ReactNode } from 'react';
 import type { Metadata } from 'next';
 import { Poppins } from 'next/font/google';
-import { NextSSRPlugin } from '@uploadthing/react/next-ssr-plugin';
-import { extractRouterConfig } from 'uploadthing/server';
 
 import { Toaster } from '@/components/ui/toaster';
-import { ourFileRouter } from './api/uploadthing/core';
+import { cn } from '@/lib/utils';
 
 export const metadata: Metadata = {
 	metadataBase: new URL('https://wirayuda.vercel.app'),
 	title: {
 		template:
-			'%s  | Bali-Based React Developer | Expert in Web Development | Wirayuda',
+			'%s - React Developer - Wirayuda',
 		default:
-			'Bali-Based React Developer | Expert in Web Development | Wirayuda',
+			'- React Developer - Wirayuda',
 		absolute: '',
 	},
 	description:
-		'Looking for a skilled React developer in Bali? Wirayuda offers expert web development services tailored to your needs. Contact us today for top-notch solutions!',
+		'Looking for a skilled React developer? Wirayuda offers expert web development services tailored to your needs. Contact us today for top-notch solutions!',
 	keywords: [
 		'React developer Bali',
 		'javascript',
@@ -103,11 +101,10 @@ export default function RootLayout({ children }: { children: ReactNode }) {
 	return (
 		<html lang='en'>
 			<body
-				className={`bg-white-800 text-black dark:bg-black-300 ${poppins.className}`}
+				className={cn(' text-white bg-black-300', poppins.className)}
 			>
 				<Toaster />
 				<main className='size-full select-none'>{children}</main>
-				<NextSSRPlugin routerConfig={extractRouterConfig(ourFileRouter)} />
 			</body>
 		</html>
 	);

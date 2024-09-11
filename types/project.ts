@@ -1,3 +1,4 @@
+
 type Icon = {
 	name: string;
 	_key: string;
@@ -7,9 +8,9 @@ type Icon = {
 type Frontend = Icon[];
 type Backend = Icon[];
 
-type Projects = {
+export type Projects = {
 	backgroundColor: string;
-	thumbnail: SanityImage;
+	thumbnail: string
 	demoSite: string;
 	techStacks: {
 		frontend: Frontend;
@@ -27,7 +28,7 @@ type Projects = {
 	}[];
 	_id: string;
 	process: {
-		icon: SanityImage;
+		icon: string;
 		_key: string;
 		title: string;
 		_type: string;
@@ -35,19 +36,19 @@ type Projects = {
 	title: string;
 	subTitle: string;
 	_createdAt: string;
-	design: Image;
-	mockup: Image;
+	design: string;
+	mockup: string;
 	_rev: string;
 	type: string;
 	learnings: string[];
 	problem: {
-		image: Image;
+		image: string;
 		description: string;
 	};
 	_updateAt: string;
 };
 
-type ImageResult = {
+export type ImageResult = {
 	fileKey: string;
 	fileName: string;
 	fileSize: number;

@@ -4,6 +4,7 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import { useForm } from 'react-hook-form';
 import { z } from 'zod';
 import emailjs from '@emailjs/browser';
+import { useState } from 'react';
 
 import { Button } from '@/components/ui/button';
 import {
@@ -18,7 +19,6 @@ import { Input } from '../ui/input';
 import { Textarea } from '../ui/textarea';
 import { formFields } from '@/constant';
 import { toast } from '../ui/use-toast';
-import { useState } from 'react';
 
 const formSchema = z.object({
 	name: z.string(),
@@ -77,16 +77,16 @@ export default function ContactForm() {
 						name={formField.label}
 						render={({ field }) => (
 							<FormItem>
-								<FormLabel className='flex flex-wrap gap-x-2 text-base text-black-300 dark:text-white'>
+								<FormLabel className='flex flex-wrap gap-x-2 text-base text-white'>
 									{formField.title}
 									<span className='text-xs font-light text-white-800 md:text-sm'>
 										{formField.subTitle}
 									</span>
 								</FormLabel>
-								<FormControl className='h-12 !bg-white-800 focus:!ring-1  focus:!ring-primary-light dark:!border-none dark:!bg-black-300 dark:text-white dark:focus:!ring-primary-dark dark:focus-visible:!border-0 dark:focus-visible:!ring-offset-0'>
+								<FormControl className='h-12  focus:!ring-1  !border-none !bg-black-300 text-white focus:!ring-primary-dark focus-visible:!border-0 focus-visible:!ring-offset-0'>
 									{formField.label === 'messageText' ? (
 										<Textarea
-											className='resize-none !bg-white-800 focus:!ring-1 focus:!ring-primary-light dark:!bg-black-300 dark:focus:!ring-primary-dark '
+											className='resize-none focus:!ring-1 !bg-black-300 focus:!ring-primary-dark '
 											{...field}
 										/>
 									) : (
@@ -101,7 +101,7 @@ export default function ContactForm() {
 				<div className='flex justify-end'>
 					<Button
 						disabled={pending}
-						className='rounded-full bg-primary-light px-12 hover:bg-blue-600 dark:bg-primary-dark dark:text-white '
+						className='rounded-full px-12 hover:bg-blue-600 bg-primary-dark text-white '
 					>
 						{pending ? 'Sending...' : 'Send'}
 					</Button>

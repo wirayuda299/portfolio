@@ -3,27 +3,30 @@
 import { useRef } from 'react';
 
 import useIntersectionObserver from '@/hooks/useInterSectionObserver';
+import Image from 'next/image';
 
 type TechIconProps = {
-	label: string;
-	lightIcon: JSX.Element;
-	delay: number;
+  label: string;
+  icon: string
+  delay: number;
 };
 
-export default function TechIcon({ label, lightIcon, delay }: TechIconProps) {
-	const ref = useRef(null);
-	useIntersectionObserver(ref, 'animate-fade-up');
+export default function TechIcon({ label, icon, delay }: TechIconProps) {
+  const ref = useRef(null);
+  useIntersectionObserver(ref, 'animate-fade-up');
 
-	return (
-		<div
-			ref={ref}
-			style={{
-				animationDelay: `${delay * 100}ms`,
-			}}
-			title={label}
-			className='ease group flex size-14 items-center justify-center rounded-full bg-white-800 opacity-0 grayscale filter transition-all duration-500 hover:shadow-lg hover:filter-none dark:bg-black-200 dark:bg-opacity-30 md:size-24'
-		>
-			{lightIcon}
-		</div>
-	);
+  return (
+    <Image
+      src={icon}
+      alt={label}
+      width={40}
+      height={40}
+      ref={ref}
+      className='ease group flex size-10 object-contain items-center justify-center rounded-full opacity-0 grayscale filter transition-all duration-500 hover:shadow-lg hover:filter-none bg-black-200/30 md:size-24'
+      style={{
+        animationDelay: delay * 50 + 'ms'
+      }}
+
+    />
+  );
 }

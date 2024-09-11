@@ -11,7 +11,7 @@ export default function FeatureProjectTitle() {
 
 	return (
 		<div className='w-full text-center'>
-			<h2 className='inline-flex w-full flex-wrap justify-center gap-2 text-4xl font-bold text-black dark:text-white md:text-5xl'>
+			<h2 className='inline-flex w-full flex-wrap justify-center gap-2 text-4xl font-bold text-white md:text-5xl'>
 				Featured
 				<span
 					ref={ref}

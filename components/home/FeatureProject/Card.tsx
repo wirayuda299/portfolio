@@ -2,6 +2,7 @@ import Image from 'next/image';
 
 import FeaturedProjectTechStacks from './TechStacks';
 import ProjectTitle from './ProjectTitle';
+import { Projects } from '@/types/project';
 
 type Props = {
 	backgroundColor: string;
