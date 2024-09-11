@@ -19,7 +19,7 @@ export default function Footer() {
 								target='_blank'
 								title={item.label}
 							>
-								{item.darkIcon}
+								{item.icon}
 							</a>
 						))}
 					</div>

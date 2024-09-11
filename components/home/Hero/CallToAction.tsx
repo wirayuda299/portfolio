@@ -28,7 +28,7 @@ export default function CallToAction() {
         <a
           href='mailto:wirayuda233@gmail.com'
           target='_blank'
-          className='inline-block text-xs font-medium text-black-400'
+          className='inline-block text-xs font-medium text-black'
         >
           wirayuda233@gmail.com
         </a>

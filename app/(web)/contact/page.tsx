@@ -40,7 +40,7 @@ export default function Contact() {
 									target='_blank'
 									title={item.label}
 								>
-									{item.darkIcon}
+									{item.icon}
 								</a>
 							))}
 						</div>
