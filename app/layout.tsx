@@ -11,6 +11,11 @@ export const metadata: Metadata = {
     template: '%s - React Developer - Wirayuda',
     default: 'React Developer - Wirayuda',
   },
+  openGraph: {
+    title: 'Personal portfolio website',
+    siteName: 'wirayuda',
+    url:new URL('https://wirayuda.vercel.app')
+  },
   description:
     'Looking for a skilled React developer? Wirayuda offers expert web development services tailored to your needs. Contact us today for top-notch solutions!',
   keywords: [
