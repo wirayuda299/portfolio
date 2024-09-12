@@ -10,7 +10,6 @@
 		"react-hooks/exhaustive-deps": "off",
 		"eslint-disable-next-line": "off",
 		"tailwindcss/no-custom-classname": "off",
-		"tailwindcss/migration-from-tailwind-2": "off",
 		"import/no-anonymous-default-export": "off",
 		"no-undef": "off",
 		"no-useless-catch": "off"

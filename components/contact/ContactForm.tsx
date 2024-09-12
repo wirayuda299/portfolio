@@ -4,7 +4,7 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import { useForm } from 'react-hook-form';
 import { z } from 'zod';
 import emailjs from '@emailjs/browser';
-import { useState } from 'react';
+import { toast } from 'sonner';
 
 import { Button } from '@/components/ui/button';
 import {
@@ -18,26 +18,31 @@ import {
 import { Input } from '../ui/input';
 import { Textarea } from '../ui/textarea';
 import { FORM_FIELDS } from '@/constants/index';
-import { toast } from 'sonner';
 
 const formSchema = z.object({
-	name: z.string(),
-	email: z.string().email(),
-	messageText: z.string(),
+	name: z.string().min(3, 'Please add name'),
+	email: z.string().email('This is not valid email'),
+	messageText: z.string().min(2, "Please add message"),
 	senderContact: z.string().email().or(z.string()),
 });
 
 export default function ContactForm() {
-	const [pending, setPending] = useState(false);
 
 	const form = useForm<z.infer<typeof formSchema>>({
 		resolver: zodResolver(formSchema),
+    defaultValues:{
+      email:'',
+      name:'',
+      messageText:'',
+      senderContact:''
+    }
 	});
+
+  const isSubmitting= form.formState.isSubmitting
 
 	const onSubmit = async (data: z.infer<typeof formSchema>) => {
 		const { name, email, messageText, senderContact } = data;
 		try {
-			setPending(true);
 			const templateParams = {
 				to_name: name,
 				to_email: email,
@@ -50,11 +55,9 @@ export default function ContactForm() {
 				templateParams,
 				process.env.EMAILJS_API_KEY
 			);
-      toast.success( 'Your message successfully sended')
+      toast.success('Your message successfully sended')
 		} catch (error) {
-      toast.error( 'Something went wrong when send your message')
-		} finally {
-			setPending(false);
+      toast.error('Something went wrong when send your message')
 		}
 	};
 
@@ -94,10 +97,10 @@ export default function ContactForm() {
 				))}
 				<div className='flex justify-end'>
 					<Button
-						disabled={pending}
+						disabled={isSubmitting}
 						className='rounded-full px-12 hover:bg-blue-600 bg-primary-dark text-white '
 					>
-						{pending ? 'Sending...' : 'Send'}
+						{isSubmitting ? 'Sending...' : 'Send'}
 					</Button>
 				</div>
 			</form>
