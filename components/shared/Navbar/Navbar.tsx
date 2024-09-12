@@ -13,6 +13,7 @@ export default function Navbar() {
             className='aspect-auto object-contain invert'
             alt='wirayuda logo'
             src={'/logo.png'}
+            priority
             width={60}
             height={60}
           />

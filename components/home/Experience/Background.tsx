@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { jobLists } from '@/constant';
+import { JOB_LIST } from '@/constants/index';
 import { useMemo } from 'react';
 
 const importantKeywords = [
@@ -35,12 +35,12 @@ const highlightKeywords = (text: string) => {
 
 export default function Background() {
   const memoizedJobLists = useMemo(() => {
-    return jobLists.map((job) => (
+    return JOB_LIST.map((job) => (
       <li key={job} className="text-xs text-slate-200 md:text-base">
         {highlightKeywords(job)}
       </li>
     ));
-  }, [jobLists]);
+  }, []);
 
   return (
     <div className="flex flex-1 flex-col items-start">
@@ -53,12 +53,10 @@ export default function Background() {
           alt={'Javascript Mastery'}
           loading="lazy"
         />
-        <div>
           <h3 className="text-base font-semibold text-white lg:text-2xl">
             Javascript Mastery
           </h3>
           <p className="text-xs font-medium uppercase text-white">1 July 2023 - Now</p>
-        </div>
       </div>
       <ul className="mt-5 flex list-disc flex-col items-start gap-8 pl-5 text-white">
         {memoizedJobLists}

@@ -13,6 +13,7 @@ type Props = {
   _id: string;
   subTitle: string;
 };
+
 export default function FeatureProjectCard({
   backgroundColor,
   techStacks,
@@ -30,8 +31,8 @@ export default function FeatureProjectCard({
     >
       <div className='grid w-full grid-cols-1 items-center justify-between gap-6 overflow-hidden lg:grid-cols-2 lg:gap-x-11'>
         <div
-          className={`${title === 'Morrent' ? 'pl-0 lg:!order-2' : ''
-            } w-fit whitespace-pre-wrap sm:pl-10 md:pl-12 `}
+          className={cn('w-fit whitespace-pre-wrap sm:pl-10 md:pl-12', title === 'Morrent' ? 'pl-0 lg:!order-2' : ''
+          )}
         >
           <ProjectTitle title={title} subTitle={subTitle} />
           <FeaturedProjectTechStacks techStacks={techStacks} _id={_id} />
@@ -39,7 +40,7 @@ export default function FeatureProjectCard({
         <Image
           src={thumbnail}
           width={800}
-          className={cn('w-full  object-cover object-center', title === 'Morrent' ? 'lg:order-1 lg:-ml-12 ' : 'order-2 lg:ml-8'
+          className={cn('w-full object-cover object-center', title === 'Morrent' ? 'lg:order-1 lg:-ml-12 ' : 'order-2 lg:ml-8'
           )}
           height={800}
           loading='lazy'

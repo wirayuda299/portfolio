@@ -1,5 +1,4 @@
-
-export const navItems = [
+export const NAV_ITEMS = [
 	{
 		title: 'Home',
 		path: '/',
@@ -19,14 +18,14 @@ export const navItems = [
 ] as const;
 
 
-export const jobLists = [
+export const JOB_LIST = [
 	'Collaborated with a diverse international team, employing Git for version control and Asana for efficient project management and task tracking.',
 	'Led the development lifecycle of various projects, starting from frontend design and ending with robust full-stack applications, ensuring seamless user experiences and high-quality code.',
 	'Facilitated daily team meetings to discuss progress, challenges, and goals, fostering a collaborative environment and maintaining project momentum.',
 	'Engaged in regular one-on-one meetings with Mentors, discussing technical challenges, career development, and skill enhancement, leading to personal and professional growth.',
 ] as const;
 
-export const services = [
+export const SERVICES = [
 	{
 		title: 'Analytics & SEO',
 		text: 'Implement tracking & analytics tools to monitor website performance & improve SEO.',
@@ -49,7 +48,7 @@ export const services = [
 	},
 ] as const;
 
-export const skills = [
+export const SKILLS = [
 	{
 		label: 'Javascript',
 		icon: '/assets/icons/js.svg',
@@ -113,7 +112,7 @@ export const skills = [
 	},
 ] as const;
 
-export const socialLinks = [
+export const SOCIAL_LINKS = [
 	{
 		link: 'https://www.linkedin.com/in/wira-yuda29/',
 		label: 'Linkedln',
@@ -126,7 +125,7 @@ export const socialLinks = [
 	},
 ] as const;
 
-export const formFields = [
+export const FORM_FIELDS = [
 	{
 		label: 'name',
 		title: 'What’s your name?',
@@ -149,22 +148,3 @@ export const formFields = [
 	},
 ] as const;
 
-export const formReviewFields = [
-	{
-		label: 'star',
-		title: 'Rating',
-	},
-
-	{
-		label: 'name',
-		title: 'Your Name',
-	},
-	{
-		label: 'role',
-		title: 'Your Role',
-	},
-	{
-		label: 'comments',
-		title: 'Give your feedback',
-	},
-] as const;

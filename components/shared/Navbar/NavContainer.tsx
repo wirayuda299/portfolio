@@ -4,7 +4,7 @@ import { useCallback, useState } from 'react';
 import Image from 'next/image';
 
 import NavItem from './NavItem';
-import { navItems } from '@/constant/index';
+import { NAV_ITEMS } from '@/constants/index';
 import { cn } from '@/lib/utils';
 
 export default function NavContainer() {
@@ -12,16 +12,16 @@ export default function NavContainer() {
 
   const closeNav = useCallback(() => setIsOpen(false), [])
 
-  const navClasses = cn('ease fixed top-0 z-50 flex h-screen w-full flex-col  items-center justify-evenly overflow-hidden pr-3 backdrop-blur transition-all duration-500 border-r-white-500 bg-black-200 md:static md:h-auto md:flex-row  md:justify-end  md:gap-x-9  md:!bg-transparent md:!bg-none md:backdrop-blur-0', isOpen ? 'left-0' : '-left-full')
+  const navClasses = cn('ease fixed top-0 z-50 flex h-screen w-full flex-col  items-center justify-evenly overflow-hidden pr-3 backdrop-blur transition-all duration-500 border-r-white-500 bg-black-200 md:static md:h-auto md:flex-row  md:justify-end  md:gap-x-9  md:!bg-transparent md:!bg-none md:backdrop-blur-0', isOpen ? 'opacity-100 left-0' : 'opacity-0 -left-full')
 
   return (
     <>
       <ul className={navClasses}>
-        {navItems.map((item, i) => (
+        {NAV_ITEMS.map((item, i) => (
           <li
             style={{ animationDelay: `${i * 100}ms`}}
             onClick={closeNav}
-            className={cn('before:ease ease relative z-[1] flex items-center  opacity-0 transition-all duration-300 before:absolute before:bottom-0 before:left-0 before:z-[-1] before:h-1 before:w-full before:scale-x-0 before:rounded-full  before:transition-all before:duration-300 hover:before:scale-x-100 text-white before:bg-primary-dark md:opacity-100', isOpen ? 'animate-fade-up' : '')} key={item.title}>
+            className={cn('before:ease ease relative z-[1] flex items-center opacity-0 transition-all duration-300 before:absolute before:bottom-0 before:left-0 before:z-[-1] before:h-1 before:w-full before:scale-x-0 before:rounded-full  before:transition-all before:duration-300 hover:before:scale-x-100 text-white before:bg-primary-dark md:opacity-100', isOpen ? 'animate-fade-up' : '')} key={item.title}>
             <NavItem
               path={item.path}
               title={item.title}

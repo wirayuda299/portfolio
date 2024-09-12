@@ -11,7 +11,7 @@ export default function CallToAction() {
 				<Image
 					width={300}
 					height={300}
-					className='max-h-[300px] w-full h-auto object-cover  aspect-auto'
+					className='size-full object-cover min-h-[300px] rounded-xl  aspect-auto'
 					src={'/assets/images/cta.png'}
 					alt='cta'
           loading='lazy'

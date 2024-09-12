@@ -1,5 +1,7 @@
-import { socialLinks } from '@/constant/index';
 import Image from 'next/image';
+
+import { SOCIAL_LINKS } from '@/constants/index';
+
 
 export default function Footer() {
 	return (
@@ -12,7 +14,7 @@ export default function Footer() {
 						</p>
 					</div>
 					<div className='inline-flex gap-6'>
-						{socialLinks.map((item) => (
+						{SOCIAL_LINKS.map((item) => (
 							<a
 								className=' invert-0'
 								href={item.link}

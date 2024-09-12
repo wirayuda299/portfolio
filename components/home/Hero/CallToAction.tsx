@@ -5,20 +5,20 @@ import { CheckIcon } from '@radix-ui/react-icons';
 import { useState } from 'react';
 import { Copy } from 'lucide-react';
 
-import { copyText } from '@/utils/copy';
-
 export default function CallToAction() {
   const [isChecked, setIsChecked] = useState<boolean>(false);
 
-  const handleCLick = () => {
+  function copyText() {
     setIsChecked(true);
-    copyText('wirayuda233@gmail.com');
+    navigator.clipboard.writeText('wirayuda233@gmail.com');
+
     setTimeout(() => setIsChecked(false), 2000);
   };
 
   return (
     <div className='flex flex-col gap-5 pt-8 md:flex-row'>
       <Link
+        aria-label='case-studies'
         href={'/case-studies'}
         className='flex h-12 w-full min-w-200 animate-fade-right items-center justify-center rounded-full text-center text-sm text-white  bg-primary-dark'
       >
@@ -38,7 +38,7 @@ export default function CallToAction() {
           name='copy'
           disabled={isChecked}
           aria-disabled={isChecked}
-          onClick={handleCLick}
+          onClick={copyText}
         >
           {isChecked ? (
             <CheckIcon color='#FFBE62' className='size-5' />

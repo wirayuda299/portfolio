@@ -1,4 +1,4 @@
-import { skills } from '@/constant';
+import { SKILLS } from '@/constants';
 import TechIcon from './Tech';
 import Title from './Title';
 
@@ -8,7 +8,7 @@ export default function Skills() {
 			<div className='mx-auto w-full max-w-1400'>
 				<Title />
 				<div className='mt-10 flex flex-wrap justify-center gap-4 md:gap-8'>
-					{skills.map((skill, i) => (
+					{SKILLS.map((skill, i) => (
 						<TechIcon
 							label={skill.label}
 							icon={skill.icon}

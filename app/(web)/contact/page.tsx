@@ -1,7 +1,7 @@
 import dynamic from 'next/dynamic';
 import Image from 'next/image';
 
-import { socialLinks } from '@/constant';
+import { SOCIAL_LINKS } from '@/constants';
 
 const ContactForm = dynamic(() =>
 	import('@/components/index').then((mod) => mod.ContactForm)
@@ -33,7 +33,7 @@ export default function Contact() {
 							My Socials
 						</h2>
 						<div className='inline-flex gap-6 pt-3'>
-							{socialLinks.map((item) => (
+							{SOCIAL_LINKS.map((item) => (
 								<a
 									href={item.link}
 									key={item.label}

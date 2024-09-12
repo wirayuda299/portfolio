@@ -2,7 +2,8 @@ import './globals.css';
 import type { ReactNode } from 'react';
 import type { Metadata } from 'next';
 import { Poppins } from 'next/font/google';
-import { Toaster } from '@/components/ui/toaster';
+
+import { Toaster } from "@/components/ui/sonner"
 import { cn } from '@/lib/utils';
 
 export const metadata: Metadata = {

@@ -1,4 +1,4 @@
-import { services } from '@/constant';
+import { SERVICES } from '@/constants/index';
 import ServiceCard from './Card';
 import Title from './Title';
 
@@ -8,7 +8,7 @@ export default function Services() {
 			<div className='mx-auto max-w-1400'>
 				<Title />
 				<div className='mt-10 flex flex-wrap justify-center gap-x-5 gap-y-14 px-5 md:px-0'>
-					{services.map((service) => (
+					{SERVICES.map((service) => (
 						<ServiceCard {...service} key={service.title} />
 					))}
 				</div>
