@@ -16,17 +16,19 @@ export default function TechIcon({ label, icon, delay }: TechIconProps) {
   useIntersectionObserver(ref, 'animate-fade-up');
 
   return (
-    <Image
-      src={icon}
-      alt={label}
-      width={40}
-      height={40}
-      ref={ref}
-      className='ease group flex size-10 object-contain items-center justify-center rounded-full opacity-0 grayscale filter transition-all duration-500 hover:shadow-lg hover:filter-none bg-black-200/30 md:size-24'
+    <div
       style={{
         animationDelay: delay * 50 + 'ms'
       }}
 
-    />
+      className='ease group flex w-20  object-contain aspect-auto object-center items-center justify-center rounded-full opacity-0 grayscale filter transition-all duration-500 hover:shadow-lg hover:filter-none bg-black-200/30 md:size-24' ref={ref}>
+      <Image
+        src={icon}
+        alt={label}
+        width={70}
+        height={70}
+      />
+
+    </div>
   );
 }

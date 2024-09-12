@@ -1,4 +1,5 @@
-import { ArrowRight, GlobeIcon, Linkedin } from 'lucide-react';
+import { ArrowRight, GlobeIcon } from 'lucide-react';
+import Image from 'next/image';
 
 
 export default function ProjectLink({
@@ -26,7 +27,7 @@ export default function ProjectLink({
 				rel='noopener noreferrer'
 				className='inline-flex items-center gap-1 text-sm font-semibold text-primary-light lg:text-lg'
 			>
-				<Linkedin height={24} width={25} />
+        <Image src='/assets/icons/github.svg' width={20} height={20} alt='github'/>
 				<span>Source Code</span>
 				<ArrowRight color='#0252cd' />
 			</a>

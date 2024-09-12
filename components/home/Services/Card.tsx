@@ -27,7 +27,7 @@ export default function ServiceCard({
 		>
 			<div className='ease group mx-auto aspect-square w-80 rounded-lg  px-5 py-7 shadow-md transition-all duration-500 hover:translate-y-10  bg-black-200 shadow-light-blue hover:bg-primary-dark hover:shadow-lg hover:shadow-primary-dark sm:w-72'>
 				<div className='flex size-14 items-center justify-center rounded-lg group-hover:brightness-0 group-hover:invert'>
-					<Image src={icon} width={30} height={30} alt={title}/>
+					<Image className='size-8 object-contain aspect-auto' src={icon} width={30} height={30} alt={title}/>
 				</div>
 				<h3 className='pt-9 text-2xl font-semibold group-hover:text-white text-white-800'>
 					{title}

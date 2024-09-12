@@ -9,12 +9,12 @@ export default function CallToAction() {
 		<section className='mt-10 flex size-full min-h-500 items-center justify-center p-3 bg-black-200 sm:p-6'>
 			<div className='relative mx-auto flex size-full h-full max-w-1400  items-center justify-center '>
 				<Image
-					width={800}
+					width={300}
 					height={300}
-					className='min-h-[300px] w-full'
+					className='max-h-[300px] w-full h-auto object-cover  aspect-auto'
 					src={'/assets/images/cta.png'}
 					alt='cta'
-					priority
+          loading='lazy'
 				/>
 				<div className='absolute flex w-full max-w-5xl flex-col items-center justify-between p-2 md:flex-row'>
 					<div className='max-w-xl'>

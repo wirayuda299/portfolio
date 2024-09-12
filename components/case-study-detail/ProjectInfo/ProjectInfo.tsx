@@ -57,7 +57,7 @@ export default function ProjectInfo({
 								key={tech._key}
 								className='size-16 rounded-full p-3 shadow-lg bg-black-300'
 							>
-								<Image src={tech.icon} alt={tech.name} width={40} height={40} />
+								<Image className='size-10' src={tech.icon} alt={tech.name} width={40} height={40} />
 							</div>
 						))}
 					</div>

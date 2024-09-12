@@ -24,14 +24,14 @@ export default async function ProjectDetail({ params: { id } }: Props) {
 	return (
 		<main className='size-full'>
 			<ProjectTitle title={caseStudy.title} shortDesc={caseStudy.subTitle} />
-			<section className='pt-7'>
+			<section className='pt-7 max-w-[500px] mx-auto relative min-h-[300px]'>
 				<Image
-					className='mx-auto'
+					className='w-full h-full object-cover object-center aspect-auto'
 					src={caseStudy.mockup}
-					width={500}
 					priority
+          fill
+          sizes='500px'
 					fetchPriority='high'
-					height={500}
 					alt={caseStudy.title}
 				/>
 				<ProjectLink

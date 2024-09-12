@@ -31,12 +31,14 @@ export default function NavItem({
       ) : (
         <div className='inline-flex items-center gap-2'>
           <Image
-            className='invert'
+            className='invert aspect-auto size-5'
             src='/assets/icons/download.svg'
             width={20}
             height={20}
-            alt='download'
+            priority
+              alt='download'
             loading='eager' />
+
           <a
             download
             href='/assets/resume/cv.pdf'

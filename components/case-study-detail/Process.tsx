@@ -21,7 +21,7 @@ export default function Process({ process }: { process: ProcessProps }) {
 							<div className=' flex size-16 items-center justify-center rounded-full bg-black-300'>
 								<Image
 									src={p.icon}
-									className='mx-auto'
+									className='mx-auto size-8'
 									width={40}
 									height={40}
 									alt={p.title}
