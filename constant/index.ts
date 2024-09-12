@@ -1,4 +1,3 @@
-import { Github, Linkedin } from "lucide-react";
 
 export const navItems = [
 	{
@@ -118,12 +117,12 @@ export const socialLinks = [
 	{
 		link: 'https://www.linkedin.com/in/wira-yuda29/',
 		label: 'Linkedln',
-		icon: <Linkedin />,
+		icon: '/assets/icons/linkedin.svg',
 	},
 	{
 		link: 'https://github.com/wirayuda299',
 		label: 'Github',
-		icon: <Github  />,
+		icon:  '/assets/icons/github.svg',
 	},
 ] as const;
 

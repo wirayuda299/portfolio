@@ -2,7 +2,7 @@ import Loader from '@/components/shared/Loader';
 
 export default function Loading() {
 	return (
-		<div className='mx-auto size-full max-w-600'>
+		<div className='mx-auto size-full max-w-600 min-h-svh overflow-hidden'>
 			<div className='mx-auto h-5 max-w-150 rounded-full  bg-gray-800'></div>
 			<div className='mx-auto mt-3 h-7 max-w-500 rounded-full bg-gray-800'></div>
 			<div className='inline-flex size-full justify-center pt-7'>

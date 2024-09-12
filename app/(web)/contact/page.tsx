@@ -1,4 +1,5 @@
 import dynamic from 'next/dynamic';
+import Image from 'next/image';
 
 import { socialLinks } from '@/constant';
 
@@ -34,13 +35,12 @@ export default function Contact() {
 						<div className='inline-flex gap-6 pt-3'>
 							{socialLinks.map((item) => (
 								<a
-									className='invert-0'
 									href={item.link}
 									key={item.label}
 									target='_blank'
 									title={item.label}
 								>
-									{item.icon}
+                  <Image src={item.icon} width={20} height={20} alt={item.label} className='size-5 aspect-auto object-contain'/>
 								</a>
 							))}
 						</div>

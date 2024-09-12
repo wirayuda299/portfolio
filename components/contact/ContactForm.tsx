@@ -17,7 +17,7 @@ import {
 } from '../ui/form';
 import { Input } from '../ui/input';
 import { Textarea } from '../ui/textarea';
-import { formFields } from '@/constant';
+import { formFields } from '@/constant/index';
 import { toast } from '../ui/use-toast';
 
 const formSchema = z.object({

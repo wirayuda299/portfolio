@@ -1,4 +1,5 @@
-import { socialLinks } from '@/constant';
+import { socialLinks } from '@/constant/index';
+import Image from 'next/image';
 
 export default function Footer() {
 	return (
@@ -19,7 +20,7 @@ export default function Footer() {
 								target='_blank'
 								title={item.label}
 							>
-								{item.icon}
+                <Image src={item.icon} width={20} height={20} alt={item.label} className='size-5 aspect-auto '/>
 							</a>
 						))}
 					</div>

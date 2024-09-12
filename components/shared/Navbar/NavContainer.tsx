@@ -4,7 +4,7 @@ import { useCallback, useState } from 'react';
 import Image from 'next/image';
 
 import NavItem from './NavItem';
-import { navItems } from '@/constant';
+import { navItems } from '@/constant/index';
 import { cn } from '@/lib/utils';
 
 export default function NavContainer() {
