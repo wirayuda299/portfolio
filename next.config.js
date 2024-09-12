@@ -18,12 +18,11 @@ const nextConfig = {
       },
     ],
   },
-  //compiler: {
-  //  removeConsole: process.env.NODE_ENV === 'production',
-  //},
+  compiler: {
+    removeConsole: process.env.NODE_ENV === 'production',
+  },
 
   env: {
-    UPLOADTHING_APP_ID: process.env.UPLOADTHING_APP_ID,
     SANITY_PROJECT_ID: process.env.SANITY_PROJECT_ID,
     SANITY_WRITE_TOKEN: process.env.SANITY_WRITE_TOKEN,
     EMAILJS_SERVICE_ID: process.env.EMAILJS_SERVICE_ID,

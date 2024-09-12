@@ -6,13 +6,8 @@ export { default as ContactForm } from './contact/ContactForm';
 export { default as CallToAction } from './shared/CallToAction';
 export { default as FeatureProject } from './home/FeatureProject/FeatureProject';
 export {
-	Design,
-	Process,
-	ProjectLink,
 	PorjectInfo,
 	CaseStudies,
-	ProjectTitle,
-	ProjectProblem,
 	ChallengesLearning,
 } from '@/components/case-study-detail/index';
 export {

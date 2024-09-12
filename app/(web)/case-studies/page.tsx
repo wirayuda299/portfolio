@@ -6,8 +6,6 @@ import Loader from '@/components/shared/Loader';
 import { getCaseStudies } from '@/sanity/actions/caseStudies';
 import { CallToAction } from '@/components/index';
 
-export const dynamic = 'force-dynamic';
-
 export const metadata = { title: 'Case Studies' };
 
 export default async function CaseStudies() {
