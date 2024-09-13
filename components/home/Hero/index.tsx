@@ -21,6 +21,7 @@ export default function Hero() {
               alt='flower'
               src='/assets/images/flower.png'
               width={50}
+              quality={40}
               height={50}
               className='inline-block size-12 animate-fade-right object-contain lg:size-14'
             />
@@ -38,6 +39,8 @@ export default function Hero() {
             src='/assets/images/hero.webp'
             alt='illustration image'
             priority
+            quality={55}
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             fetchPriority='high'
             width={823}
             height={523}

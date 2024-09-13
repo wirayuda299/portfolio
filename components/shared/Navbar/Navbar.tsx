@@ -14,6 +14,7 @@ export default function Navbar() {
             alt='wirayuda logo'
             src={'/logo.png'}
             priority
+            quality={40}
             width={60}
             height={60}
           />

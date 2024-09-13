@@ -39,6 +39,8 @@ export default function NavContainer() {
             src={'/assets/icons/cross.png'}
             width={40}
             height={40}
+            loading='lazy'
+            fetchPriority='low'
             alt='menu'
             priority={isOpen}
             className='aspect-auto size-6 object-contain'

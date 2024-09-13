@@ -22,7 +22,7 @@ export default function Footer() {
 								target='_blank'
 								title={item.label}
 							>
-                <Image src={item.icon} width={20} height={20} alt={item.label} className='size-5 aspect-auto '/>
+                <Image loading='lazy' fetchPriority='low' src={item.icon} width={20} height={20} alt={item.label} className='size-5 aspect-auto '/>
 							</a>
 						))}
 					</div>

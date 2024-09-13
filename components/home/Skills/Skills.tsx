@@ -4,7 +4,7 @@ import Title from './Title';
 
 export default function Skills() {
 	return (
-		<section className='w-full p-6 bg-black-200 md:p-16'>
+		<section className='w-full  bg-black-200  min-h-[400px]'>
 			<div className='mx-auto w-full max-w-1400'>
 				<Title />
 				<div className='mt-10 flex flex-wrap justify-center gap-4 md:gap-8'>

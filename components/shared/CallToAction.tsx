@@ -15,6 +15,7 @@ export default function CallToAction() {
 					src={'/assets/images/cta.png'}
 					alt='cta'
           loading='lazy'
+          fetchPriority='low'
 				/>
 				<div className='absolute flex w-full max-w-5xl flex-col items-center justify-between p-2 md:flex-row'>
 					<div className='max-w-xl'>

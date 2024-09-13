@@ -4,6 +4,7 @@ import FeaturedProjectTechStacks from './TechStacks';
 import ProjectTitle from './ProjectTitle';
 import { Projects } from '@/types/project';
 import { cn } from '@/lib/utils';
+import { loader } from '@/utils/image-loader';
 
 type Props = {
   backgroundColor: string;
@@ -22,6 +23,8 @@ export default function FeatureProjectCard({
   _id,
   subTitle,
 }: Props) {
+
+  const blurDataUrl = loader(300, 300)
   return (
     <div
       className='w-full rounded-lg p-5 md:px-0 md:py-9'
@@ -44,8 +47,9 @@ export default function FeatureProjectCard({
           )}
           height={800}
           loading='lazy'
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           placeholder='blur'
-          blurDataURL={thumbnail}
+          blurDataURL={blurDataUrl}
           alt={title}
         />
       </div>
