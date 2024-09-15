@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
-import { getCaseStudies } from '@/sanity/actions/caseStudies';
+import { getCaseStudies } from '@/sanity/actions';
 import { CallToAction } from '@/components/index';
 
 export const metadata = { title: 'Case Studies' };
@@ -30,6 +30,7 @@ export default async function CaseStudies() {
               style={{
                 animationDelay: `${i * 100}ms`,
               }}
+              key={project._id}
               className='size-full max-w-400 animate-fade-in opacity-0'
               href={`/case-studies/${project._id}`}
             >
@@ -44,7 +45,7 @@ export default async function CaseStudies() {
                 priority
                 quality={50}
                 fetchPriority='high'
-                className='mx-auto rounded-md object-cover object-bottom px-5 pt-5 lg:px-10 lg:pt-10'
+                className='mx-auto rounded-xl object-cover object-center'
               />
               <h2 className='pt-5 text-xl font-semibold text-white'>
                 {project.title}
