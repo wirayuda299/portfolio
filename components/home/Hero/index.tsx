@@ -21,7 +21,6 @@ export default function Hero() {
               alt='flower'
               src='/assets/images/flower.webp'
               width={50}
-              priority
               quality={40}
               height={50}
               className='inline-block size-12 animate-fade-right object-contain lg:size-14'
