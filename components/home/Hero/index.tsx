@@ -19,8 +19,9 @@ export default function Hero() {
             <Image
               priority
               alt='flower'
-              src='/assets/images/flower.png'
+              src='/assets/images/flower.webp'
               width={50}
+              priority
               quality={40}
               height={50}
               className='inline-block size-12 animate-fade-right object-contain lg:size-14'
@@ -34,17 +35,24 @@ export default function Hero() {
           <CallToAction />
         </div>
         <div className='size-full'>
-          <Image
-            className='size-full animate-fade-left object-cover object-center md2:max-h-750 lg:max-w-600 xl:object-contain xl:pt-5'
-            src='/assets/images/hero.webp'
-            alt='illustration image'
-            priority
-            quality={55}
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-            fetchPriority='high'
-            width={823}
-            height={523}
-          />
+          <picture>
+            <source
+
+              srcSet='/assets/images/hero-6.webp'
+              media='(max-width:768px)'
+            />
+            <Image
+              className='size-full animate-fade-left object-cover object-center md2:max-h-750 lg:max-w-600 xl:object-contain xl:pt-5'
+              src='/assets/images/hero.webp'
+              alt='illustration image'
+              priority
+              quality={55}
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              fetchPriority='high'
+              width={823}
+              height={523}
+            />
+          </picture>
         </div>
       </div>
     </section>

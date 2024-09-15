@@ -14,13 +14,13 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Personal portfolio website',
     siteName: 'wirayuda',
-    url:new URL('https://wirayuda.vercel.app')
+    url: new URL('https://wirayuda.vercel.app')
   },
   description:
     'Looking for a skilled React developer? Wirayuda offers expert web development services tailored to your needs. Contact us today for top-notch solutions!',
   keywords: [
     'React developer', 'JavaScript', 'front-end development', 'web development',
-    'Bali tech community', 'portfolio', 'Next.js developer', 'Indonesia',
+    'Tech community', 'portfolio', 'Next.js developer', 'Indonesia',
     'SEO', 'UI/UX design', 'custom software solutions', 'progressive web apps',
     'agile software development', 'responsive web design', 'mobile-friendly web development',
     'React.js consulting', 'frontend optimization', 'JavaScript developer'
