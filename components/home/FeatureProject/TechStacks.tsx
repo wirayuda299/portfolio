@@ -28,6 +28,8 @@ export default function FeaturedProjectTechStacks({
       <div ref={ref} className='mt-6 inline-flex flex-wrap gap-4 opacity-0'>
         {techStacks?.map((tech) => (
           <Button
+            name={tech.name}
+            title={tech.name}
             className='truncate bg-light-gray text-10 uppercase text-white hover:bg-white hover:text-black'
             key={tech.name}
           >
