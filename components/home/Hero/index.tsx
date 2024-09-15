@@ -36,7 +36,6 @@ export default function Hero() {
         <div className='size-full'>
           <picture>
             <source
-
               srcSet='/assets/images/hero-6.webp'
               media='(max-width:768px)'
             />

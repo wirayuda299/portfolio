@@ -11,46 +11,37 @@ import { Projects } from '@/types/project';
 type TechStacks = Pick<Projects, 'techStacks'>['techStacks'];
 
 type FeaturedProjectTechStacksProps = {
-	techStacks: TechStacks;
-	_id: string;
+  techStacks: TechStacks;
+  _id: string;
 };
 
 export default function FeaturedProjectTechStacks({
-	techStacks,
-	_id,
+  techStacks,
+  _id,
 }: FeaturedProjectTechStacksProps) {
-	const ref = useRef(null);
+  const ref = useRef(null);
 
-	useIntersectionObserver(ref, 'animate-fade-up');
+  useIntersectionObserver(ref, 'animate-fade-up');
 
-	return (
-		<div className='flex flex-col lg:px-4'>
-			<div ref={ref} className='mt-6 inline-flex flex-wrap gap-4 opacity-0'>
-				{techStacks.frontend?.map((tech) => (
-					<Button
-						className='truncate bg-light-gray text-10 uppercase text-white hover:bg-white hover:text-black'
-						key={tech.name}
-					>
-						<span>{tech.name}</span>
-					</Button>
-				))}
-				{techStacks?.backend &&
-					techStacks?.backend?.slice(0, 1).map((tech) => (
-						<Button
-							key={tech.name}
-							className='flex truncate bg-light-gray text-10 uppercase text-white hover:bg-white hover:text-black'
-						>
-							<span>{tech.name}</span>
-						</Button>
-					))}
-			</div>
-			<Link
-				href={`/case-studies/${_id}`}
-				className='inline-flex items-center gap-3 pt-5 text-sm font-medium text-white'
-			>
-				See Case Study
-				<ArrowRight color='#fff' />
-			</Link>
-		</div>
-	);
+  return (
+    <div className='flex flex-col lg:px-4'>
+      <div ref={ref} className='mt-6 inline-flex flex-wrap gap-4 opacity-0'>
+        {techStacks?.map((tech) => (
+          <Button
+            className='truncate bg-light-gray text-10 uppercase text-white hover:bg-white hover:text-black'
+            key={tech.name}
+          >
+            <span>{tech.name}</span>
+          </Button>
+        ))}
+      </div>
+      <Link
+        href={`/case-studies/${_id}`}
+        className='inline-flex items-center gap-3 pt-5 text-sm font-medium text-white'
+      >
+        See Case Study
+        <ArrowRight color='#fff' />
+      </Link>
+    </div>
+  );
 }

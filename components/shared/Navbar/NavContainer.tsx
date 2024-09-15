@@ -19,7 +19,7 @@ export default function NavContainer() {
       <ul className={navClasses}>
         {NAV_ITEMS.map((item, i) => (
           <li
-            style={{ animationDelay: `${i * 100}ms`}}
+            style={{ animationDelay: `${i * 100}ms` }}
             onClick={closeNav}
             className={cn('before:ease ease relative z-[1] flex items-center opacity-0 transition-all duration-300 before:absolute before:bottom-0 before:left-0 before:z-[-1] before:h-1 before:w-full before:scale-x-0 before:rounded-full  before:transition-all before:duration-300 hover:before:scale-x-100 text-white before:bg-primary-dark md:opacity-100', isOpen ? 'animate-fade-up' : '')} key={item.title}>
             <NavItem
@@ -42,22 +42,21 @@ export default function NavContainer() {
             loading='lazy'
             fetchPriority='low'
             alt='menu'
-            priority={isOpen}
             className='aspect-auto size-6 object-contain'
           />
         </button>
       </ul>
-        <button
-          title='menu'
-          aria-label='menu'
-          name='menu'
-          aria-expanded={isOpen}
-          className='md:hidden'
-          type='button'
-          onClick={() => setIsOpen((prev) => !prev)}
-        >
-          <Image className='invert-0' src='/assets/icons/menu.svg' width={20} height={20} alt='menu' />
-        </button>
+      <button
+        title='menu'
+        aria-label='menu'
+        name='menu'
+        aria-expanded={isOpen}
+        className='md:hidden'
+        type='button'
+        onClick={() => setIsOpen((prev) => !prev)}
+      >
+        <Image className='invert-0' src='/assets/icons/menu.svg' width={20} height={20} alt='menu' />
+      </button>
     </>
   );
 };
