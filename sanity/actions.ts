@@ -61,6 +61,7 @@ name
 
     return res[0] as Projects;
   } catch (error) {
+    console.log(error)
     throw error;
   }
 };

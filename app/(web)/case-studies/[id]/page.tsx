@@ -8,9 +8,7 @@ import {
 } from '@/components/index';
 import { getSingleCaseStudy } from '@/sanity/actions';
 
-type Props = Readonly<{
-  params: { id: string };
-}>;
+type Props = Readonly<{ params: { id: string } }>;
 
 export default async function ProjectDetail({ params: { id } }: Props) {
   const caseStudy = await getSingleCaseStudy(id);
@@ -88,7 +86,7 @@ export default async function ProjectDetail({ params: { id } }: Props) {
         challenges={caseStudy?.challenges}
         learnings={caseStudy?.learnings}
       />
-      <CaseStudies id={caseStudy._id} />
+      <CaseStudies id={caseStudy?._id} />
       <CallToAction />
     </main>
   );
